@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GetOnlineTool – Free Online Tools for Everyone</title>
+  <meta name="description" content="Free online tools for text, SEO, and productivity. Word counter, keyword tool, case converter, calculator and more – fast, free, no login required." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+  <meta name="google-site-verification" content="I-F1RXbRZeob-y8B5yqspOc1ghDxnEQPBw6DC_LGBVE" />
+    <link rel="icon" type="image/webp" href="/images/getonlinetool-favicon.webp">
+
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       HEADER
+  ═══════════════════════════════════════════════ -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <!-- Logo -->
+      <a href="/" class="logo" aria-label="GetOnlineTool Home">
+        <img src="https://getonlinetool.com/images/GetOnlineTool-Logo.webp" alt="GetOnlineTool Logo" class="logo-img" />
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="main-nav" aria-label="Main navigation">
+
+        <!-- All Tools with Dropdown -->
+        <div class="nav-dropdown">
+          <a>
+            All Tools
+            <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="dropdown-menu">
+            <div class="dropdown-col">
+              <span class="dropdown-cat">📝 Text Tools</span>
+              <a href="/tool/word-count-online">Word Count</a>
+              <a href="/tool/character-count-online">Character Count</a>
+              <a href="/tool/case-maker-online">Case Maker</a>
+              <a href="/tool/upper-to-lower-case">Upper To Lower Case</a>
+              <a href="/tool/lower-to-upper-case">Lower To Upper Case</a>
+              <a href="/tool/text-reverse-generator">Text Reverse Generator</a>
+              <a href="/tool/small-caps-generator">Small Caps Generator</a>
+              <a href="/tool/upside-down-text-generator">Upside Down Text</a>
+              <a href="/tool/palindrome-checker-online">Palindrome Checker</a>
+              <a href="/tool/notepad-online">Notepad Online</a>
+            </div>
+            <div class="dropdown-col">
+              <span class="dropdown-cat">🔑 SEO Tools</span>
+              <a href="/tool/keyword-phrase-maker">Keyword Phrase Maker</a>
+              <a href="/tool/json-ld-maker-online">JSON-LD Generator</a>
+              <span class="dropdown-cat" style="margin-top:16px;">🧮 Utility</span>
+              <a href="/tool/online-calculator">Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="/blog">Blog</a>
+        <a href="/about-us">About Us</a>
+        <a href="/contact-us">Contact Us</a>
+      </nav>
+
+      <!-- Hamburger (mobile) -->
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMenu(this)">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+      <p>All Tools</p>
+      <a href="/tool/word-count-online" class="mobile-sub">↳ Word Count</a>
+      <a href="/tool/character-count-online" class="mobile-sub">↳ Character Count</a>
+      <a href="/tool/case-maker-online" class="mobile-sub">↳ Case Maker</a>
+      <a href="/tool/upper-to-lower-case" class="mobile-sub">↳ Upper To Lower Case</a>
+      <a href="/tool/lower-to-upper-case" class="mobile-sub">↳ Lower To Upper Case</a>
+      <a href="/tool/text-reverse-generator" class="mobile-sub">↳ Text Reverse Generator</a>
+      <a href="/tool/small-caps-generator" class="mobile-sub">↳ Small Caps Generator</a>
+      <a href="/tool/upside-down-text-generator" class="mobile-sub">↳ Upside Down Text</a>
+      <a href="/tool/palindrome-checker-online" class="mobile-sub">↳ Palindrome Checker</a>
+      <a href="/tool/notepad-online" class="mobile-sub">↳ Notepad Online</a>
+      <a href="/tool/keyword-phrase-maker" class="mobile-sub">↳ Keyword Phrase Maker</a>
+      <a href="/tool/json-ld-maker-online" class="mobile-sub">↳ JSON-LD Generator</a>
+      <a href="/tool/online-calculator" class="mobile-sub">↳ Calculator</a>
+      <a href="/blog">Blog</a>
+      <a href="/about-us">About Us</a>
+      <a href="/contact-us">Contact Us</a>
+    </nav>
+  </header>
+
+
+  <!-- ═══════════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-badge">100% Free · No Login Required</div>
+      <h1 class="hero-title">Free Online Tools<br /><span class="hero-accent">for Everyone</span></h1>
+      <p class="hero-sub">
+        Instantly use powerful tools for text editing, SEO, calculations, and more.
+        No sign-up, no cost, just results.
+      </p>
+
+      <!-- Search -->
+      <div class="hero-search">
+        <input type="text" placeholder="Search a tool… e.g. Word Count, Calculator" aria-label="Search tools" oninput="filterTools(this.value)" />
+        <button aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+      </div>
+
+      <!-- Stats -->
+      <div class="hero-stats">
+        <div class="stat"><strong>13+</strong><span>Free Tools</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>$0</strong><span>Yearly Cost</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>100%</strong><span>Browser-Based</span></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       TOOLS GRID
+  ═══════════════════════════════════════════════ -->
+  <section class="tools-section" id="tools">
+    <div class="container">
+      <h2 class="section-title">All Tools</h2>
+      <p class="section-sub">Pick a tool and get started instantly — no account needed.</p>
+
+      <!-- Category Filter Pills -->
+      <div class="cat-filters" role="group" aria-label="Filter by category">
+        <button class="cat-pill active" onclick="filterCat('all', this)">All</button>
+        <button class="cat-pill" onclick="filterCat('text', this)">Text Tools</button>
+        <button class="cat-pill" onclick="filterCat('seo', this)">SEO Tools</button>
+        <button class="cat-pill" onclick="filterCat('utility', this)">Utility</button>
+      </div>
+
+      <!-- Grid -->
+      <div class="tools-grid" id="toolsGrid">
+
+        <!-- Text Tools -->
+        <a href="/tool/word-count-online" class="tool-card" data-cat="text">
+          <div class="tool-icon" style="background:#FFF0E6;">📝</div>
+          <div class="tool-info">
+            <h3>Word Count</h3>
+            <p>Count words, characters and sentences in your text instantly.</p>
+          </div>
+          <span class="tool-tag">Text</span>
+        </a>
+
+        <a href="/tool/character-count-online" class="tool-card" data-cat="text">
+          <div class="tool-icon" style="background:#E8F0FE;">🔤</div>
+          <div class="tool-info">
+            <h3>Character Count</h3>
+            <p>Count total characters with and without spaces.</p>
+          </div>
+          <span class="tool-tag">Text</span>
+        </a>
+
+        <a href="/tool/case-maker-online" class="tool-card" data-cat="text">
+          <div class="tool-icon" style="background:#E6F4EA;">Aa</div>
+          <div class="tool-info">
+            <h3>Case Maker</h3>
+            <p>Convert your text to Title Case, Sentence case, or more.</p>
+          </div>
+          <span class="tool-tag">Text</span>
+        </a>
+
+        <a href="/tool/upper-to-lower-case" class="tool-card" data-cat="text">
+          <div class="tool-icon" style="background:#FFF0E6;">🔡</div>
+          <div class="tool-info">
+            <h3>Upper To Lower Case</h3>
+            <p>Convert all UPPERCASE text to lowercase instantly.</p>
+          </div>
+          <span class="tool-tag">Text</span>
+        </a>
+
+        <a href="/tool/lower-to-upper-case" class="tool-card" data-cat="text">
+          <div class="tool-icon" style="background:#F3E8FF;">🔠</div>
+          <div class="tool-info">
+            <h3>Lower To Upper Case</h3>
+            <p>Transform lowercase text into UPPERCASE in one click.</p>
+          </div>
+          <span class="tool-tag">Text</span>
+        </a>
+
+        <a href="/tool/text-reverse-generator" class="tool-card" data-cat="text">
+          <div class="tool-icon" style="background:#FFF9E6;">🔁</div>
+          <div class="tool-info">
+            <h3>Text Reverse Generator</h3>
+            <p>Reverse any text or sentence backward instantly.</p>
+          </div>
+          <span class="tool-tag">Text</span>
+        </a>
+
+        <a href="/tool/small-caps-generator" class="tool-card" data-cat="text">
+          <div class="tool-icon" style="background:#E6F4EA;">ₛᴄ</div>
+          <div class="tool-info">
+            <h3>Small Caps Generator</h3>
+            <p>Convert your text to ꜱᴍᴀʟʟ ᴄᴀᴘꜱ Unicode style.</p>
+          </div>
+          <span class="tool-tag">Text</span>
+        </a>
+
+        <a href="/tool/upside-down-text-generator" class="tool-card" data-cat="text">
+          <div class="tool-icon" style="background:#FEE8E8;">🙃</div>
+          <div class="tool-info">
+            <h3>Upside Down Text</h3>
+            <p>Flip your text upside down using Unicode characters.</p>
+          </div>
+          <span class="tool-tag">Text</span>
+        </a>
+
+        <a href="/tool/palindrome-checker-online" class="tool-card" data-cat="text">
+          <div class="tool-icon" style="background:#E8F0FE;">🔄</div>
+          <div class="tool-info">
+            <h3>Palindrome Checker</h3>
+            <p>Check if your word or phrase reads the same backward.</p>
+          </div>
+          <span class="tool-tag">Text</span>
+        </a>
+
+        <a href="/tool/notepad-online" class="tool-card" data-cat="text">
+          <div class="tool-icon" style="background:#FFF9E6;">🗒</div>
+          <div class="tool-info">
+            <h3>Notepad Online</h3>
+            <p>A clean online notepad that saves your text locally.</p>
+          </div>
+          <span class="tool-tag">Text</span>
+        </a>
+
+        <!-- SEO Tools -->
+        <a href="/tool/keyword-phrase-maker" class="tool-card" data-cat="seo">
+          <div class="tool-icon" style="background:#FFF0E6;">🔑</div>
+          <div class="tool-info">
+            <h3>Keyword Phrase Maker</h3>
+            <p>Combine keyword lists and generate match types for Google Ads.</p>
+          </div>
+          <span class="tool-tag seo">SEO</span>
+        </a>
+
+        <a href="/tool/json-ld-maker-online" class="tool-card" data-cat="seo">
+          <div class="tool-icon" style="background:#E6F4EA;">{}</div>
+          <div class="tool-info">
+            <h3>JSON-LD Generator</h3>
+            <p>Generate structured data JSON-LD schema for better SEO.</p>
+          </div>
+          <span class="tool-tag seo">SEO</span>
+        </a>
+
+        <!-- Utility -->
+        <a href="/tool/online-calculator" class="tool-card" data-cat="utility">
+          <div class="tool-icon" style="background:#F3E8FF;">🧮</div>
+          <div class="tool-info">
+            <h3>Calculator Online</h3>
+            <p>A simple, fast calculator for everyday arithmetic.</p>
+          </div>
+          <span class="tool-tag utility">Utility</span>
+        </a>
+
+      </div><!-- /tools-grid -->
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       FEATURES / WHY US
+  ═══════════════════════════════════════════════ -->
+  <section class="features-section">
+    <div class="container">
+      <h2 class="section-title">Why GetOnlineTool?</h2>
+      <p class="section-sub">Simple tools built for real people — not power users.</p>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Instant Results</h3>
+          <p>All tools run directly in your browser — no waiting, no server delays, no page reloads needed.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3>Private & Secure</h3>
+          <p>Your text never leaves your device. Everything is processed locally. We don't store your data.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📱</div>
+          <h3>Works on Any Device</h3>
+          <p>Fully responsive design — use any tool on your phone, tablet, or desktop without issues.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🆓</div>
+          <h3>Always Free</h3>
+          <p>Every tool on GetOnlineTool is 100% free. No premium plans, no locked features, no credit card.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       HOW IT WORKS
+  ═══════════════════════════════════════════════ -->
+  <section class="howto-section">
+    <div class="container">
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-sub">Three simple steps. That's all it takes.</p>
+
+      <div class="steps-row">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Pick a Tool</h3>
+          <p>Browse or search from our growing list of free online tools.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Enter Your Text</h3>
+          <p>Paste your text or type your content into the tool's input area.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Get Results</h3>
+          <p>Your output appears instantly. Copy, download, or use it right away.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <!-- Col 1: Logo + Description -->
+      <div class="footer-brand">
+        <a href="/" class="logo logo-light">
+          <img src="https://getonlinetool.com/images/GetOnlineTool-Logo.webp" alt="GetOnlineTool Logo" class="logo-img footer-logo-img" />
+        </a>
+        <p>GetOnlineTool provides free, fast, and simple online tools for writers, marketers, students, and developers. No account needed — ever.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="https://facebook.com/getonlinetoolcom" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="LinkedIn">💼</a>
+        </div>
+      </div>
+
+      <!-- Col 2: Useful Links -->
+      <div class="footer-col">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about-us">About Us</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/contact-us">Contact Us</a></li>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-and-conditions">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Popular Tools -->
+      <div class="footer-col">
+        <h4>Popular Tools</h4>
+        <ul>
+          <li><a href="/tool/word-count-online">Word Count</a></li>
+          <li><a href="/tool/character-count-online">Character Count</a></li>
+          <li><a href="/tool/keyword-phrase-maker">Keyword Phrase Maker</a></li>
+          <li><a href="/tool/case-maker-online">Case Maker</a></li>
+          <li><a href="/tool/text-reverse-generator">Text Reverse Generator</a></li>
+          <li><a href="/tool/palindrome-checker-online">Palindrome Checker</a></li>
+          <li><a href="/tool/online-calculator">Calculator</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Newsletter -->
+      <div class="footer-col">
+        <h4>Stay Updated</h4>
+        <p class="newsletter-desc">Get notified when we add new tools. No spam, ever.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email address" aria-label="Email address" />
+          <button type="button">Subscribe</button>
+        </div>
+        <p class="newsletter-note">We respect your privacy. Unsubscribe anytime.</p>
+      </div>
+
+    </div>
+
+    <!-- Copyright Bar -->
+    <div class="footer-bar">
+      <div class="container footer-bar-inner">
+        <p>© 2026 GetOnlineTool. All rights reserved.</p>
+        <div class="footer-bar-links">
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms-and-conditions">Terms of Service</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    // Hamburger toggle
+    function toggleMenu(btn) {
+      const nav = document.getElementById('mobileNav');
+      const open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+      btn.classList.toggle('active', open);
+    }
+
+    // Category filter
+    function filterCat(cat, btn) {
+      document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.tool-card').forEach(card => {
+        const show = cat === 'all' || card.dataset.cat === cat;
+        card.style.display = show ? '' : 'none';
+      });
+    }
+
+    // Search filter
+    function filterTools(query) {
+      const q = query.toLowerCase();
+      document.querySelectorAll('.tool-card').forEach(card => {
+        const text = card.querySelector('h3').textContent.toLowerCase()
+                   + card.querySelector('p').textContent.toLowerCase();
+        card.style.display = text.includes(q) ? '' : 'none';
+      });
+      // reset category pills
+      document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+      document.querySelector('.cat-pill').classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
