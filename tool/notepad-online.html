@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notepad Online – Free Online Text Editor</title>
+  <meta name="description" content="A free online notepad that automatically saves your text in your browser. No sign-up needed. Write, edit, copy, or download your notes anytime." />
+  <link rel="canonical" href="https://getonlinetool.com/tool/notepad-online" />
+  <meta property="og:title" content="Notepad Online – Free Online Text Editor" />
+  <meta property="og:description" content="Free online notepad with auto-save. Your notes stay in your browser — no account needed." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://getonlinetool.com/tool/notepad-online" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../tool.css" />
+<link rel="icon" type="image/webp" href="/images/getonlinetool-favicon.webp">
+<link rel="icon" type="image/webp" href="/images/getonlinetool-favicon.webp">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Notepad Online",
+    "url": "https://getonlinetool.com/tool/notepad-online",
+    "description": "Free online notepad that auto-saves your text in your browser.",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <!-- Logo -->
+      <a href="/" class="logo" aria-label="GetOnlineTool Home">
+        <img src="https://getonlinetool.com/images/GetOnlineTool-Logo.webp" alt="GetOnlineTool Logo" class="logo-img" />
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="main-nav" aria-label="Main navigation">
+
+        <!-- All Tools with Dropdown -->
+        <div class="nav-dropdown">
+          <a>
+            All Tools
+            <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="dropdown-menu">
+            <div class="dropdown-col">
+              <span class="dropdown-cat">📝 Text Tools</span>
+              <a href="/tool/word-count-online">Word Count</a>
+              <a href="/tool/character-count-online">Character Count</a>
+              <a href="/tool/case-maker-online">Case Maker</a>
+              <a href="/tool/upper-to-lower-case">Upper To Lower Case</a>
+              <a href="/tool/lower-to-upper-case">Lower To Upper Case</a>
+              <a href="/tool/text-reverse-generator">Text Reverse Generator</a>
+              <a href="/tool/small-caps-generator">Small Caps Generator</a>
+              <a href="/tool/upside-down-text-generator">Upside Down Text</a>
+              <a href="/tool/palindrome-checker-online">Palindrome Checker</a>
+              <a href="/tool/notepad-online">Notepad Online</a>
+            </div>
+            <div class="dropdown-col">
+              <span class="dropdown-cat">🔑 SEO Tools</span>
+              <a href="/tool/keyword-phrase-maker">Keyword Phrase Maker</a>
+              <a href="/tool/json-ld-maker-online">JSON-LD Generator</a>
+              <span class="dropdown-cat" style="margin-top:16px;">🧮 Utility</span>
+              <a href="/tool/online-calculator">Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="/blog">Blog</a>
+        <a href="/about-us">About Us</a>
+        <a href="/contact-us">Contact Us</a>
+      </nav>
+
+      <!-- Hamburger (mobile) -->
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMenu(this)">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+      <p>All Tools</p>
+      <a href="/tool/word-count-online" class="mobile-sub">↳ Word Count</a>
+      <a href="/tool/character-count-online" class="mobile-sub">↳ Character Count</a>
+      <a href="/tool/case-maker-online" class="mobile-sub">↳ Case Maker</a>
+      <a href="/tool/upper-to-lower-case" class="mobile-sub">↳ Upper To Lower Case</a>
+      <a href="/tool/lower-to-upper-case" class="mobile-sub">↳ Lower To Upper Case</a>
+      <a href="/tool/text-reverse-generator" class="mobile-sub">↳ Text Reverse Generator</a>
+      <a href="/tool/small-caps-generator" class="mobile-sub">↳ Small Caps Generator</a>
+      <a href="/tool/upside-down-text-generator" class="mobile-sub">↳ Upside Down Text</a>
+      <a href="/tool/palindrome-checker-online" class="mobile-sub">↳ Palindrome Checker</a>
+      <a href="/tool/notepad-online" class="mobile-sub">↳ Notepad Online</a>
+      <a href="/tool/keyword-phrase-maker" class="mobile-sub">↳ Keyword Phrase Maker</a>
+      <a href="#json-ld" class="mobile-sub">↳ JSON-LD Generator</a>
+      <a href="/tool/online-calculator" class="mobile-sub">↳ Calculator</a>
+      <a href="/blog">Blog</a>
+      <a href="/about-us">About Us</a>
+      <a href="/contact-us">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a><span>›</span>
+        <a href="/#tools">Tools</a><span>›</span>
+        <span>Notepad Online</span>
+      </div>
+      <h1 class="page-hero-title">Notepad Online</h1>
+      <p class="page-hero-sub">A clean, distraction-free online notepad that automatically saves your notes in your browser. No sign-up, no cloud, no fuss.</p>
+    </div>
+  </section>
+
+  <!-- TOOL -->
+  <section class="tool-section">
+    <div class="container">
+      <div class="tool-wrapper">
+        <div class="np-layout">
+
+          <!-- LEFT: Notepad -->
+          <div class="np-left">
+
+            <!-- Toolbar -->
+            <div class="np-toolbar">
+              <div class="np-toolbar-left">
+                <span class="np-autosave" id="saveStatus">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  Auto-saved
+                </span>
+              </div>
+              <!--<div class="np-toolbar-right">-->
+              <!--  <label class="np-font-label">Font size</label>-->
+              <!--  <select class="np-font-select" onchange="changeFontSize(this.value)">-->
+              <!--    <option value="14">14px</option>-->
+              <!--    <option value="16" selected>16px</option>-->
+              <!--    <option value="18">18px</option>-->
+              <!--    <option value="20">20px</option>-->
+              <!--    <option value="24">24px</option>-->
+              <!--  </select>-->
+              <!--</div>-->
+            </div>
+
+            <!-- Main Textarea -->
+            <div class="cc-textarea-wrap">
+            <textarea
+              id="notepad inputText"
+              class="np-textarea cc-textarea"
+              placeholder="Start typing your notes here... Everything is saved automatically."
+              oninput="onType(this.value)"
+              spellcheck="true"
+            ></textarea>
+            </div>
+            
+
+            <!-- Footer stats -->
+            <div class="np-footer">
+              <span id="npStats">0 words · 0 characters</span>
+              <span id="npLines">0 lines</span>
+            </div>
+
+          </div>
+
+          <!-- RIGHT: Sidebar -->
+          <div class="np-right">
+
+            <!-- Auto-save info -->
+            <div class="np-info-card">
+              <div class="np-info-icon">💾</div>
+              <h3>Auto-Save On</h3>
+              <p>Your notes are saved automatically in your browser as you type. They will be here when you come back.</p>
+            </div>
+
+            <!-- Actions -->
+            <button class="btn-generate" onclick="copyAll(this)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              Copy All
+            </button>
+
+            <!--<button class="btn-copy" onclick="downloadTxt()">-->
+            <!--  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>-->
+            <!--  Download .txt-->
+            <!--</button>-->
+
+            <!--<button class="btn-clear" onclick="clearNotes()">Clear Notepad</button>-->
+
+            <!-- Stats card -->
+            <div class="np-stats-card">
+              <div class="cc-stat-row">
+                <span class="cc-stat-row-label">Words</span>
+                <span class="cc-stat-row-val" id="sWords">0</span>
+              </div>
+              <div class="cc-stat-row">
+                <span class="cc-stat-row-label">Characters</span>
+                <span class="cc-stat-row-val" id="sChars">0</span>
+              </div>
+              <div class="cc-stat-row">
+                <span class="cc-stat-row-label">Lines</span>
+                <span class="cc-stat-row-val" id="sLines">0</span>
+              </div>
+              <div class="cc-stat-row">
+                <span class="cc-stat-row-label">Reading time</span>
+                <span class="cc-stat-row-val" id="sTime">0 sec</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="content-section">
+    <div class="container content-narrow">
+
+      <h2>About This Online Notepad</h2>
+      <p>This is a simple, fast, and distraction-free online text editor. Everything you type is saved automatically to your browser's Local Storage — so even if you accidentally close the tab or refresh the page, your notes will still be there when you come back.</p>
+      <p>There is no account to create, no files to manage, and no cloud service involved. Your notes stay entirely on your own device.</p>
+
+      <h2>Features</h2>
+      <ol class="how-steps">
+        <li><strong>Auto-save</strong> — your text is saved instantly as you type, with no manual save button needed.</li>
+        <li><strong>Font size control</strong> — adjust the text size from 14px to 24px for comfortable reading or writing.</li>
+        <li><strong>Copy All</strong> — copy your entire notepad content to the clipboard in one click.</li>
+        <li><strong>Download as .txt</strong> — save your notes as a plain text file to your device.</li>
+        <li><strong>Live stats</strong> — word count, character count, lines, and reading time update as you write.</li>
+      </ol>
+
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            Will my notes be saved if I close the browser?
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p>Yes. Your notes are saved in your browser's Local Storage, which persists even after closing the browser. They will be restored the next time you open this page on the same browser and device.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            Can I access my notes on another device?
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p>No. Since notes are saved locally in your browser, they are only available on the same browser and device. If you need your notes on another device, use the Download .txt button to save the file, then transfer it manually.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            Is there a note size limit?
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p>Browser Local Storage typically allows up to 5MB per domain, which is enough for millions of words of plain text. You are unlikely to hit this limit with normal note-taking.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            Can I format text (bold, italic, headings)?
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p>This is a plain text notepad — formatting like bold, italic, or headings is not supported. It is designed to be simple and fast. If you need formatting, use the downloaded .txt file in a word processor like Microsoft Word or Google Docs.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            Is this tool free?
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p>Completely free, no account required. All tools on GetOnlineTool.com are free for everyone with no hidden limits.</p></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED TOOLS -->
+  <section class="related-section">
+    <div class="container">
+      <h2 class="section-title">Related Tools</h2>
+      <div class="related-grid">
+        <a href="/tool/word-count-online" class="tool-card">
+          <div class="tool-icon" style="background:#FFF0E6;">📝</div>
+          <div class="tool-info"><h3>Word Count</h3><p>Count words, characters and sentences instantly.</p></div>
+          <span class="tool-tag">Text</span>
+        </a>
+        <a href="/tool/character-count-online" class="tool-card">
+          <div class="tool-icon" style="background:#E8F0FE;">🔤</div>
+          <div class="tool-info"><h3>Character Count</h3><p>Count total characters with and without spaces.</p></div>
+          <span class="tool-tag">Text</span>
+        </a>
+        <a href="/tool/case-maker-online" class="tool-card">
+          <div class="tool-icon" style="background:#E6F4EA;">Aa</div>
+          <div class="tool-info"><h3>Case Maker</h3><p>Convert text to Sentence case, Title Case, and more.</p></div>
+          <span class="tool-tag">Text</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo logo-light">
+          <img src="/images/GetOnlineTool-Logo.webp" alt="GetOnlineTool Logo" class="logo-img footer-logo-img"
+               onerror="this.onerror=null;this.src='https://getonlinetool.com/images/GetOnlineTool-Logo.webp'" />
+        </a>
+        <p>GetOnlineTool provides free, fast, and simple online tools for writers, marketers, students, and developers. No account needed — ever.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="LinkedIn">💼</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/#tools">All Tools</a></li>
+          <li><a href="/about-us">About Us</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/contact-us">Contact Us</a></li>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-and-conditions">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Popular Tools</h4>
+        <ul>
+          <li><a href="/tool/word-count-online">Word Count</a></li>
+          <li><a href="/tool/character-count-online">Character Count</a></li>
+          <li><a href="/tool/keyword-phrase-maker">Keyword Phrase Maker</a></li>
+          <li><a href="/tool/case-maker-online">Case Maker</a></li>
+          <li><a href="/tool/text-reverse-generator">Text Reverse Generator</a></li>
+          <li><a href="/tool/palindrome-checker-online">Palindrome Checker</a></li>
+          <li><a href="/tool/online-calculator">Calculator</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Stay Updated</h4>
+        <p class="newsletter-desc">Get notified when we add new tools. No spam, ever.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email address" aria-label="Email address" />
+          <button type="button">Subscribe</button>
+        </div>
+        <p class="newsletter-note">We respect your privacy. Unsubscribe anytime.</p>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <div class="container footer-bar-inner">
+        <p>© 2025 GetOnlineTool. All rights reserved.</p>
+        <div class="footer-bar-links">
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms-and-conditions">Terms & Conditions</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const LS_KEY = 'notepad_content';
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem(LS_KEY) || '';
+      document.getElementById('notepad').value = saved;
+      if (saved) updateStats(saved);
+    });
+
+    let saveTimer;
+    function onType(val) {
+      updateStats(val);
+      clearTimeout(saveTimer);
+      document.getElementById('saveStatus').innerHTML =
+        '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/></svg> Saving...';
+      saveTimer = setTimeout(() => {
+        localStorage.setItem(LS_KEY, val);
+        document.getElementById('saveStatus').innerHTML =
+          '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Auto-saved';
+      }, 600);
+    }
+
+    function updateStats(text) {
+      const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+      const chars = text.length;
+      const lines = text === '' ? 0 : text.split('\n').length;
+      const secs  = Math.ceil((words / 200) * 60);
+      const time  = words === 0 ? '0 sec' : secs < 60 ? `${secs} sec` : `${Math.ceil(secs/60)} min`;
+
+      document.getElementById('npStats').textContent  = `${words.toLocaleString()} words · ${chars.toLocaleString()} characters`;
+      document.getElementById('npLines').textContent  = `${lines.toLocaleString()} lines`;
+      document.getElementById('sWords').textContent   = words.toLocaleString();
+      document.getElementById('sChars').textContent   = chars.toLocaleString();
+      document.getElementById('sLines').textContent   = lines.toLocaleString();
+      document.getElementById('sTime').textContent    = time;
+    }
+
+    function changeFontSize(size) {
+      document.getElementById('notepad').style.fontSize = size + 'px';
+    }
+
+    function copyAll(btn) {
+      const text = document.getElementById('notepad').value;
+      if (!text) return;
+      navigator.clipboard.writeText(text).catch(() => {
+        document.getElementById('notepad').select();
+        document.execCommand('copy');
+      });
+      const orig = btn.innerHTML;
+      btn.innerHTML = '✓ Copied!';
+      setTimeout(() => btn.innerHTML = orig, 2000);
+    }
+
+    function downloadTxt() {
+      const text = document.getElementById('notepad').value;
+      if (!text) return;
+      const blob = new Blob([text], { type: 'text/plain' });
+      const a    = document.createElement('a');
+      a.href     = URL.createObjectURL(blob);
+      a.download = 'notes.txt';
+      a.click();
+      URL.revokeObjectURL(a.href);
+    }
+
+    function clearNotes() {
+      if (!confirm('Are you sure you want to clear all your notes? This cannot be undone.')) return;
+      document.getElementById('notepad').value = '';
+      localStorage.removeItem(LS_KEY);
+      updateStats('');
+    }
+
+    function toggleMenu(btn) {
+      const nav  = document.getElementById('mobileNav');
+      const open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+      btn.classList.toggle('active', open);
+    }
+
+    function toggleFaq(btn) {
+      btn.closest('.faq-item').classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>

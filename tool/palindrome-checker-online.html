@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Palindrome Checker Online – Free Palindrome Test Tool</title>
+  <meta name="description" content="Check if a word, phrase or sentence is a palindrome instantly. Free online palindrome checker — ignores spaces and punctuation for accurate results." />
+  <link rel="canonical" href="https://getonlinetool.com/tool/palindrome-checker-online" />
+  <meta property="og:title" content="Palindrome Checker Online – Free Palindrome Test Tool" />
+  <meta property="og:description" content="Check if your text is a palindrome instantly. Free, browser-based, no account needed." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://getonlinetool.com/tool/palindrome-checker-online" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../tool.css" />
+<link rel="icon" type="image/webp" href="/images/getonlinetool-favicon.webp">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Palindrome Checker Online",
+    "url": "https://getonlinetool.com/tool/palindrome-checker-online",
+    "description": "Free online tool to check if a word or phrase is a palindrome.",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <!-- Logo -->
+      <a href="/" class="logo" aria-label="GetOnlineTool Home">
+        <img src="https://getonlinetool.com/images/GetOnlineTool-Logo.webp" alt="GetOnlineTool Logo" class="logo-img" />
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="main-nav" aria-label="Main navigation">
+
+        <!-- All Tools with Dropdown -->
+        <div class="nav-dropdown">
+          <a>
+            All Tools
+            <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="dropdown-menu">
+            <div class="dropdown-col">
+              <span class="dropdown-cat">📝 Text Tools</span>
+              <a href="/tool/word-count-online">Word Count</a>
+              <a href="/tool/character-count-online">Character Count</a>
+              <a href="/tool/case-maker-online">Case Maker</a>
+              <a href="/tool/upper-to-lower-case">Upper To Lower Case</a>
+              <a href="/tool/lower-to-upper-case">Lower To Upper Case</a>
+              <a href="/tool/text-reverse-generator">Text Reverse Generator</a>
+              <a href="/tool/small-caps-generator">Small Caps Generator</a>
+              <a href="/tool/upside-down-text-generator">Upside Down Text</a>
+              <a href="/tool/palindrome-checker-online">Palindrome Checker</a>
+              <a href="/tool/notepad-online">Notepad Online</a>
+            </div>
+            <div class="dropdown-col">
+              <span class="dropdown-cat">🔑 SEO Tools</span>
+              <a href="/tool/keyword-phrase-maker">Keyword Phrase Maker</a>
+              <a href="/tool/json-ld-maker-online">JSON-LD Generator</a>
+              <span class="dropdown-cat" style="margin-top:16px;">🧮 Utility</span>
+              <a href="/tool/online-calculator">Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="/blog">Blog</a>
+        <a href="/about-us">About Us</a>
+        <a href="/contact-us">Contact Us</a>
+      </nav>
+
+      <!-- Hamburger (mobile) -->
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMenu(this)">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+      <p>All Tools</p>
+      <a href="/tool/word-count-online" class="mobile-sub">↳ Word Count</a>
+      <a href="/tool/character-count-online" class="mobile-sub">↳ Character Count</a>
+      <a href="/tool/case-maker-online" class="mobile-sub">↳ Case Maker</a>
+      <a href="/tool/upper-to-lower-case" class="mobile-sub">↳ Upper To Lower Case</a>
+      <a href="/tool/lower-to-upper-case" class="mobile-sub">↳ Lower To Upper Case</a>
+      <a href="/tool/text-reverse-generator" class="mobile-sub">↳ Text Reverse Generator</a>
+      <a href="/tool/small-caps-generator" class="mobile-sub">↳ Small Caps Generator</a>
+      <a href="/tool/upside-down-text-generator" class="mobile-sub">↳ Upside Down Text</a>
+      <a href="/tool/palindrome-checker-online" class="mobile-sub">↳ Palindrome Checker</a>
+      <a href="/tool/notepad-online" class="mobile-sub">↳ Notepad Online</a>
+      <a href="/tool/keyword-phrase-maker" class="mobile-sub">↳ Keyword Phrase Maker</a>
+      <a href="#json-ld" class="mobile-sub">↳ JSON-LD Generator</a>
+      <a href="/tool/online-calculator" class="mobile-sub">↳ Calculator</a>
+      <a href="/blog">Blog</a>
+      <a href="/about-us">About Us</a>
+      <a href="/contact-us">Contact Us</a>
+    </nav>
+  </header>
+  
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a><span>›</span>
+        <a href="/#tools">Tools</a><span>›</span>
+        <span>Palindrome Checker Online</span>
+      </div>
+      <h1 class="page-hero-title">Palindrome Checker Online</h1>
+      <p class="page-hero-sub">Check if any word, phrase, or sentence is a palindrome instantly. Spaces and punctuation are automatically ignored for accurate results.</p>
+    </div>
+  </section>
+
+  <!-- TOOL -->
+  <section class="tool-section">
+    <div class="container">
+      <div class="tool-wrapper">
+        <div class="cm-layout">
+
+          <!-- LEFT -->
+          <div class="cm-left">
+
+            <!-- Input -->
+            <div class="cm-box">
+              <label class="cm-label">Enter Text</label>
+              <div class="cc-textarea-wrap">
+                <textarea id="inputText" class="cc-textarea"
+                  style="min-height:200px"
+                  placeholder="Type or paste a word, phrase, or sentence..."
+                  oninput="checkPalindrome(this.value)"
+                  spellcheck="false"></textarea>
+                <div class="cc-textarea-footer">
+                  <span class="cc-live-badge">● Live check</span>
+                  <button class="cc-clear-btn" onclick="clearAll()">Clear</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Result box -->
+            <div class="pc-result-box" id="resultBox">
+              <div class="pc-result-idle">
+                <span class="pc-result-icon">🔄</span>
+                <p>Type something above to check if it is a palindrome.</p>
+              </div>
+            </div>
+
+            <!-- Reversed text -->
+            <div class="cm-box" id="reversedSection" style="display:none;">
+              <label class="cm-label">Reversed Text</label>
+              <div class="cc-textarea-wrap">
+                <textarea id="reversedText" class="cc-textarea output-textarea"
+                  style="min-height:80px"
+                  readonly spellcheck="false"></textarea>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- RIGHT: Sidebar -->
+          <div class="cm-right">
+
+            <div class="kpm-options-card">
+              <h3 class="options-title">Check Options</h3>
+              <label class="check-label" style="padding:10px 14px;">
+                <input type="checkbox" id="ignoreCase" checked onchange="recheckCurrent()" />
+                <span>Ignore case</span>
+              </label>
+              <label class="check-label" style="padding:10px 14px;">
+                <input type="checkbox" id="ignoreSpaces" checked onchange="recheckCurrent()" />
+                <span>Ignore spaces</span>
+              </label>
+              <label class="check-label" style="padding:10px 14px;">
+                <input type="checkbox" id="ignorePunct" checked onchange="recheckCurrent()" />
+                <span>Ignore punctuation</span>
+              </label>
+            </div>
+
+            <button class="btn-generate" onclick="checkPalindrome(document.getElementById('inputText').value)">
+              Check Palindrome
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+
+            <button class="btn-clear" onclick="clearAll()">Clear</button>
+
+            <!-- Examples -->
+            <div class="pc-examples-card">
+              <h4>Try an example</h4>
+              <button class="pc-example-btn" onclick="tryExample('racecar')">racecar</button>
+              <button class="pc-example-btn" onclick="tryExample('A man a plan a canal Panama')">A man a plan a canal Panama</button>
+              <button class="pc-example-btn" onclick="tryExample('Was it a car or a cat I saw')">Was it a car or a cat I saw</button>
+              <button class="pc-example-btn" onclick="tryExample('Never odd or even')">Never odd or even</button>
+              <button class="pc-example-btn" onclick="tryExample('hello world')">hello world</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="content-section">
+    <div class="container content-narrow">
+
+      <h2>What Is a Palindrome?</h2>
+      <p>A palindrome is a word, phrase, number, or sequence of characters that reads the same forward and backward. The word "racecar" is a classic example — spell it forwards or backwards and it is identical. Famous palindrome phrases include "A man, a plan, a canal: Panama" and "Was it a car or a cat I saw?" — both read the same in either direction when spaces and punctuation are ignored.</p>
+
+      <h2>How to Use the Palindrome Checker</h2>
+      <ol class="how-steps">
+        <li><strong>Type or paste your text</strong> into the input box. The check runs live as you type.</li>
+        <li><strong>Adjust check options</strong> in the sidebar — you can choose whether to ignore case, spaces, and punctuation.</li>
+        <li><strong>Read the result</strong> — the tool will tell you clearly whether your text is a palindrome or not, and show you the reversed version for comparison.</li>
+        <li><strong>Try the examples</strong> in the sidebar to see how famous palindromes look.</li>
+      </ol>
+
+      <h2>Famous Palindrome Examples</h2>
+      <div class="limits-table">
+        <div class="lt-row lt-head"><span>Palindrome</span><span>Type</span></div>
+        <div class="lt-row"><span>racecar</span><span>Word</span></div>
+        <div class="lt-row"><span>level</span><span>Word</span></div>
+        <div class="lt-row"><span>madam</span><span>Word</span></div>
+        <div class="lt-row"><span>civic</span><span>Word</span></div>
+        <div class="lt-row"><span>A man a plan a canal Panama</span><span>Phrase</span></div>
+        <div class="lt-row"><span>Never odd or even</span><span>Phrase</span></div>
+        <div class="lt-row"><span>Was it a car or a cat I saw</span><span>Phrase</span></div>
+        <div class="lt-row"><span>12321</span><span>Number</span></div>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            Are spaces ignored when checking?
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p>By default, yes. The "Ignore spaces" option is turned on, which means "never odd or even" is correctly detected as a palindrome. You can turn this off using the Check Options in the sidebar if you want a strict character-by-character check including spaces.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            Does it check numbers too?
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p>Yes. You can check numeric palindromes like 12321 or 1001 just by typing the number into the input box. The tool treats numbers as regular characters.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            Is "A man a plan a canal Panama" a palindrome?
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p>Yes — when spaces and punctuation are ignored and the check is case-insensitive. The letters "amanaplanacanalpanama" read identically forwards and backwards. Try the example button in the sidebar to verify it.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            Is this tool free?
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p>Completely free, no account required. All tools on GetOnlineTool.com are free for everyone with no hidden limits.</p></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED TOOLS -->
+  <section class="related-section">
+    <div class="container">
+      <h2 class="section-title">Related Tools</h2>
+      <div class="related-grid">
+        <a href="/tool/text-reverse-generator" class="tool-card">
+          <div class="tool-icon" style="background:#FFF9E6;">🔁</div>
+          <div class="tool-info"><h3>Text Reverse Generator</h3><p>Reverse any text or sentence backward instantly.</p></div>
+          <span class="tool-tag">Text</span>
+        </a>
+        <a href="/tool/word-count-online" class="tool-card">
+          <div class="tool-icon" style="background:#FFF0E6;">📝</div>
+          <div class="tool-info"><h3>Word Count</h3><p>Count words, characters and sentences instantly.</p></div>
+          <span class="tool-tag">Text</span>
+        </a>
+        <a href="/tool/case-maker-online" class="tool-card">
+          <div class="tool-icon" style="background:#E6F4EA;">Aa</div>
+          <div class="tool-info"><h3>Case Maker</h3><p>Convert text to Sentence case, Title Case, and more.</p></div>
+          <span class="tool-tag">Text</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo logo-light">
+          <img src="/images/GetOnlineTool-Logo.webp" alt="GetOnlineTool Logo" class="logo-img footer-logo-img"
+               onerror="this.onerror=null;this.src='https://getonlinetool.com/images/GetOnlineTool-Logo.webp'" />
+        </a>
+        <p>GetOnlineTool provides free, fast, and simple online tools for writers, marketers, students, and developers. No account needed — ever.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="LinkedIn">💼</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/#tools">All Tools</a></li>
+          <li><a href="/about-us">About Us</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/contact-us">Contact Us</a></li>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-and-conditions">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Popular Tools</h4>
+        <ul>
+          <li><a href="/tool/word-count-online">Word Count</a></li>
+          <li><a href="/tool/character-count-online">Character Count</a></li>
+          <li><a href="/tool/keyword-phrase-maker">Keyword Phrase Maker</a></li>
+          <li><a href="/tool/case-maker-online">Case Maker</a></li>
+          <li><a href="/tool/text-reverse-generator">Text Reverse Generator</a></li>
+          <li><a href="/tool/palindrome-checker-online">Palindrome Checker</a></li>
+          <li><a href="/tool/online-calculator">Calculator</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Stay Updated</h4>
+        <p class="newsletter-desc">Get notified when we add new tools. No spam, ever.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email address" aria-label="Email address" />
+          <button type="button">Subscribe</button>
+        </div>
+        <p class="newsletter-note">We respect your privacy. Unsubscribe anytime.</p>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <div class="container footer-bar-inner">
+        <p>© 2025 GetOnlineTool. All rights reserved.</p>
+        <div class="footer-bar-links">
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms-and-conditions">Terms & Conditions</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function processText(text) {
+      let t = text;
+      if (document.getElementById('ignoreCase').checked)   t = t.toLowerCase();
+      if (document.getElementById('ignoreSpaces').checked) t = t.replace(/\s/g, '');
+      if (document.getElementById('ignorePunct').checked)  t = t.replace(/[^a-zA-Z0-9]/g, '');
+      return t;
+    }
+
+    function checkPalindrome(raw) {
+      const box = document.getElementById('resultBox');
+      const revSection = document.getElementById('reversedSection');
+
+      if (!raw.trim()) {
+        box.innerHTML = `<div class="pc-result-idle">
+          <span class="pc-result-icon">🔄</span>
+          <p>Type something above to check if it is a palindrome.</p>
+        </div>`;
+        revSection.style.display = 'none';
+        return;
+      }
+
+      const processed = processText(raw);
+      const reversed  = processed.split('').reverse().join('');
+      const isPalin   = processed.length > 0 && processed === reversed;
+
+      // Show reversed original (not processed)
+      document.getElementById('reversedText').value = raw.split('').reverse().join('');
+      revSection.style.display = '';
+
+      if (isPalin) {
+        box.innerHTML = `<div class="pc-result yes">
+          <span class="pc-result-icon">✅</span>
+          <div>
+            <strong>Yes, it's a palindrome!</strong>
+            <p>"${raw.trim()}" reads the same forwards and backwards.</p>
+          </div>
+        </div>`;
+      } else {
+        box.innerHTML = `<div class="pc-result no">
+          <span class="pc-result-icon">❌</span>
+          <div>
+            <strong>Not a palindrome.</strong>
+            <p>"${raw.trim()}" does not read the same backwards.</p>
+          </div>
+        </div>`;
+      }
+    }
+
+    function recheckCurrent() {
+      checkPalindrome(document.getElementById('inputText').value);
+    }
+
+    function tryExample(text) {
+      document.getElementById('inputText').value = text;
+      checkPalindrome(text);
+    }
+
+    function clearAll() {
+      document.getElementById('inputText').value = '';
+      document.getElementById('reversedSection').style.display = 'none';
+      document.getElementById('resultBox').innerHTML = `<div class="pc-result-idle">
+        <span class="pc-result-icon">🔄</span>
+        <p>Type something above to check if it is a palindrome.</p>
+      </div>`;
+    }
+
+    function toggleMenu(btn) {
+      const nav  = document.getElementById('mobileNav');
+      const open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+      btn.classList.toggle('active', open);
+    }
+
+    function toggleFaq(btn) {
+      btn.closest('.faq-item').classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>

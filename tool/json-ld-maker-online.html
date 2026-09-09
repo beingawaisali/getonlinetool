@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<link rel="icon" type="image/webp" href="/images/getonlinetool-favicon.webp" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JSON-LD Generator – Free Structured Data Schema Markup Tool</title>
+  <meta name="description" content="Generate JSON-LD structured data schema markup for SEO. Supports Article, FAQ, Product, Local Business, Person, and Website schemas. Free, instant, no sign-up needed." />
+  <link rel="canonical" href="https://getonlinetool.com/tool/json-ld-maker-online" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../tool.css" />
+  <style>
+    :root {
+      --bg:#F7F6F2; --bg-white:#FFFFFF; --primary:#D4611A; --primary-dk:#B0500F;
+      --primary-lt:#FFF0E6; --dark:#1C1C2E; --dark-2:#2D2D40; --text:#2B2B3A;
+      --text-muted:#6B6B80; --border:#E4E2DA; --shadow-md:0 6px 24px rgba(0,0,0,.10);
+      --radius:14px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.6;}
+    a{text-decoration:none;color:inherit;}
+
+    /* ── Header ── */
+    .site-header{background:var(--dark);position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.2);}
+    .container{width:100%;max-width:1200px;margin:0 auto;padding:0 24px;}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;height:52px;}
+    .logo{display:flex;align-items:center;}
+    .logo-img{height:38px;width:auto;}
+    .main-nav{display:flex;align-items:center;gap:6px;}
+    .main-nav a{color:rgba(255,255,255,.8);font-size:.9rem;font-weight:500;padding:6px 14px;border-radius:8px;transition:.2s;}
+    .main-nav a:hover{color:#fff;background:rgba(255,255,255,.1);}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-trigger{display:flex;align-items:center;gap:4px;cursor:pointer;}
+    .dropdown-arrow{transition:transform .2s;}
+    .nav-dropdown:hover .dropdown-arrow{transform:rotate(180deg);}
+    .dropdown-menu{display:none;position:absolute;top:calc(100% + 8px);left:0;background:var(--dark-2);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:20px;gap:24px;min-width:420px;box-shadow:0 12px 40px rgba(0,0,0,.35);z-index:200;grid-template-columns:1fr 1fr;}
+    .nav-dropdown:hover .dropdown-menu{display:grid;}
+    .dropdown-col{display:flex;flex-direction:column;gap:2px;}
+    .dropdown-cat{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--primary);margin-bottom:6px;padding:0 10px;}
+    .dropdown-menu a{font-size:.85rem;color:rgba(255,255,255,.65);padding:7px 10px;border-radius:8px;transition:.2s;}
+    .dropdown-menu a:hover,.active-link{color:#fff !important;background:rgba(255,255,255,.07);}
+    .active-link{color:var(--primary) !important;}
+    .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;}
+    .hamburger span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;transition:.2s;}
+    .hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+    .hamburger.active span:nth-child(2){opacity:0;}
+    .hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+    .mobile-nav{display:none;flex-direction:column;background:var(--dark-2);padding:8px 0 16px;}
+    .mobile-nav a{color:rgba(255,255,255,.85);padding:12px 24px;font-size:.95rem;border-bottom:1px solid rgba(255,255,255,.06);}
+    .mobile-nav.open{display:flex;}
+    .mobile-sub{padding:8px 36px !important;font-size:.82rem !important;color:rgba(255,255,255,.45) !important;border-bottom:none !important;}
+
+    /* ── Page Hero ── */
+    .page-hero{background:linear-gradient(160deg,var(--dark) 0%,#2A2A42 100%);padding:44px 0 48px;position:relative;overflow:hidden;}
+    .page-hero::before{content:'';position:absolute;width:500px;height:300px;background:radial-gradient(ellipse,rgba(212,97,26,.15) 0%,transparent 70%);top:-60px;right:-80px;pointer-events:none;}
+    .breadcrumb{display:flex;align-items:center;gap:8px;font-size:.82rem;color:rgba(255,255,255,.5);margin-bottom:16px;flex-wrap:wrap;}
+    .breadcrumb a{color:rgba(255,255,255,.6);}
+    .breadcrumb a:hover{color:var(--primary);}
+    .page-hero-title{font-family:'Poppins',sans-serif;font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;color:#fff;margin-bottom:12px;}
+    .page-hero-sub{max-width:640px;color:rgba(255,255,255,.65);font-size:.97rem;line-height:1.7;}
+
+    /* ── Tool section ── */
+    .tool-section{padding:44px 0 56px;}
+    .tool-wrapper{background:var(--bg-white);border:1.5px solid var(--border);border-radius:18px;padding:32px;box-shadow:var(--shadow-md);}
+
+    /* ── Schema Type Pills ── */
+    .jld-type-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px;padding-bottom:24px;border-bottom:1.5px solid var(--border);}
+    .jld-pill{display:flex;align-items:center;gap:7px;padding:9px 18px;border:1.5px solid var(--border);border-radius:100px;background:var(--bg);color:var(--text-muted);font-size:.85rem;font-weight:600;font-family:'Poppins',sans-serif;cursor:pointer;transition:.2s;}
+    .jld-pill:hover{border-color:var(--primary);color:var(--primary);}
+    .jld-pill.active{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 4px 14px rgba(212,97,26,.35);}
+    .jld-pill-icon{font-size:1rem;}
+
+    /* ── Two column layout ── */
+    .jld-layout{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;}
+
+    /* ── Form column ── */
+    .jld-form-col{display:flex;flex-direction:column;}
+    .jld-form{display:none;flex-direction:column;gap:0;}
+    .jld-form.active{display:flex;}
+    .jld-form-title{font-family:'Poppins',sans-serif;font-size:1rem;font-weight:700;color:var(--text);margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+    .jld-form-title span{font-size:1.2rem;}
+
+    .jld-field{display:flex;flex-direction:column;gap:5px;margin-bottom:12px;}
+    .jld-field label{font-size:.75rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em;}
+    .jld-field .req{color:var(--primary);}
+
+    .jld-field input,
+    .jld-field select,
+    .jld-field textarea{
+      padding:10px 14px;
+      border:1.5px solid var(--border);
+      border-radius:9px;
+      font-family:'Inter',sans-serif;
+      font-size:.88rem;
+      color:var(--text);
+      background:var(--bg);
+      outline:none;
+      transition:border-color .2s,background .2s;
+      width:100%;
+    }
+    .jld-field input:focus,
+    .jld-field select:focus,
+    .jld-field textarea:focus{border-color:var(--primary);background:#fff;box-shadow:0 0 0 3px rgba(212,97,26,.08);}
+    .jld-field input::placeholder,
+    .jld-field textarea::placeholder{color:#c0bdb6;}
+    .jld-field textarea{resize:vertical;min-height:72px;}
+    .jld-field select{cursor:pointer;appearance:auto;}
+
+    /* FAQ pairs */
+    .faq-pair{background:var(--bg);border:1.5px solid var(--border);border-radius:10px;padding:14px;margin-bottom:10px;}
+    .faq-pair-header{font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;}
+    .jld-add-btn{display:flex;align-items:center;justify-content:center;gap:6px;background:none;border:1.5px dashed var(--border);border-radius:9px;padding:10px;font-family:'Poppins',sans-serif;font-size:.84rem;font-weight:600;color:var(--primary);cursor:pointer;transition:.2s;margin-top:4px;}
+    .jld-add-btn:hover{background:var(--primary-lt);border-color:var(--primary);}
+
+    /* ── Output column ── */
+    .jld-output-col{display:flex;flex-direction:column;gap:12px;position:sticky;top:68px;}
+    .jld-output-card{background:var(--dark);border-radius:14px;overflow:hidden;border:1.5px solid rgba(255,255,255,.06);}
+    .jld-output-topbar{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:rgba(0,0,0,.3);border-bottom:1px solid rgba(255,255,255,.06);}
+    .jld-output-label{display:flex;align-items:center;gap:8px;font-family:'Poppins',sans-serif;font-size:.82rem;font-weight:700;color:rgba(255,255,255,.7);}
+    .jld-dot{width:10px;height:10px;border-radius:50%;}
+    .jld-dot.red{background:#FF5F57;}
+    .jld-dot.yellow{background:#FFBD2E;}
+    .jld-dot.green{background:#28C840;}
+    .jld-dots{display:flex;gap:6px;}
+
+    .jld-copy-btn{display:flex;align-items:center;gap:7px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:7px;color:rgba(255,255,255,.8);font-size:.78rem;font-weight:600;font-family:inherit;padding:6px 14px;cursor:pointer;transition:.2s;}
+    .jld-copy-btn:hover{background:rgba(255,255,255,.18);color:#fff;}
+    .jld-copy-btn.copied{background:rgba(40,200,64,.2);border-color:#28C840;color:#28C840;}
+
+    .jld-output-textarea{width:100%;min-height:380px;padding:18px;border:none;outline:none;font-family:'Courier New',monospace;font-size:.82rem;color:#7AE28C;background:transparent;resize:vertical;line-height:1.7;letter-spacing:.01em;}
+    .jld-output-textarea::placeholder{color:rgba(255,255,255,.2);}
+
+    .jld-tip{display:flex;align-items:flex-start;gap:10px;padding:12px 16px;background:var(--primary-lt);border:1.5px solid rgba(212,97,26,.2);border-radius:10px;font-size:.8rem;color:var(--text-muted);line-height:1.55;}
+    .jld-tip svg{flex-shrink:0;margin-top:2px;color:var(--primary);}
+    .jld-tip code{background:rgba(212,97,26,.1);color:var(--primary);padding:1px 6px;border-radius:4px;font-size:.75rem;}
+
+    /* ── Buttons ── */
+    .btn-generate{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--primary);color:#fff;border:none;border-radius:10px;padding:13px 16px;font-family:'Poppins',sans-serif;font-size:.9rem;font-weight:700;cursor:pointer;transition:.2s;width:100%;}
+    .btn-generate:hover{background:var(--primary-dk);}
+
+    /* ── Content sections ── */
+    .content-section{background:var(--bg);padding:56px 0;border-top:1px solid var(--border);}
+    .content-narrow{max-width:800px;}
+    .content-narrow h2{font-family:'Poppins',sans-serif;font-size:1.35rem;font-weight:700;color:var(--text);margin-top:40px;margin-bottom:14px;}
+    .content-narrow h2:first-child{margin-top:0;}
+    .content-narrow p{color:var(--text-muted);line-height:1.75;font-size:.93rem;margin-bottom:14px;}
+    .how-steps{padding-left:20px;display:flex;flex-direction:column;gap:12px;margin-bottom:14px;}
+    .how-steps li{color:var(--text-muted);font-size:.93rem;line-height:1.7;padding-left:6px;}
+    .how-steps li strong{color:var(--text);}
+    .limits-table{border:1.5px solid var(--border);border-radius:12px;overflow:hidden;margin:20px 0;}
+    .lt-row{display:grid;grid-template-columns:1fr 1.4fr;border-bottom:1px solid var(--border);font-size:.88rem;}
+    .lt-row:last-child{border-bottom:none;}
+    .lt-row span{padding:10px 16px;color:var(--text-muted);}
+    .lt-row span:last-child{font-weight:600;color:var(--text);}
+    .lt-head{background:var(--dark);}
+    .lt-head span{color:rgba(255,255,255,.7);font-weight:600;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;}
+    .faq-list{border:1.5px solid var(--border);border-radius:12px;overflow:hidden;margin-top:16px;}
+    .faq-item{border-bottom:1px solid var(--border);}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;background:none;border:none;padding:16px 20px;font-family:'Poppins',sans-serif;font-size:.92rem;font-weight:600;color:var(--text);cursor:pointer;text-align:left;transition:background .2s;}
+    .faq-q:hover{background:var(--bg);}
+    .faq-q svg{flex-shrink:0;transition:transform .25s;color:var(--text-muted);}
+    .faq-item.open .faq-q svg{transform:rotate(180deg);}
+    .faq-item.open .faq-q{color:var(--primary);background:var(--primary-lt);}
+    .faq-a{display:none;padding:0 20px 16px;background:var(--bg);}
+    .faq-item.open .faq-a{display:block;}
+    .faq-a p{font-size:.9rem;color:var(--text-muted);line-height:1.7;margin:0;padding-top:8px;}
+    .related-section{padding:56px 0;border-top:1px solid var(--border);}
+    .section-title{font-family:'Poppins',sans-serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;color:var(--text);text-align:center;margin-bottom:32px;}
+    .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;}
+    .tool-card{display:flex;align-items:flex-start;gap:14px;background:var(--bg-white);border:1.5px solid var(--border);border-radius:var(--radius);padding:20px;cursor:pointer;transition:.2s;position:relative;overflow:hidden;}
+    .tool-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:var(--primary);}
+    .tool-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:700;flex-shrink:0;font-family:'Poppins',sans-serif;}
+    .tool-info h3{font-family:'Poppins',sans-serif;font-size:.95rem;font-weight:600;color:var(--text);margin-bottom:4px;}
+    .tool-info p{font-size:.82rem;color:var(--text-muted);line-height:1.5;}
+    .tool-tag{position:absolute;top:14px;right:14px;font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:100px;background:var(--primary-lt);color:var(--primary);}
+    .tool-tag.seo{background:#E6F4EA;color:#2E7D32;}
+
+    /* ── Footer ── */
+    .site-footer{background:#2D2D40;padding-top:60px;}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.6fr;gap:40px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.08);}
+    .footer-brand p{font-size:.85rem;color:rgba(255,255,255,.5);line-height:1.7;margin:16px 0 20px;}
+    .footer-logo-img{height:34px;}
+    .social-links{display:flex;gap:12px;}
+    .social-links a{font-size:1.2rem;opacity:.6;transition:.2s;}
+    .social-links a:hover{opacity:1;}
+    .footer-col h4{font-family:'Poppins',sans-serif;font-size:.9rem;font-weight:700;color:#fff;margin-bottom:16px;text-transform:uppercase;letter-spacing:.06em;}
+    .footer-col ul{list-style:none;}
+    .footer-col ul li{margin-bottom:10px;}
+    .footer-col ul li a{font-size:.85rem;color:rgba(255,255,255,.5);transition:.2s;}
+    .footer-col ul li a:hover{color:var(--primary);}
+    .newsletter-desc{font-size:.85rem;color:rgba(255,255,255,.5);margin-bottom:14px;line-height:1.6;}
+    .newsletter-form{display:flex;flex-direction:column;gap:10px;margin-bottom:10px;}
+    .newsletter-form input{padding:11px 16px;border-radius:8px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.07);color:#fff;font-size:.88rem;font-family:inherit;outline:none;}
+    .newsletter-form button{padding:11px 16px;background:var(--primary);color:#fff;border:none;border-radius:8px;font-size:.88rem;font-weight:600;font-family:inherit;cursor:pointer;transition:.2s;}
+    .newsletter-note{font-size:.75rem;color:rgba(255,255,255,.3);}
+    .footer-bar{background:rgba(0,0,0,.25);padding:14px 0;}
+    .footer-bar-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+    .footer-bar p{font-size:.82rem;color:rgba(255,255,255,.4);}
+    .footer-bar-links{display:flex;gap:20px;}
+    .footer-bar-links a{font-size:.82rem;color:rgba(255,255,255,.4);transition:.2s;}
+    .footer-bar-links a:hover{color:var(--primary);}
+
+    @media(max-width:900px){
+      .main-nav{display:none;} .hamburger{display:flex;}
+      .jld-layout{grid-template-columns:1fr;}
+      .jld-output-col{position:static;}
+      .footer-grid{grid-template-columns:1fr 1fr;}
+      .footer-brand{grid-column:1/-1;}
+    }
+    @media(max-width:640px){
+      .footer-grid{grid-template-columns:1fr;}
+      .footer-bar-inner{flex-direction:column;text-align:center;}
+      .jld-type-row{gap:6px;}
+      .jld-pill{padding:7px 12px;font-size:.78rem;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <!-- Logo -->
+      <a href="/" class="logo" aria-label="GetOnlineTool Home">
+        <img src="https://getonlinetool.com/images/GetOnlineTool-Logo.webp" alt="GetOnlineTool Logo" class="logo-img" />
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="main-nav" aria-label="Main navigation">
+
+        <!-- All Tools with Dropdown -->
+        <div class="nav-dropdown">
+          <a>
+            All Tools
+            <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="dropdown-menu">
+            <div class="dropdown-col">
+              <span class="dropdown-cat">📝 Text Tools</span>
+              <a href="/tool/word-count-online">Word Count</a>
+              <a href="/tool/character-count-online">Character Count</a>
+              <a href="/tool/case-maker-online">Case Maker</a>
+              <a href="/tool/upper-to-lower-case">Upper To Lower Case</a>
+              <a href="/tool/lower-to-upper-case">Lower To Upper Case</a>
+              <a href="/tool/text-reverse-generator">Text Reverse Generator</a>
+              <a href="/tool/small-caps-generator">Small Caps Generator</a>
+              <a href="/tool/upside-down-text-generator">Upside Down Text</a>
+              <a href="/tool/palindrome-checker-online">Palindrome Checker</a>
+              <a href="/tool/notepad-online">Notepad Online</a>
+            </div>
+            <div class="dropdown-col">
+              <span class="dropdown-cat">🔑 SEO Tools</span>
+              <a href="/tool/keyword-phrase-maker">Keyword Phrase Maker</a>
+              <a href="/tool/json-ld-maker-online">JSON-LD Generator</a>
+              <span class="dropdown-cat" style="margin-top:16px;">🧮 Utility</span>
+              <a href="/tool/online-calculator">Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="/blog">Blog</a>
+        <a href="/about-us">About Us</a>
+        <a href="/contact-us">Contact Us</a>
+      </nav>
+
+      <!-- Hamburger (mobile) -->
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMenu(this)">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+      <p>All Tools</p>
+      <a href="/tool/word-count-online" class="mobile-sub">↳ Word Count</a>
+      <a href="/tool/character-count-online" class="mobile-sub">↳ Character Count</a>
+      <a href="/tool/case-maker-online" class="mobile-sub">↳ Case Maker</a>
+      <a href="/tool/upper-to-lower-case" class="mobile-sub">↳ Upper To Lower Case</a>
+      <a href="/tool/lower-to-upper-case" class="mobile-sub">↳ Lower To Upper Case</a>
+      <a href="/tool/text-reverse-generator" class="mobile-sub">↳ Text Reverse Generator</a>
+      <a href="/tool/small-caps-generator" class="mobile-sub">↳ Small Caps Generator</a>
+      <a href="/tool/upside-down-text-generator" class="mobile-sub">↳ Upside Down Text</a>
+      <a href="/tool/palindrome-checker-online" class="mobile-sub">↳ Palindrome Checker</a>
+      <a href="/tool/notepad-online" class="mobile-sub">↳ Notepad Online</a>
+      <a href="/tool/keyword-phrase-maker" class="mobile-sub">↳ Keyword Phrase Maker</a>
+      <a href="#json-ld" class="mobile-sub">↳ JSON-LD Generator</a>
+      <a href="/tool/online-calculator" class="mobile-sub">↳ Calculator</a>
+      <a href="/blog">Blog</a>
+      <a href="/about-us">About Us</a>
+      <a href="/contact-us">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a><span>›</span><a href="/#tools">Tools</a><span>›</span><span>JSON-LD Generator</span>
+      </div>
+      <h1 class="page-hero-title">JSON-LD Generator</h1>
+      <p class="page-hero-sub">Generate structured data JSON-LD schema markup for better SEO. Supports Article, FAQ, Product, Local Business, Person, and Website schemas — instantly, free, no sign-up.</p>
+    </div>
+  </section>
+
+  <!-- TOOL -->
+  <section class="tool-section">
+    <div class="container">
+      <div class="tool-wrapper">
+
+        <!-- Schema type pills -->
+        <div class="jld-type-row">
+          <button class="jld-pill active" onclick="switchSchema('article',this)"><span class="jld-pill-icon">📄</span> Article</button>
+          <button class="jld-pill" onclick="switchSchema('faq',this)"><span class="jld-pill-icon">❓</span> FAQ</button>
+          <button class="jld-pill" onclick="switchSchema('product',this)"><span class="jld-pill-icon">🛒</span> Product</button>
+          <button class="jld-pill" onclick="switchSchema('localbusiness',this)"><span class="jld-pill-icon">🏢</span> Local Business</button>
+          <button class="jld-pill" onclick="switchSchema('person',this)"><span class="jld-pill-icon">👤</span> Person</button>
+          <button class="jld-pill" onclick="switchSchema('website',this)"><span class="jld-pill-icon">🌐</span> Website</button>
+        </div>
+
+        <div class="jld-layout">
+
+          <!-- LEFT: Form -->
+          <div class="jld-form-col">
+
+            <!-- Article -->
+            <div class="jld-form active" id="form-article">
+              <div class="jld-form-title"><span>📄</span> Article Schema Fields</div>
+              <div class="jld-field"><label>Headline <span class="req">*</span></label><input id="art-headline" placeholder="Your article headline" oninput="generate()" /></div>
+              <div class="jld-field"><label>Description</label><input id="art-desc" placeholder="Short description of the article" oninput="generate()" /></div>
+              <div class="jld-field"><label>Author Name <span class="req">*</span></label><input id="art-author" placeholder="John Doe" oninput="generate()" /></div>
+              <div class="jld-field"><label>Publisher Name <span class="req">*</span></label><input id="art-publisher" placeholder="GetOnlineTool" oninput="generate()" /></div>
+              <div class="jld-field"><label>Publisher Logo URL</label><input id="art-logo" placeholder="https://example.com/logo.png" oninput="generate()" /></div>
+              <div class="jld-field"><label>Article URL</label><input id="art-url" placeholder="https://example.com/article" oninput="generate()" /></div>
+              <div class="jld-field"><label>Date Published</label><input type="date" id="art-date" oninput="generate()" /></div>
+              <div class="jld-field"><label>Date Modified</label><input type="date" id="art-modified" oninput="generate()" /></div>
+              <div class="jld-field"><label>Featured Image URL</label><input id="art-image" placeholder="https://example.com/image.jpg" oninput="generate()" /></div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="jld-form" id="form-faq">
+              <div class="jld-form-title"><span>❓</span> FAQ Schema Fields</div>
+              <div id="faq-pairs">
+                <div class="faq-pair">
+                  <div class="faq-pair-header">Question 1</div>
+                  <div class="jld-field"><label>Question <span class="req">*</span></label><input class="faq-q" placeholder="What is JSON-LD?" oninput="generate()" /></div>
+                  <div class="jld-field"><label>Answer <span class="req">*</span></label><textarea class="faq-a" placeholder="JSON-LD is a method of encoding..." oninput="generate()"></textarea></div>
+                </div>
+                <div class="faq-pair">
+                  <div class="faq-pair-header">Question 2</div>
+                  <div class="jld-field"><label>Question</label><input class="faq-q" placeholder="Another question..." oninput="generate()" /></div>
+                  <div class="jld-field"><label>Answer</label><textarea class="faq-a" placeholder="Answer..." oninput="generate()"></textarea></div>
+                </div>
+              </div>
+              <button class="jld-add-btn" onclick="addFaqPair()">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                Add Another Question
+              </button>
+            </div>
+
+            <!-- Product -->
+            <div class="jld-form" id="form-product">
+              <div class="jld-form-title"><span>🛒</span> Product Schema Fields</div>
+              <div class="jld-field"><label>Product Name <span class="req">*</span></label><input id="prod-name" placeholder="Product Name" oninput="generate()" /></div>
+              <div class="jld-field"><label>Description</label><input id="prod-desc" placeholder="Short product description" oninput="generate()" /></div>
+              <div class="jld-field"><label>Image URL</label><input id="prod-image" placeholder="https://example.com/product.jpg" oninput="generate()" /></div>
+              <div class="jld-field"><label>Brand</label><input id="prod-brand" placeholder="Brand Name" oninput="generate()" /></div>
+              <div class="jld-field"><label>Price <span class="req">*</span></label><input type="number" id="prod-price" placeholder="29.99" oninput="generate()" /></div>
+              <div class="jld-field"><label>Currency</label>
+                <select id="prod-currency" onchange="generate()">
+                  <option value="USD">USD – US Dollar</option>
+                  <option value="EUR">EUR – Euro</option>
+                  <option value="GBP">GBP – British Pound</option>
+                  <option value="PKR">PKR – Pakistani Rupee</option>
+                  <option value="INR">INR – Indian Rupee</option>
+                </select>
+              </div>
+              <div class="jld-field"><label>Availability</label>
+                <select id="prod-avail" onchange="generate()">
+                  <option value="InStock">In Stock</option>
+                  <option value="OutOfStock">Out of Stock</option>
+                  <option value="PreOrder">Pre-Order</option>
+                </select>
+              </div>
+              <div class="jld-field"><label>Rating (1–5)</label><input type="number" id="prod-rating" min="1" max="5" step="0.1" placeholder="4.5" oninput="generate()" /></div>
+              <div class="jld-field"><label>Review Count</label><input type="number" id="prod-reviews" placeholder="128" oninput="generate()" /></div>
+              <div class="jld-field"><label>Product URL</label><input id="prod-url" placeholder="https://example.com/product" oninput="generate()" /></div>
+            </div>
+
+            <!-- Local Business -->
+            <div class="jld-form" id="form-localbusiness">
+              <div class="jld-form-title"><span>🏢</span> Local Business Schema Fields</div>
+              <div class="jld-field"><label>Business Name <span class="req">*</span></label><input id="lb-name" placeholder="My Business Name" oninput="generate()" /></div>
+              <div class="jld-field"><label>Business Type</label>
+                <select id="lb-type" onchange="generate()">
+                  <option value="LocalBusiness">Local Business (General)</option>
+                  <option value="Restaurant">Restaurant</option>
+                  <option value="Store">Store / Shop</option>
+                  <option value="Hotel">Hotel</option>
+                  <option value="MedicalBusiness">Medical / Clinic</option>
+                  <option value="EducationalOrganization">Educational Organization</option>
+                  <option value="LegalService">Legal Service</option>
+                </select>
+              </div>
+              <div class="jld-field"><label>Description</label><input id="lb-desc" placeholder="What your business does" oninput="generate()" /></div>
+              <div class="jld-field"><label>Website URL</label><input id="lb-url" placeholder="https://example.com" oninput="generate()" /></div>
+              <div class="jld-field"><label>Phone Number</label><input id="lb-phone" placeholder="+92-300-0000000" oninput="generate()" /></div>
+              <div class="jld-field"><label>Street Address</label><input id="lb-street" placeholder="123 Main Street" oninput="generate()" /></div>
+              <div class="jld-field"><label>City</label><input id="lb-city" placeholder="Karachi" oninput="generate()" /></div>
+              <div class="jld-field"><label>Country Code</label><input id="lb-country" placeholder="PK" maxlength="2" oninput="generate()" /></div>
+              <div class="jld-field"><label>Opening Hours</label><input id="lb-hours" placeholder="Mo-Fr 09:00-18:00" oninput="generate()" /></div>
+              <div class="jld-field"><label>Rating (1–5)</label><input type="number" id="lb-rating" min="1" max="5" step="0.1" placeholder="4.5" oninput="generate()" /></div>
+            </div>
+
+            <!-- Person -->
+            <div class="jld-form" id="form-person">
+              <div class="jld-form-title"><span>👤</span> Person Schema Fields</div>
+              <div class="jld-field"><label>Full Name <span class="req">*</span></label><input id="per-name" placeholder="John Doe" oninput="generate()" /></div>
+              <div class="jld-field"><label>Job Title</label><input id="per-job" placeholder="Web Developer" oninput="generate()" /></div>
+              <div class="jld-field"><label>Bio / Description</label><textarea id="per-desc" placeholder="Short bio..." oninput="generate()"></textarea></div>
+              <div class="jld-field"><label>Profile URL</label><input id="per-url" placeholder="https://example.com/about" oninput="generate()" /></div>
+              <div class="jld-field"><label>Profile Image URL</label><input id="per-image" placeholder="https://example.com/photo.jpg" oninput="generate()" /></div>
+              <div class="jld-field"><label>Email</label><input type="email" id="per-email" placeholder="john@example.com" oninput="generate()" /></div>
+              <div class="jld-field"><label>Organization / Employer</label><input id="per-org" placeholder="Company Name" oninput="generate()" /></div>
+              <div class="jld-field"><label>Social Profile URL</label><input id="per-social" placeholder="https://twitter.com/johndoe" oninput="generate()" /></div>
+            </div>
+
+            <!-- Website -->
+            <div class="jld-form" id="form-website">
+              <div class="jld-form-title"><span>🌐</span> Website Schema Fields</div>
+              <div class="jld-field"><label>Website Name <span class="req">*</span></label><input id="web-name" placeholder="My Website" oninput="generate()" /></div>
+              <div class="jld-field"><label>Website URL <span class="req">*</span></label><input id="web-url" placeholder="https://example.com" oninput="generate()" /></div>
+              <div class="jld-field"><label>Description</label><input id="web-desc" placeholder="What this website is about" oninput="generate()" /></div>
+              <div class="jld-field"><label>Language Code</label><input id="web-lang" placeholder="en" oninput="generate()" /></div>
+              <div class="jld-field"><label>Search URL (Sitelinks Searchbox)</label><input id="web-search" placeholder="https://example.com/search?q={search_term_string}" oninput="generate()" /></div>
+            </div>
+
+          </div>
+
+          <!-- RIGHT: Output -->
+          <div class="jld-output-col">
+            <div class="jld-output-card">
+              <div class="jld-output-topbar">
+                <div class="jld-dots">
+                  <div class="jld-dot red"></div>
+                  <div class="jld-dot yellow"></div>
+                  <div class="jld-dot green"></div>
+                </div>
+                <div class="jld-output-label">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                  JSON-LD Output
+                </div>
+                <button class="jld-copy-btn" id="copyBtn" onclick="copyOutput(this)">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  Copy Code
+                </button>
+              </div>
+              <textarea id="jsonOutput" class="jld-output-textarea" readonly spellcheck="false" placeholder="// Fill in the fields on the left&#10;// Your JSON-LD code will appear here..."></textarea>
+            </div>
+            <div class="jld-tip">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+              Paste this inside a <code>&lt;script type="application/ld+json"&gt;</code> tag in your page's <code>&lt;head&gt;</code> section.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="content-section">
+    <div class="container content-narrow">
+      <h2>What Is JSON-LD?</h2>
+      <p>JSON-LD (JavaScript Object Notation for Linked Data) is a method of encoding structured data that search engines like Google use to better understand your web pages. It enables rich results in search — such as star ratings, FAQ dropdowns, article details, and more.</p>
+
+      <h2>How to Use the JSON-LD Generator</h2>
+      <ol class="how-steps">
+        <li><strong>Select a schema type</strong> from the buttons above — Article, FAQ, Product, Local Business, Person, or Website.</li>
+        <li><strong>Fill in the fields</strong> on the left. The JSON-LD code updates automatically as you type.</li>
+        <li><strong>Copy the generated code</strong> using the Copy Code button.</li>
+        <li><strong>Paste it into your website</strong> inside a <code style="background:var(--primary-lt);color:var(--primary);padding:1px 6px;border-radius:4px;font-size:.85em;">&lt;script type="application/ld+json"&gt;</code> tag in the <code style="background:var(--primary-lt);color:var(--primary);padding:1px 6px;border-radius:4px;font-size:.85em;">&lt;head&gt;</code>.</li>
+      </ol>
+
+      <h2>Which Schema Type Should You Use?</h2>
+      <div class="limits-table">
+        <div class="lt-row lt-head"><span>Schema Type</span><span>Best For</span></div>
+        <div class="lt-row"><span><strong>Article</strong></span><span>Blog posts, news articles, guides</span></div>
+        <div class="lt-row"><span><strong>FAQ</strong></span><span>Pages with question & answer sections</span></div>
+        <div class="lt-row"><span><strong>Product</strong></span><span>E-commerce product pages</span></div>
+        <div class="lt-row"><span><strong>Local Business</strong></span><span>Physical business locations</span></div>
+        <div class="lt-row"><span><strong>Person</strong></span><span>Author pages, personal websites</span></div>
+        <div class="lt-row"><span><strong>Website</strong></span><span>Homepage sitelinks searchbox</span></div>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Where exactly do I paste the JSON-LD code?
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p>Paste it inside your page's HTML wrapped in a script tag: &lt;script type="application/ld+json"&gt;...&lt;/script&gt;. Place it in the &lt;head&gt; section. WordPress users can use plugins like Yoast SEO or RankMath to add it easily.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Will JSON-LD improve my search rankings?
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p>JSON-LD doesn't directly boost rankings but enables rich results (star ratings, FAQ dropdowns etc.) which improve click-through rates and can indirectly benefit your SEO over time.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Can I use multiple schemas on one page?
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p>Yes. You can add multiple JSON-LD script tags on the same page. Generate each schema separately using this tool and add both to your page.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How do I test my JSON-LD?
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p>Use Google's Rich Results Test at search.google.com/test/rich-results to validate your structured data and check if your page qualifies for rich results.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED -->
+  <section class="related-section">
+    <div class="container">
+      <h2 class="section-title">Related Tools</h2>
+      <div class="related-grid">
+        <a href="/tool/keyword-phrase-maker" class="tool-card">
+          <div class="tool-icon" style="background:#FFF0E6;">🔑</div>
+          <div class="tool-info"><h3>Keyword Phrase Maker</h3><p>Combine keyword lists and generate Google Ads match types.</p></div>
+          <span class="tool-tag seo">SEO</span>
+        </a>
+        <a href="/tool/word-count-online" class="tool-card">
+          <div class="tool-icon" style="background:#FFF0E6;">📝</div>
+          <div class="tool-info"><h3>Word Count</h3><p>Count words, characters and sentences instantly.</p></div>
+          <span class="tool-tag">Text</span>
+        </a>
+        <a href="/tool/character-count-online" class="tool-card">
+          <div class="tool-icon" style="background:#E8F0FE;">🔤</div>
+          <div class="tool-info"><h3>Character Count</h3><p>Count characters with and without spaces.</p></div>
+          <span class="tool-tag">Text</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="/"><img src="/images/GetOnlineTool-Logo.webp" alt="GetOnlineTool" class="footer-logo-img" onerror="this.src='https://getonlinetool.com/images/GetOnlineTool-Logo.webp'" /></a>
+        <p>GetOnlineTool provides free, fast, and simple online tools for writers, marketers, students, and developers. No account needed — ever.</p>
+        <div class="social-links"><a href="#">🐦</a><a href="#">📘</a><a href="#">💼</a></div>
+      </div>
+      <div class="footer-col">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="/">Home</a></li><li><a href="/#tools">All Tools</a></li>
+          <li><a href="/about-us">About Us</a></li><li><a href="/blog">Blog</a></li>
+          <li><a href="/contact-us">Contact Us</a></li>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-and-conditions">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Popular Tools</h4>
+        <ul>
+          <li><a href="/tool/word-count-online">Word Count</a></li>
+          <li><a href="/tool/character-count-online">Character Count</a></li>
+          <li><a href="/tool/keyword-phrase-maker">Keyword Phrase Maker</a></li>
+          <li><a href="/tool/json-ld-maker-online">JSON-LD Generator</a></li>
+          <li><a href="/tool/online-calculator">Calculator</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Stay Updated</h4>
+        <p class="newsletter-desc">Get notified when we add new tools. No spam, ever.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email address" />
+          <button type="button">Subscribe</button>
+        </div>
+        <p class="newsletter-note">We respect your privacy. Unsubscribe anytime.</p>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <div class="container footer-bar-inner">
+        <p>© 2025 GetOnlineTool. All rights reserved.</p>
+        <div class="footer-bar-links">
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms-and-conditions">Terms & Conditions</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    let currentSchema = 'article';
+
+    function switchSchema(type, btn) {
+      currentSchema = type;
+      document.querySelectorAll('.jld-pill').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.jld-form').forEach(f => f.classList.remove('active'));
+      document.getElementById('form-' + type).classList.add('active');
+      generate();
+    }
+
+    function v(id) {
+      const el = document.getElementById(id);
+      return el ? el.value.trim() : '';
+    }
+
+    function generate() {
+      let schema = {};
+      switch (currentSchema) {
+        case 'article':
+          schema = { "@context":"https://schema.org","@type":"Article" };
+          if(v('art-headline'))  schema.headline      = v('art-headline');
+          if(v('art-desc'))      schema.description   = v('art-desc');
+          if(v('art-url'))       schema.url           = v('art-url');
+          if(v('art-image'))     schema.image         = v('art-image');
+          if(v('art-date'))      schema.datePublished = v('art-date');
+          if(v('art-modified'))  schema.dateModified  = v('art-modified');
+          if(v('art-author'))    schema.author        = {"@type":"Person","name":v('art-author')};
+          if(v('art-publisher')){
+            schema.publisher = {"@type":"Organization","name":v('art-publisher')};
+            if(v('art-logo')) schema.publisher.logo = {"@type":"ImageObject","url":v('art-logo')};
+          }
+          break;
+        case 'faq':
+          const items = [];
+          document.querySelectorAll('.faq-pair').forEach(p => {
+            const q = p.querySelector('.faq-q').value.trim();
+            const a = p.querySelector('.faq-a').value.trim();
+            if(q && a) items.push({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}});
+          });
+          schema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":items};
+          break;
+        case 'product':
+          schema = {"@context":"https://schema.org","@type":"Product"};
+          if(v('prod-name'))   schema.name        = v('prod-name');
+          if(v('prod-desc'))   schema.description = v('prod-desc');
+          if(v('prod-image'))  schema.image       = v('prod-image');
+          if(v('prod-brand'))  schema.brand       = {"@type":"Brand","name":v('prod-brand')};
+          if(v('prod-url'))    schema.url         = v('prod-url');
+          if(v('prod-price'))  schema.offers      = {"@type":"Offer","price":v('prod-price'),"priceCurrency":v('prod-currency')||'USD',"availability":"https://schema.org/"+(v('prod-avail')||'InStock')};
+          if(v('prod-rating')) schema.aggregateRating = {"@type":"AggregateRating","ratingValue":v('prod-rating'),"reviewCount":v('prod-reviews')||'1'};
+          break;
+        case 'localbusiness':
+          schema = {"@context":"https://schema.org","@type":v('lb-type')||'LocalBusiness'};
+          if(v('lb-name'))  schema.name        = v('lb-name');
+          if(v('lb-desc'))  schema.description = v('lb-desc');
+          if(v('lb-url'))   schema.url         = v('lb-url');
+          if(v('lb-phone')) schema.telephone   = v('lb-phone');
+          if(v('lb-hours')) schema.openingHours= v('lb-hours');
+          if(v('lb-street')||v('lb-city')){
+            schema.address={"@type":"PostalAddress"};
+            if(v('lb-street'))  schema.address.streetAddress=v('lb-street');
+            if(v('lb-city'))    schema.address.addressLocality=v('lb-city');
+            if(v('lb-country')) schema.address.addressCountry=v('lb-country');
+          }
+          if(v('lb-rating')) schema.aggregateRating={"@type":"AggregateRating","ratingValue":v('lb-rating'),"reviewCount":"10"};
+          break;
+        case 'person':
+          schema = {"@context":"https://schema.org","@type":"Person"};
+          if(v('per-name'))   schema.name       = v('per-name');
+          if(v('per-job'))    schema.jobTitle   = v('per-job');
+          if(v('per-desc'))   schema.description= v('per-desc');
+          if(v('per-url'))    schema.url        = v('per-url');
+          if(v('per-image'))  schema.image      = v('per-image');
+          if(v('per-email'))  schema.email      = v('per-email');
+          if(v('per-org'))    schema.worksFor   = {"@type":"Organization","name":v('per-org')};
+          if(v('per-social')) schema.sameAs     = [v('per-social')];
+          break;
+        case 'website':
+          schema = {"@context":"https://schema.org","@type":"WebSite"};
+          if(v('web-name'))   schema.name        = v('web-name');
+          if(v('web-url'))    schema.url         = v('web-url');
+          if(v('web-desc'))   schema.description = v('web-desc');
+          if(v('web-lang'))   schema.inLanguage  = v('web-lang');
+          if(v('web-search')) schema.potentialAction = {"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":v('web-search')},"query-input":"required name=search_term_string"};
+          break;
+      }
+      document.getElementById('jsonOutput').value =
+        '<script type="application/ld+json">\n' + JSON.stringify(schema, null, 2) + '\n<\/script>';
+    }
+
+    function addFaqPair() {
+      const c = document.getElementById('faq-pairs');
+      const idx = c.querySelectorAll('.faq-pair').length + 1;
+      const d = document.createElement('div');
+      d.className = 'faq-pair';
+      d.innerHTML = `<div class="faq-pair-header">Question ${idx}</div>
+        <div class="jld-field"><label>Question</label><input class="faq-q" placeholder="Your question..." oninput="generate()" /></div>
+        <div class="jld-field"><label>Answer</label><textarea class="faq-a" placeholder="Your answer..." oninput="generate()"></textarea></div>`;
+      c.appendChild(d);
+    }
+
+    function copyOutput(btn) {
+      const out = document.getElementById('jsonOutput').value;
+      if (!out) return;
+      navigator.clipboard.writeText(out).catch(() => {
+        document.getElementById('jsonOutput').select();
+        document.execCommand('copy');
+      });
+      btn.innerHTML = '✓ Copied!';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy Code';
+        btn.classList.remove('copied');
+      }, 2000);
+    }
+
+    function toggleMenu(btn) {
+      const nav = document.getElementById('mobileNav');
+      const open = nav.classList.toggle('open');
+      btn.classList.toggle('active', open);
+    }
+    function toggleFaq(btn) { btn.closest('.faq-item').classList.toggle('open'); }
+
+    generate();
+  </script>
+</body>
+</html>

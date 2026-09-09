@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Maker Online – Free Text Case Converter Tool</title>
+  <meta name="description" content="Convert text to Sentence case, Title Case, UPPER CASE, lower case, alternating case and more. Free online case converter — instant results, no sign-up needed." />
+  <link rel="canonical" href="https://getonlinetool.com/tool/case-maker-online" />
+  <meta property="og:title" content="Case Maker Online – Free Text Case Converter" />
+  <meta property="og:description" content="Convert text to any case format instantly. Free, browser-based, no account needed." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://getonlinetool.com/tool/case-maker-online" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../tool.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Case Maker Online",
+    "url": "https://getonlinetool.com/tool/case-maker-online",
+    "description": "Free online tool to convert text to any case format instantly.",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+<link rel="icon" type="image/webp" href="/images/getonlinetool-favicon.webp">
+
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <!-- Logo -->
+      <a href="/" class="logo" aria-label="GetOnlineTool Home">
+        <img src="https://getonlinetool.com/images/GetOnlineTool-Logo.webp" alt="GetOnlineTool Logo" class="logo-img" />
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="main-nav" aria-label="Main navigation">
+
+        <!-- All Tools with Dropdown -->
+        <div class="nav-dropdown">
+          <a>
+            All Tools
+            <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="dropdown-menu">
+            <div class="dropdown-col">
+              <span class="dropdown-cat">📝 Text Tools</span>
+              <a href="/tool/word-count-online">Word Count</a>
+              <a href="/tool/character-count-online">Character Count</a>
+              <a href="/tool/case-maker-online">Case Maker</a>
+              <a href="/tool/upper-to-lower-case">Upper To Lower Case</a>
+              <a href="/tool/lower-to-upper-case">Lower To Upper Case</a>
+              <a href="/tool/text-reverse-generator">Text Reverse Generator</a>
+              <a href="/tool/small-caps-generator">Small Caps Generator</a>
+              <a href="/tool/upside-down-text-generator">Upside Down Text</a>
+              <a href="/tool/palindrome-checker-online">Palindrome Checker</a>
+              <a href="/tool/notepad-online">Notepad Online</a>
+            </div>
+            <div class="dropdown-col">
+              <span class="dropdown-cat">🔑 SEO Tools</span>
+              <a href="/tool/keyword-phrase-maker">Keyword Phrase Maker</a>
+              <a href="/tool/json-ld-maker-online">JSON-LD Generator</a>
+              <span class="dropdown-cat" style="margin-top:16px;">🧮 Utility</span>
+              <a href="/tool/online-calculator">Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="/blog">Blog</a>
+        <a href="/about-us">About Us</a>
+        <a href="/contact-us">Contact Us</a>
+      </nav>
+
+      <!-- Hamburger (mobile) -->
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMenu(this)">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+      <p>All Tools</p>
+      <a href="/tool/word-count-online" class="mobile-sub">↳ Word Count</a>
+      <a href="/tool/character-count-online" class="mobile-sub">↳ Character Count</a>
+      <a href="/tool/case-maker-online" class="mobile-sub">↳ Case Maker</a>
+      <a href="/tool/upper-to-lower-case" class="mobile-sub">↳ Upper To Lower Case</a>
+      <a href="/tool/lower-to-upper-case" class="mobile-sub">↳ Lower To Upper Case</a>
+      <a href="/tool/text-reverse-generator" class="mobile-sub">↳ Text Reverse Generator</a>
+      <a href="/tool/small-caps-generator" class="mobile-sub">↳ Small Caps Generator</a>
+      <a href="/tool/upside-down-text-generator" class="mobile-sub">↳ Upside Down Text</a>
+      <a href="/tool/palindrome-checker-online" class="mobile-sub">↳ Palindrome Checker</a>
+      <a href="/tool/notepad-online" class="mobile-sub">↳ Notepad Online</a>
+      <a href="/tool/keyword-phrase-maker" class="mobile-sub">↳ Keyword Phrase Maker</a>
+      <a href="#json-ld" class="mobile-sub">↳ JSON-LD Generator</a>
+      <a href="/tool/online-calculator" class="mobile-sub">↳ Calculator</a>
+      <a href="/blog">Blog</a>
+      <a href="/about-us">About Us</a>
+      <a href="/contact-us">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a><span>›</span>
+        <a href="/#tools">Tools</a><span>›</span>
+        <span>Case Maker Online</span>
+      </div>
+      <h1 class="page-hero-title">Case Maker Online</h1>
+      <p class="page-hero-sub">Convert your text to Sentence case, Title Case, UPPER CASE, lower case, alternating case, and more — instantly with one click.</p>
+    </div>
+  </section>
+
+  <!-- TOOL -->
+  <section class="tool-section">
+    <div class="container">
+      <div class="tool-wrapper">
+        <div class="cm-layout">
+
+          <!-- LEFT: Input + Output -->
+          <div class="cm-left">
+
+            <!-- Input -->
+            <div class="cm-box">
+              <label class="cm-label">Input Text</label>
+              <div class="cc-textarea-wrap">
+                <textarea rows="10" cols="120"
+                  id="inputText"
+                  class="cc-textarea"
+                  placeholder="Type or paste your text here..."
+                  oninput="saveInput(this.value)"
+                  spellcheck="false"
+                ></textarea>
+                <div class="cc-textarea-footer">
+                  <span class="cc-live-badge" id="inputStats">0 words · 0 characters</span>
+                  <button class="cc-clear-btn" onclick="clearAll()">Clear</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Output -->
+            <div class="cm-box">
+              <div class="cm-output-header">
+                <label class="cm-label">
+                  Output
+                  <span class="cm-active-case" id="activeCase"></span>
+                </label>
+                <button class="btn-copy" id="copyBtn" onclick="copyOutput(this)">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  Copy
+                </button>
+              </div>
+              <textarea rows="10" cols="120" id="outputText" class="cc-textarea output-textarea" readonly placeholder="Your converted text will appear here..." spellcheck="false" style="margin-top:10px"></textarea>
+            </div>
+
+          </div>
+
+          <!-- RIGHT: Case Buttons Sidebar -->
+          <div class="cm-right">
+
+            <div class="kpm-options-card">
+              <h3 class="options-title">Select Case</h3>
+
+              <button class="case-btn" onclick="convertCase('sentence')" data-case="sentence">
+                <span class="case-btn-name">Sentence case</span>
+                <span class="case-btn-preview">The quick brown fox</span>
+              </button>
+
+              <button class="case-btn" onclick="convertCase('title')" data-case="title">
+                <span class="case-btn-name">Title Case</span>
+                <span class="case-btn-preview">The Quick Brown Fox</span>
+              </button>
+
+              <button class="case-btn" onclick="convertCase('upper')" data-case="upper">
+                <span class="case-btn-name">UPPER CASE</span>
+                <span class="case-btn-preview">THE QUICK BROWN FOX</span>
+              </button>
+
+              <button class="case-btn" onclick="convertCase('lower')" data-case="lower">
+                <span class="case-btn-name">lower case</span>
+                <span class="case-btn-preview">the quick brown fox</span>
+              </button>
+
+              <button class="case-btn" onclick="convertCase('alternating')" data-case="alternating">
+                <span class="case-btn-name">aLtErNaTiNg cAsE</span>
+                <span class="case-btn-preview">tHe QuIcK bRoWn FoX</span>
+              </button>
+
+              <button class="case-btn" onclick="convertCase('inverse')" data-case="inverse">
+                <span class="case-btn-name">iNVERSE CaSe</span>
+                <span class="case-btn-preview">tHE QUICK BROWN fOX</span>
+              </button>
+
+            </div>
+
+            <button class="btn-generate" onclick="copyOutput(this)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              Copy Output
+            </button>
+
+            <button class="btn-clear" onclick="clearAll()">Clear All</button>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO USE -->
+  <section class="content-section">
+    <div class="container content-narrow">
+
+      <h2>How to Use the Case Maker</h2>
+      <p>Converting text case is as simple as typing or pasting your text and clicking a button. No sign-up or installation needed.</p>
+      <ol class="how-steps">
+        <li><strong>Paste or type your text</strong> into the Input Text box on the left.</li>
+        <li><strong>Click any case button</strong> in the right sidebar — Sentence case, Title Case, UPPER CASE, lower case, alternating, or inverse.</li>
+        <li><strong>Your converted text</strong> appears instantly in the Output box.</li>
+        <li><strong>Copy the result</strong> using the Copy button and paste it wherever you need it.</li>
+      </ol>
+
+      <h2>What Each Case Type Does</h2>
+      <div class="limits-table">
+        <div class="lt-row lt-head"><span>Case Type</span><span>Example</span></div>
+        <div class="lt-row"><span><strong>Sentence case</strong></span><span>The quick brown fox</span></div>
+        <div class="lt-row"><span><strong>Title Case</strong></span><span>The Quick Brown Fox</span></div>
+        <div class="lt-row"><span><strong>UPPER CASE</strong></span><span>THE QUICK BROWN FOX</span></div>
+        <div class="lt-row"><span><strong>lower case</strong></span><span>the quick brown fox</span></div>
+        <div class="lt-row"><span><strong>aLtErNaTiNg</strong></span><span>tHe QuIcK bRoWn FoX</span></div>
+        <div class="lt-row"><span><strong>iNVERSE</strong></span><span>tHE QUICK BROWN fOX</span></div>
+      </div>
+
+      <h2>When to Use Each Case</h2>
+      <p><strong>Sentence case</strong> is the standard for body text, emails, and most writing. It capitalizes only the first letter of each sentence.</p>
+      <p><strong>Title Case</strong> is used for headings, article titles, book titles, and headlines. Every major word starts with a capital letter.</p>
+      <p><strong>UPPER CASE</strong> is used for emphasis, acronyms, warning labels, or shouting on the internet.</p>
+      <p><strong>lower case</strong> is often used in informal writing, poetry, brand names (like "adidas"), and social media.</p>
+      <p><strong>Alternating case</strong> and <strong>Inverse case</strong> are used for humour, memes, or stylistic creative writing.</p>
+
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            Does this tool save my text?
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p>Yes. Your input text is automatically saved in your browser's Local Storage. If you close and reopen this page, your text will still be there. Nothing is sent to any server.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            How does Sentence case handle multiple sentences?
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p>Sentence case capitalizes the first letter after every sentence-ending punctuation mark (full stop, exclamation mark, or question mark). The rest of the text is converted to lowercase. Proper nouns are not specially handled as that would require language processing.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            What words are skipped in Title Case?
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p>In standard Title Case, small connecting words like "a", "an", "the", "and", "but", "or", "for", "in", "on", "at", "to", and "of" are kept lowercase unless they are the first word. This tool follows that convention for a proper Title Case output.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            Is there a text length limit?
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p>No. This tool runs entirely in your browser with no server involved, so there is no text length limit. You can paste entire documents and it will convert them instantly.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            Is this tool free?
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p>Completely free, no account required. All tools on GetOnlineTool.com are free for everyone.</p></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED TOOLS -->
+  <section class="related-section">
+    <div class="container">
+      <h2 class="section-title">Related Tools</h2>
+      <div class="related-grid">
+        <a href="/tool/upper-to-lower-case" class="tool-card">
+          <div class="tool-icon" style="background:#FFF0E6;">🔡</div>
+          <div class="tool-info"><h3>Upper To Lower Case</h3><p>Convert all UPPERCASE text to lowercase instantly.</p></div>
+          <span class="tool-tag">Text</span>
+        </a>
+        <a href="/tool/lower-to-upper-case" class="tool-card">
+          <div class="tool-icon" style="background:#F3E8FF;">🔠</div>
+          <div class="tool-info"><h3>Lower To Upper Case</h3><p>Transform lowercase text into UPPERCASE in one click.</p></div>
+          <span class="tool-tag">Text</span>
+        </a>
+        <a href="/tool/word-count-online" class="tool-card">
+          <div class="tool-icon" style="background:#FFF0E6;">📝</div>
+          <div class="tool-info"><h3>Word Count</h3><p>Count words, characters and sentences instantly.</p></div>
+          <span class="tool-tag">Text</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo logo-light">
+          <img src="/images/GetOnlineTool-Logo.webp" alt="GetOnlineTool Logo" class="logo-img footer-logo-img"
+               onerror="this.onerror=null;this.src='https://getonlinetool.com/images/GetOnlineTool-Logo.webp'" />
+        </a>
+        <p>GetOnlineTool provides free, fast, and simple online tools for writers, marketers, students, and developers. No account needed — ever.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="LinkedIn">💼</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/#tools">All Tools</a></li>
+          <li><a href="/about-us">About Us</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/contact-us">Contact Us</a></li>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-and-conditions">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Popular Tools</h4>
+        <ul>
+          <li><a href="/tool/word-count-online">Word Count</a></li>
+          <li><a href="/tool/character-count-online">Character Count</a></li>
+          <li><a href="/tool/keyword-phrase-maker">Keyword Phrase Maker</a></li>
+          <li><a href="/tool/case-maker-online">Case Maker</a></li>
+          <li><a href="/tool/text-reverse-generator">Text Reverse Generator</a></li>
+          <li><a href="/tool/palindrome-checker-online">Palindrome Checker</a></li>
+          <li><a href="/tool/online-calculator">Calculator</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Stay Updated</h4>
+        <p class="newsletter-desc">Get notified when we add new tools. No spam, ever.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email address" aria-label="Email address" />
+          <button type="button">Subscribe</button>
+        </div>
+        <p class="newsletter-note">We respect your privacy. Unsubscribe anytime.</p>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <div class="container footer-bar-inner">
+        <p>© 2025 GetOnlineTool. All rights reserved.</p>
+        <div class="footer-bar-links">
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms-and-conditions">Terms & Conditions</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ── Restore saved input ──
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('cm_text') || '';
+      document.getElementById('inputText').value = saved;
+      if (saved) updateStats(saved);
+    });
+
+    function saveInput(val) {
+      localStorage.setItem('cm_text', val);
+      updateStats(val);
+      // Re-run last active case if any
+      const active = document.querySelector('.case-btn.active');
+      if (active) convertCase(active.dataset.case);
+    }
+
+    function updateStats(text) {
+      const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+      const chars = text.length;
+      document.getElementById('inputStats').textContent =
+        `${words.toLocaleString()} word${words !== 1 ? 's' : ''} · ${chars.toLocaleString()} character${chars !== 1 ? 's' : ''}`;
+    }
+
+    // ── Case conversion logic ──
+    const CASE_NAMES = {
+      sentence:   'Sentence case',
+      title:      'Title Case',
+      upper:      'UPPER CASE',
+      lower:      'lower case',
+      alternating:'aLtErNaTiNg cAsE',
+      inverse:    'iNVERSE CaSe'
+    };
+
+    // Words not capitalised in Title Case
+    const TITLE_SKIP = new Set(['a','an','the','and','but','or','for','nor','on','at','to','by','in','of','up','as','is']);
+
+    function toSentenceCase(text) {
+      return text.toLowerCase().replace(/(^\s*\w|[.!?]\s*\w)/g, c => c.toUpperCase());
+    }
+
+    function toTitleCase(text) {
+      return text.toLowerCase().split(' ').map((word, i) => {
+        const clean = word.replace(/[^a-z]/gi, '').toLowerCase();
+        if (i !== 0 && TITLE_SKIP.has(clean)) return word;
+        return word.charAt(0).toUpperCase() + word.slice(1);
+      }).join(' ');
+    }
+
+    function toAlternating(text) {
+      let i = 0;
+      return text.split('').map(c => {
+        if (c.match(/[a-zA-Z]/)) {
+          return (i++ % 2 === 0) ? c.toLowerCase() : c.toUpperCase();
+        }
+        return c;
+      }).join('');
+    }
+
+    function toInverse(text) {
+      return text.split('').map(c =>
+        c === c.toUpperCase() ? c.toLowerCase() : c.toUpperCase()
+      ).join('');
+    }
+
+    function convertCase(type) {
+      const input = document.getElementById('inputText').value;
+      if (!input.trim()) return;
+
+      let result = '';
+      switch (type) {
+        case 'sentence':   result = toSentenceCase(input); break;
+        case 'title':      result = toTitleCase(input);    break;
+        case 'upper':      result = input.toUpperCase();   break;
+        case 'lower':      result = input.toLowerCase();   break;
+        case 'alternating':result = toAlternating(input);  break;
+        case 'inverse':    result = toInverse(input);      break;
+      }
+
+      document.getElementById('outputText').value = result;
+      document.getElementById('activeCase').textContent = '— ' + CASE_NAMES[type];
+
+      // Highlight active button
+      document.querySelectorAll('.case-btn').forEach(b => b.classList.remove('active'));
+      document.querySelector(`.case-btn[data-case="${type}"]`).classList.add('active');
+    }
+
+    // ── Copy output ──
+    function copyOutput(btn) {
+      const out = document.getElementById('outputText').value;
+      if (!out) return;
+      navigator.clipboard.writeText(out).catch(() => {
+        document.getElementById('outputText').select();
+        document.execCommand('copy');
+      });
+      const orig = btn.innerHTML;
+      btn.innerHTML = '✓ Copied!';
+      setTimeout(() => btn.innerHTML = orig, 2000);
+    }
+
+    // ── Clear ──
+    function clearAll() {
+      document.getElementById('inputText').value  = '';
+      document.getElementById('outputText').value = '';
+      document.getElementById('activeCase').textContent = '';
+      document.getElementById('inputStats').textContent = '0 words · 0 characters';
+      document.querySelectorAll('.case-btn').forEach(b => b.classList.remove('active'));
+      localStorage.removeItem('cm_text');
+    }
+
+    // ── Header ──
+    function toggleMenu(btn) {
+      const nav = document.getElementById('mobileNav');
+      const open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+      btn.classList.toggle('active', open);
+    }
+
+    // ── FAQ ──
+    function toggleFaq(btn) {
+      btn.closest('.faq-item').classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>

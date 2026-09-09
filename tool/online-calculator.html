@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<link rel="icon" type="image/webp" href="/images/getonlinetool-favicon.webp" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Calculator – Free Basic Calculator Tool</title>
+  <meta name="description" content="Free online calculator for basic arithmetic. Supports addition, subtraction, multiplication, division, percentage and more. Works on all devices, no sign-up needed." />
+  <link rel="canonical" href="https://getonlinetool.com/tool/online-calculator" />
+  <meta property="og:title" content="Online Calculator – Free Basic Calculator Tool" />
+  <meta property="og:description" content="Free online calculator. Fast, simple, works on all devices." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://getonlinetool.com/tool/online-calculator" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../tool.css" />
+  <link rel="stylesheet" href="online-calculator.css" />
+  
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Online Calculator",
+    "url": "https://getonlinetool.com/tool/online-calculator",
+    "description": "Free online basic calculator for everyday arithmetic.",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <!-- Logo -->
+      <a href="/" class="logo" aria-label="GetOnlineTool Home">
+        <img src="https://getonlinetool.com/images/GetOnlineTool-Logo.webp" alt="GetOnlineTool Logo" class="logo-img" />
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="main-nav" aria-label="Main navigation">
+
+        <!-- All Tools with Dropdown -->
+        <div class="nav-dropdown">
+          <a>
+            All Tools
+            <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="dropdown-menu">
+            <div class="dropdown-col">
+              <span class="dropdown-cat">📝 Text Tools</span>
+              <a href="/tool/word-count-online">Word Count</a>
+              <a href="/tool/character-count-online">Character Count</a>
+              <a href="/tool/case-maker-online">Case Maker</a>
+              <a href="/tool/upper-to-lower-case">Upper To Lower Case</a>
+              <a href="/tool/lower-to-upper-case">Lower To Upper Case</a>
+              <a href="/tool/text-reverse-generator">Text Reverse Generator</a>
+              <a href="/tool/small-caps-generator">Small Caps Generator</a>
+              <a href="/tool/upside-down-text-generator">Upside Down Text</a>
+              <a href="/tool/palindrome-checker-online">Palindrome Checker</a>
+              <a href="/tool/notepad-online">Notepad Online</a>
+            </div>
+            <div class="dropdown-col">
+              <span class="dropdown-cat">🔑 SEO Tools</span>
+              <a href="/tool/keyword-phrase-maker">Keyword Phrase Maker</a>
+              <a href="/tool/json-ld-maker-online">JSON-LD Generator</a>
+              <span class="dropdown-cat" style="margin-top:16px;">🧮 Utility</span>
+              <a href="/tool/online-calculator">Calculator</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="/blog">Blog</a>
+        <a href="/about-us">About Us</a>
+        <a href="/contact-us">Contact Us</a>
+      </nav>
+
+      <!-- Hamburger (mobile) -->
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMenu(this)">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+      <p>All Tools</p>
+      <a href="/tool/word-count-online" class="mobile-sub">↳ Word Count</a>
+      <a href="/tool/character-count-online" class="mobile-sub">↳ Character Count</a>
+      <a href="/tool/case-maker-online" class="mobile-sub">↳ Case Maker</a>
+      <a href="/tool/upper-to-lower-case" class="mobile-sub">↳ Upper To Lower Case</a>
+      <a href="/tool/lower-to-upper-case" class="mobile-sub">↳ Lower To Upper Case</a>
+      <a href="/tool/text-reverse-generator" class="mobile-sub">↳ Text Reverse Generator</a>
+      <a href="/tool/small-caps-generator" class="mobile-sub">↳ Small Caps Generator</a>
+      <a href="/tool/upside-down-text-generator" class="mobile-sub">↳ Upside Down Text</a>
+      <a href="/tool/palindrome-checker-online" class="mobile-sub">↳ Palindrome Checker</a>
+      <a href="/tool/notepad-online" class="mobile-sub">↳ Notepad Online</a>
+      <a href="/tool/keyword-phrase-maker" class="mobile-sub">↳ Keyword Phrase Maker</a>
+      <a href="#json-ld" class="mobile-sub">↳ JSON-LD Generator</a>
+      <a href="/tool/online-calculator" class="mobile-sub">↳ Calculator</a>
+      <a href="/blog">Blog</a>
+      <a href="/about-us">About Us</a>
+      <a href="/contact-us">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a><span>›</span>
+        <a href="/#tools">Tools</a><span>›</span>
+        <span>Online Calculator</span>
+      </div>
+      <h1 class="page-hero-title">Online Calculator</h1>
+      <p class="page-hero-sub">A fast, simple calculator for everyday arithmetic. Supports keyboard input and keeps a history of your recent calculations.</p>
+    </div>
+  </section>
+
+  <!-- TOOL -->
+  <section class="tool-section">
+    <div class="container">
+      <div class="tool-wrapper">
+        <div class="calc-layout">
+
+          <!-- CALCULATOR -->
+          <div class="calc-wrap">
+
+            <!-- Display -->
+            <div class="calc-display">
+              <div class="calc-expression" id="expression">&nbsp;</div>
+              <div class="calc-result" id="display">0</div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="calc-grid">
+              <!-- Row 1 -->
+              <button class="calc-btn fn" onclick="clearAll()">AC</button>
+              <button class="calc-btn fn" onclick="toggleSign()">+/−</button>
+              <button class="calc-btn fn" onclick="percentage()">%</button>
+              <button class="calc-btn op" onclick="setOp('÷')">÷</button>
+              <!-- Row 2 -->
+              <button class="calc-btn" onclick="num('7')">7</button>
+              <button class="calc-btn" onclick="num('8')">8</button>
+              <button class="calc-btn" onclick="num('9')">9</button>
+              <button class="calc-btn op" onclick="setOp('×')">×</button>
+              <!-- Row 3 -->
+              <button class="calc-btn" onclick="num('4')">4</button>
+              <button class="calc-btn" onclick="num('5')">5</button>
+              <button class="calc-btn" onclick="num('6')">6</button>
+              <button class="calc-btn op" onclick="setOp('−')">−</button>
+              <!-- Row 4 -->
+              <button class="calc-btn" onclick="num('1')">1</button>
+              <button class="calc-btn" onclick="num('2')">2</button>
+              <button class="calc-btn" onclick="num('3')">3</button>
+              <button class="calc-btn op" onclick="setOp('+')">+</button>
+              <!-- Row 5 -->
+              <button class="calc-btn wide" onclick="num('0')">0</button>
+              <button class="calc-btn" onclick="decimal()">.</button>
+              <button class="calc-btn eq" onclick="equals()">=</button>
+            </div>
+
+            <!-- Backspace -->
+            <div class="calc-extras">
+              <button class="calc-extra-btn" onclick="backspace()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 4H8l-7 8 7 8h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/><line x1="18" y1="9" x2="13" y2="14"/><line x1="13" y1="9" x2="18" y2="14"/></svg>
+                Backspace
+              </button>
+              <span class="calc-keyboard-hint">Keyboard supported</span>
+            </div>
+          </div>
+
+          <!-- HISTORY -->
+          <div class="calc-history-col">
+            <div class="calc-history-header">
+              <span class="calc-history-title">History</span>
+              <button class="cc-clear-btn" onclick="clearHistory()">Clear</button>
+            </div>
+            <div class="calc-history-list" id="historyList">
+              <p class="calc-history-empty">Your calculations will appear here.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="content-section">
+    <div class="container content-narrow">
+
+      <h2>How to Use the Online Calculator</h2>
+      <p>This calculator works exactly like a standard handheld calculator — click buttons or use your keyboard to enter numbers and operators.</p>
+      <ol class="how-steps">
+        <li><strong>Click number buttons</strong> or press keys on your keyboard to enter numbers.</li>
+        <li><strong>Select an operator</strong> — addition (+), subtraction (−), multiplication (×), or division (÷).</li>
+        <li><strong>Press = or Enter</strong> to see the result. The calculation is saved in the History panel on the right.</li>
+        <li><strong>Use AC</strong> to clear everything, <strong>+/−</strong> to toggle the sign, <strong>%</strong> to convert to a percentage, and the backspace button to delete the last digit.</li>
+      </ol>
+
+      <h2>Keyboard Shortcuts</h2>
+      <div class="limits-table">
+        <div class="lt-row lt-head"><span>Key</span><span>Action</span></div>
+        <div class="lt-row"><span>0 – 9</span><span>Enter digits</span></div>
+        <div class="lt-row"><span>+ − * /</span><span>Operators</span></div>
+        <div class="lt-row"><span>Enter or =</span><span>Calculate result</span></div>
+        <div class="lt-row"><span>Backspace</span><span>Delete last digit</span></div>
+        <div class="lt-row"><span>Escape</span><span>Clear all (AC)</span></div>
+        <div class="lt-row"><span>.</span><span>Decimal point</span></div>
+        <div class="lt-row"><span>%</span><span>Percentage</span></div>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            Does this calculator support keyboard input?
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p>Yes. You can use your keyboard to type numbers, operators (+, -, *, /), Enter or = to calculate, Backspace to delete, Escape to clear, and the period key for decimals.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            How does the percentage button work?
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p>The % button divides the current number by 100. For example, entering 75 and pressing % gives 0.75. If you then multiply by another number (e.g. 200 × 75%), you get 150 — which is 75% of 200.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            Is my calculation history saved?
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p>Yes. Your calculation history is saved in your browser's Local Storage, so it persists even if you refresh the page. You can clear it anytime using the Clear button above the history panel.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            Is this tool free?
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p>Completely free, no account required. All tools on GetOnlineTool.com are free for everyone with no hidden limits.</p></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED -->
+  <section class="related-section">
+    <div class="container">
+      <h2 class="section-title">Related Tools</h2>
+      <div class="related-grid">
+        <a href="/tool/word-count-online" class="tool-card">
+          <div class="tool-icon" style="background:#FFF0E6;">📝</div>
+          <div class="tool-info"><h3>Word Count</h3><p>Count words, characters and sentences instantly.</p></div>
+          <span class="tool-tag">Text</span>
+        </a>
+        <a href="/tool/character-count-online" class="tool-card">
+          <div class="tool-icon" style="background:#E8F0FE;">🔤</div>
+          <div class="tool-info"><h3>Character Count</h3><p>Count total characters with and without spaces.</p></div>
+          <span class="tool-tag">Text</span>
+        </a>
+        <a href="/tool/notepad-online" class="tool-card">
+          <div class="tool-icon" style="background:#FFF9E6;">🗒</div>
+          <div class="tool-info"><h3>Notepad Online</h3><p>A clean online notepad that saves your text locally.</p></div>
+          <span class="tool-tag">Text</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo logo-light">
+          <img src="/images/GetOnlineTool-Logo.webp" alt="GetOnlineTool Logo" class="logo-img footer-logo-img"
+               onerror="this.onerror=null;this.src='https://getonlinetool.com/images/GetOnlineTool-Logo.webp'" />
+        </a>
+        <p>GetOnlineTool provides free, fast, and simple online tools for writers, marketers, students, and developers. No account needed — ever.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="LinkedIn">💼</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/#tools">All Tools</a></li>
+          <li><a href="/about-us">About Us</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/contact-us">Contact Us</a></li>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-and-conditions">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Popular Tools</h4>
+        <ul>
+          <li><a href="/tool/word-count-online">Word Count</a></li>
+          <li><a href="/tool/character-count-online">Character Count</a></li>
+          <li><a href="/tool/keyword-phrase-maker">Keyword Phrase Maker</a></li>
+          <li><a href="/tool/case-maker-online">Case Maker</a></li>
+          <li><a href="/tool/text-reverse-generator">Text Reverse Generator</a></li>
+          <li><a href="/tool/palindrome-checker-online">Palindrome Checker</a></li>
+          <li><a href="/tool/online-calculator">Calculator</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Stay Updated</h4>
+        <p class="newsletter-desc">Get notified when we add new tools. No spam, ever.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email address" aria-label="Email address" />
+          <button type="button">Subscribe</button>
+        </div>
+        <p class="newsletter-note">We respect your privacy. Unsubscribe anytime.</p>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <div class="container footer-bar-inner">
+        <p>© 2025 GetOnlineTool. All rights reserved.</p>
+        <div class="footer-bar-links">
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms-and-conditions">Terms & Conditions</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    let current = '0', operator = null, prev = null, fresh = false;
+    const display    = document.getElementById('display');
+    const expression = document.getElementById('expression');
+    let history      = JSON.parse(localStorage.getItem('calc_history') || '[]');
+
+    renderHistory();
+
+    function updateDisplay(val) {
+      const n = parseFloat(val);
+      if (!isNaN(n) && isFinite(n)) {
+        display.textContent = n.toLocaleString('en', { maximumFractionDigits: 10 });
+      } else {
+        display.textContent = val;
+      }
+      // Shrink font for long numbers
+      display.style.fontSize = display.textContent.length > 12 ? '1.6rem' : display.textContent.length > 9 ? '2rem' : '';
+    }
+
+    function num(n) {
+      if (fresh) { current = n; fresh = false; }
+      else current = current === '0' ? n : current + n;
+      updateDisplay(current);
+    }
+
+    function decimal() {
+      if (fresh) { current = '0.'; fresh = false; }
+      else if (!current.includes('.')) current += '.';
+      updateDisplay(current);
+    }
+
+    function setOp(op) {
+      if (operator && !fresh) calculate(false);
+      prev = parseFloat(current);
+      operator = op;
+      expression.textContent = `${prev.toLocaleString('en')} ${op}`;
+      fresh = true;
+    }
+
+    function calculate(addHistory = true) {
+      if (operator === null || prev === null) return;
+      const a = prev, b = parseFloat(current);
+      let result;
+      switch (operator) {
+        case '+': result = a + b; break;
+        case '−': result = a - b; break;
+        case '×': result = a * b; break;
+        case '÷': result = b === 0 ? 'Error' : a / b; break;
+        default: return;
+      }
+      const expr = `${a.toLocaleString('en')} ${operator} ${b.toLocaleString('en')} =`;
+      expression.textContent = expr;
+      const resStr = result === 'Error' ? 'Error' : String(parseFloat(result.toFixed(10)));
+      if (addHistory && result !== 'Error') saveHistory(expr, resStr);
+      current = resStr;
+      updateDisplay(current);
+      operator = null; prev = null; fresh = true;
+    }
+
+    function equals() { calculate(true); }
+
+    function clearAll() {
+      current = '0'; operator = null; prev = null; fresh = false;
+      expression.textContent = '\u00a0';
+      updateDisplay('0');
+    }
+
+    function backspace() {
+      if (fresh || current === '0') return;
+      current = current.length > 1 ? current.slice(0, -1) : '0';
+      updateDisplay(current);
+    }
+
+    function toggleSign() {
+      current = String(parseFloat(current) * -1);
+      updateDisplay(current);
+    }
+
+    function percentage() {
+      current = String(parseFloat(current) / 100);
+      updateDisplay(current);
+    }
+
+    // History
+    function saveHistory(expr, result) {
+      history.unshift({ expr, result, time: new Date().toLocaleTimeString() });
+      if (history.length > 30) history.pop();
+      localStorage.setItem('calc_history', JSON.stringify(history));
+      renderHistory();
+    }
+
+    function renderHistory() {
+      const list = document.getElementById('historyList');
+      if (history.length === 0) {
+        list.innerHTML = '<p class="calc-history-empty">Your calculations will appear here.</p>';
+        return;
+      }
+      list.innerHTML = history.map(h => `
+        <div class="calc-history-item" onclick="loadResult('${h.result}')">
+          <span class="calc-history-expr">${h.expr}</span>
+          <span class="calc-history-res">${parseFloat(h.result).toLocaleString('en')}</span>
+        </div>
+      `).join('');
+    }
+
+    function loadResult(val) {
+      current = val; fresh = false;
+      updateDisplay(current);
+    }
+
+    function clearHistory() {
+      history = [];
+      localStorage.removeItem('calc_history');
+      renderHistory();
+    }
+
+    // Keyboard support
+    document.addEventListener('keydown', e => {
+      if (e.key >= '0' && e.key <= '9') num(e.key);
+      else if (e.key === '.') decimal();
+      else if (e.key === '+') setOp('+');
+      else if (e.key === '-') setOp('−');
+      else if (e.key === '*') setOp('×');
+      else if (e.key === '/') { e.preventDefault(); setOp('÷'); }
+      else if (e.key === 'Enter' || e.key === '=') equals();
+      else if (e.key === 'Backspace') backspace();
+      else if (e.key === 'Escape') clearAll();
+      else if (e.key === '%') percentage();
+    });
+
+    function toggleMenu(btn) {
+      const nav  = document.getElementById('mobileNav');
+      const open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+      btn.classList.toggle('active', open);
+    }
+
+    function toggleFaq(btn) {
+      btn.closest('.faq-item').classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>
