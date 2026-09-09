@@ -1,143 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Coming Soon - GetOnlineTool</title>
-<link rel="icon" type="image/webp" href="/images/getonlinetool-favicon.webp">
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:Inter,Segoe UI,Arial,sans-serif;
-    background:#121212;
-    color:#fff;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-    overflow:hidden;
-}
-
-/* Background Glow */
-body::before{
-    content:"";
-    position:absolute;
-    width:500px;
-    height:500px;
-    background:#ca5b1f;
-    opacity:.08;
-    border-radius:50%;
-    filter:blur(140px);
-    top:-150px;
-    right:-150px;
-}
-
-body::after{
-    content:"";
-    position:absolute;
-    width:450px;
-    height:450px;
-    background:#ca5b1f;
-    opacity:.05;
-    border-radius:50%;
-    filter:blur(120px);
-    bottom:-180px;
-    left:-180px;
-}
-
-.container{
-    width:90%;
-    max-width:700px;
-    text-align:center;
-    position:relative;
-    z-index:2;
-}
-
-.logo{
-    width:320px;
-    max-width:90%;
-    margin-bottom:45px;
-}
-
-h1{
-    font-size:64px;
-    font-weight:700;
-    letter-spacing:-2px;
-    margin-bottom:18px;
-}
-
-.orange{
-    color:#ca5b1f;
-}
-
-p{
-    color:#b8b8b8;
-    font-size:19px;
-    line-height:1.7;
-    max-width:580px;
-    margin:auto;
-}
-
-.line{
-    width:90px;
-    height:4px;
-    background:#ca5b1f;
-    margin:40px auto;
-    border-radius:20px;
-}
-
-.footer{
-    margin-top:45px;
-    color:#666;
-    font-size:14px;
-}
-
-@media(max-width:768px){
-
-.logo{
-    width:240px;
-}
-
-h1{
-    font-size:42px;
-}
-
-p{
-    font-size:17px;
-}
-
-}
-</style>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – GetOnlineTool | Get in Touch or Suggest a Tool</title>
+  <meta name="description" content="Contact the GetOnlineTool team. Suggest a new free online tool, report a bug, or ask a question. We read every message and reply as soon as we can." />
+  <link rel="canonical" href="https://getonlinetool.com/contact-us" />
+  <meta property="og:title" content="Contact Us – GetOnlineTool | Get in Touch or Suggest a Tool" />
+  <meta property="og:description" content="Have a question, bug report, or tool idea? Reach the GetOnlineTool team here." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://getonlinetool.com/contact-us" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/tool.css" />
+  <style>
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:8px}
+    .contact-form-card{background:var(--bg-white);border:1px solid var(--border);border-radius:16px;padding:28px}
+    .cf-field{margin-bottom:18px}
+    .cf-field label{display:block;font-weight:600;font-size:.9rem;margin-bottom:7px;color:var(--text)}
+    .cf-field input,.cf-field textarea{width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:10px;font-family:inherit;font-size:.95rem;background:var(--bg);color:var(--text);transition:border-color .2s}
+    .cf-field input:focus,.cf-field textarea:focus{outline:none;border-color:var(--primary)}
+    .cf-field textarea{resize:vertical;min-height:130px}
+    .cf-submit{width:100%;padding:13px;background:var(--primary);color:#fff;border:none;border-radius:10px;font-weight:700;font-size:.98rem;cursor:pointer;transition:background .2s}
+    .cf-submit:hover{background:var(--primary-dk)}
+    .cf-note{font-size:.82rem;color:var(--text-muted);margin-top:12px;text-align:center}
+    .contact-info-card{display:flex;flex-direction:column;gap:22px}
+    .ci-item{display:flex;gap:14px;align-items:flex-start}
+    .ci-icon{width:44px;height:44px;flex-shrink:0;border-radius:12px;background:var(--primary-lt);display:flex;align-items:center;justify-content:center;font-size:1.3rem}
+    .ci-item h3{font-size:1rem;margin-bottom:3px;color:var(--text)}
+    .ci-item p{color:var(--text-muted);font-size:.92rem;line-height:1.55;margin:0}
+    .ci-item a{color:var(--primary);text-decoration:none}
+    .ci-item a:hover{text-decoration:underline}
+    @media(max-width:768px){.contact-grid{grid-template-columns:1fr;gap:28px}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "url": "https://getonlinetool.com/contact-us",
+    "name": "Contact GetOnlineTool",
+    "description": "Contact page for GetOnlineTool. Suggest a tool, report a bug, or ask a question.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "GetOnlineTool",
+      "url": "https://getonlinetool.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://getonlinetool.com/images/GetOnlineTool-Logo.webp"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "url": "https://getonlinetool.com/contact-us",
+        "availableLanguage": "English"
+      },
+      "sameAs": [
+        "https://facebook.com/getonlinetoolcom"
+      ]
+    }
+  }
+  </script>
+  <link rel="icon" type="image/webp" href="/images/getonlinetool-favicon.webp">
 </head>
 <body>
 
-<div class="container">
-
-    <img src="https://getonlinetool.com/images/GetOnlineTool-Logo.webp"
-         alt="GetOnlineTool"
-         class="logo">
-
-    <h1>Coming <span class="orange">Soon</span></h1>
-
-    <p>
-        We're working on this page and it'll be available very soon.
-        Thanks for your patience while we build something useful for you.
-    </p>
-
-    <div class="line"></div>
-
-    <div class="footer">
-        © 2026 GetOnlineTool.com
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="GetOnlineTool Home">
+        <img src="https://getonlinetool.com/images/GetOnlineTool-Logo.webp" alt="GetOnlineTool Logo" class="logo-img" />
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <div class="nav-dropdown">
+          <a>
+            All Tools
+            <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="dropdown-menu">
+            <div class="dropdown-col">
+              <span class="dropdown-cat">📝 Text Tools</span>
+              <a href="/tool/word-count-online">Word Count</a>
+              <a href="/tool/character-count-online">Character Count</a>
+              <a href="/tool/case-maker-online">Case Maker</a>
+              <a href="/tool/upper-to-lower-case">Upper To Lower Case</a>
+              <a href="/tool/lower-to-upper-case">Lower To Upper Case</a>
+              <a href="/tool/text-reverse-generator">Text Reverse Generator</a>
+              <a href="/tool/small-caps-generator">Small Caps Generator</a>
+              <a href="/tool/upside-down-text-generator">Upside Down Text</a>
+              <a href="/tool/palindrome-checker-online">Palindrome Checker</a>
+              <a href="/tool/notepad-online">Notepad Online</a>
+            </div>
+            <div class="dropdown-col">
+              <span class="dropdown-cat">🔑 SEO Tools</span>
+              <a href="/tool/keyword-phrase-maker">Keyword Phrase Maker</a>
+              <a href="/tool/json-ld-maker-online">JSON-LD Generator</a>
+              <span class="dropdown-cat" style="margin-top:16px;">🧮 Utility</span>
+              <a href="/tool/online-calculator">Calculator</a>
+            </div>
+          </div>
+        </div>
+        <a href="/blog">Blog</a>
+        <a href="/about-us">About Us</a>
+        <a href="/contact-us">Contact Us</a>
+      </nav>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMenu(this)">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+      <p>All Tools</p>
+      <a href="/tool/word-count-online" class="mobile-sub">↳ Word Count</a>
+      <a href="/tool/character-count-online" class="mobile-sub">↳ Character Count</a>
+      <a href="/tool/case-maker-online" class="mobile-sub">↳ Case Maker</a>
+      <a href="/tool/upper-to-lower-case" class="mobile-sub">↳ Upper To Lower Case</a>
+      <a href="/tool/lower-to-upper-case" class="mobile-sub">↳ Lower To Upper Case</a>
+      <a href="/tool/text-reverse-generator" class="mobile-sub">↳ Text Reverse Generator</a>
+      <a href="/tool/small-caps-generator" class="mobile-sub">↳ Small Caps Generator</a>
+      <a href="/tool/upside-down-text-generator" class="mobile-sub">↳ Upside Down Text</a>
+      <a href="/tool/palindrome-checker-online" class="mobile-sub">↳ Palindrome Checker</a>
+      <a href="/tool/notepad-online" class="mobile-sub">↳ Notepad Online</a>
+      <a href="/tool/keyword-phrase-maker" class="mobile-sub">↳ Keyword Phrase Maker</a>
+      <a href="/tool/json-ld-maker-online" class="mobile-sub">↳ JSON-LD Generator</a>
+      <a href="/tool/online-calculator" class="mobile-sub">↳ Calculator</a>
+      <a href="/blog">Blog</a>
+      <a href="/about-us">About Us</a>
+      <a href="/contact-us">Contact Us</a>
+    </nav>
+  </header>
 
-</div>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a><span>›</span>
+        <span>Contact Us</span>
+      </div>
+      <h1 class="page-hero-title">Contact Us</h1>
+      <p class="page-hero-sub">Got a question, spotted a bug, or thought of a tool we should build next? Drop us a line. Every message lands with a real person, and we do our best to reply quickly.</p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="content-section">
+    <div class="container content-narrow">
+
+      <div class="contact-grid">
+
+        <!-- Form -->
+        <div class="contact-form-card">
+          <div class="cf-field">
+            <label for="cfName">Your Name</label>
+            <input type="text" id="cfName" placeholder="Jane Doe" />
+          </div>
+          <div class="cf-field">
+            <label for="cfEmail">Email Address</label>
+            <input type="email" id="cfEmail" placeholder="you@example.com" />
+          </div>
+          <div class="cf-field">
+            <label for="cfSubject">Subject</label>
+            <input type="text" id="cfSubject" placeholder="Tool suggestion, bug report, or question" />
+          </div>
+          <div class="cf-field">
+            <label for="cfMessage">Message</label>
+            <textarea id="cfMessage" placeholder="Tell us what is on your mind..."></textarea>
+          </div>
+          <button class="cf-submit" onclick="sendContact()">Send Message</button>
+          <p class="cf-note">Your message opens in your own email app so you stay in control of what you send.</p>
+        </div>
+
+        <!-- Info -->
+        <div class="contact-info-card">
+          <div class="ci-item">
+            <div class="ci-icon">💡</div>
+            <div>
+              <h3>Suggest a Tool</h3>
+              <p>A big share of what we build comes straight from visitor ideas. If a tool would make your day easier, tell us and it may be next on the list.</p>
+            </div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon">🐞</div>
+            <div>
+              <h3>Report a Problem</h3>
+              <p>If something is not working the way it should, let us know the tool name and what happened. Clear reports help us fix things fast.</p>
+            </div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon">📘</div>
+            <div>
+              <h3>Find Us on Facebook</h3>
+              <p>Prefer social media? Reach out through our page at <a href="https://facebook.com/getonlinetoolcom" rel="noopener">facebook.com/getonlinetoolcom</a>.</p>
+            </div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon">⏱️</div>
+            <div>
+              <h3>Response Time</h3>
+              <p>We are a lean team, so replies usually take a day or two. We read everything, even if it takes us a moment to get back to you.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <h2>How to Reach the GetOnlineTool Team</h2>
+      <p>We built GetOnlineTool to be truly useful and the best way for us to improve is to get feedback from the people who use it. The easiest way for most questions is the contact form above. Fill in your name, email, short subject and message and press send. Everything’s filled in, and your default email app launches so you can review before sending. Nothing is silently transmitted in the background.</p>
+      <p>Not sure what to write? Here are the messages we love receiving most.</p>
+
+      <h2>What You Can Contact Us About</h2>
+      <p>Tool requests are our favourite. Keep wishing that some converter, counter or generator existed describe what you would need and how you would use it. The more detail you provide the better we can align the tool to the real world task. Bug reports are also appreciated. Let us know what tool misbehaved, what device or browser you were on and what you expected to happen vs what actually happened. Also fair game are general questions about how a tool works, whether your data is private, or how our tools handle a particular edge case.</p>
+      <p>Your feedback really matters if you’re a writer, marketer, student or developer who uses our tools on a daily basis. Small comments have already shaped features and fixed rough edges we never would have caught on our own. </p>
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            How long does it take to get a reply?
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p>Most messages get a response within one to two days. We are a small team, so we cannot promise instant replies, but we do read every single message that comes in.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            Can I really suggest a new tool?
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p>Yes, and we hope you do. Many tools on the site exist because a visitor asked for them. Send us the idea with a bit of context on how you would use it.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            Is there a phone number or live chat?
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p>Not at the moment. We handle support through the contact form and our Facebook page, which lets us keep the site free and lean while still helping everyone who reaches out.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            Do you store the details I send?
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p>The contact form uses your own email app to send the message, so we only ever see what you choose to send us. For more on how we handle information, see our <a href="/privacy-policy">Privacy Policy</a>.</p></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo logo-light">
+          <img src="https://getonlinetool.com/images/GetOnlineTool-Logo.webp" alt="GetOnlineTool Logo" class="logo-img footer-logo-img" />
+        </a>
+        <p>GetOnlineTool provides free, fast, and simple online tools for writers, marketers, students, and developers. No account needed — ever.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="https://facebook.com/getonlinetoolcom" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="LinkedIn">💼</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about-us">About Us</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/contact-us">Contact Us</a></li>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-and-conditions">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Popular Tools</h4>
+        <ul>
+          <li><a href="/tool/word-count-online">Word Count</a></li>
+          <li><a href="/tool/character-count-online">Character Count</a></li>
+          <li><a href="/tool/keyword-phrase-maker">Keyword Phrase Maker</a></li>
+          <li><a href="/tool/case-maker-online">Case Maker</a></li>
+          <li><a href="/tool/text-reverse-generator">Text Reverse Generator</a></li>
+          <li><a href="/tool/palindrome-checker-online">Palindrome Checker</a></li>
+          <li><a href="/tool/online-calculator">Calculator</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Stay Updated</h4>
+        <p class="newsletter-desc">Get notified when we add new tools. No spam, ever.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email address" aria-label="Email address" />
+          <button type="button">Subscribe</button>
+        </div>
+        <p class="newsletter-note">We respect your privacy. Unsubscribe anytime.</p>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <div class="container footer-bar-inner">
+        <p>© 2026 GetOnlineTool. All rights reserved.</p>
+        <div class="footer-bar-links">
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms-and-conditions">Terms of Service</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    function sendContact() {
+      const name = document.getElementById('cfName').value.trim();
+      const email = document.getElementById('cfEmail').value.trim();
+      const subject = document.getElementById('cfSubject').value.trim() || 'Message from GetOnlineTool';
+      const message = document.getElementById('cfMessage').value.trim();
+      const body = 'Name: ' + name + '%0D%0AEmail: ' + email + '%0D%0A%0D%0A' + encodeURIComponent(message);
+      window.location.href = 'mailto:contact@getonlinetool.com?subject=' + encodeURIComponent(subject) + '&body=' + body;
+    }
+    function toggleMenu(btn) {
+      const nav = document.getElementById('mobileNav');
+      const open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+      btn.classList.toggle('active', open);
+    }
+    function toggleFaq(btn) {
+      btn.closest('.faq-item').classList.toggle('open');
+    }
+  </script>
 
 </body>
 </html>

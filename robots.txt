@@ -1,0 +1,15 @@
+User-agent: *
+
+Allow: /
+Disallow: /.htaccess
+Disallow: /tool/*.css
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+
+Sitemap: https://getonlinetool.com/sitemap.xml
+
