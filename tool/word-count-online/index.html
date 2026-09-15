@@ -3,42 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Convert Lower To Upper Case Online Free | GetOnlineTool</title>
-  <meta name="description" content="Free tool to convert lower to upper case instantly. Paste your text, change lower to upper case in one click - works live in your browser, no sign-up." />
-  <link rel="canonical" href="https://getonlinetool.com/tool/lower-to-upper-case" />
-  <meta property="og:title" content="Lower To Upper Case - Convert Lower To Upper Case Online Free" />
-  <meta property="og:description" content="Convert any text to UPPERCASE instantly. Free, browser-based, no account needed." />
+  <title>Word Count Online – Free Word Counter Tool</title>
+  <meta name="description" content="Count words instantly with our free online word counter. Also shows characters, sentences, paragraphs, reading time and more — live as you type." />
+  <link rel="canonical" href="https://getonlinetool.com/tool/word-count-online" />
+  <meta property="og:title" content="Word Count Online – Free Word Counter Tool" />
+  <meta property="og:description" content="Count words instantly. Free, fast, browser-based — no account needed." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://getonlinetool.com/tool/lower-to-upper-case" />
+  <meta property="og:url" content="https://getonlinetool.com/tool/word-count-online" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../tool.css" />
-<link rel="icon" type="image/webp" href="/images/getonlinetool-favicon.webp">
-  
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/tool.css" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "Lower To Upper Case",
-    "url": "https://getonlinetool.com/tool/lower-to-upper-case",
-    "description": "Free online tool to convert lowercase text to UPPERCASE instantly.",
+    "name": "Word Count Online",
+    "url": "https://getonlinetool.com/tool/word-count-online",
+    "description": "Free online tool to count words, characters, sentences, and paragraphs instantly.",
     "applicationCategory": "UtilityApplication",
     "operatingSystem": "Any",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
   }
   </script>
+<link rel="icon" type="image/webp" href="/images/getonlinetool-favicon.webp">
+
 </head>
 <body>
 
+  <!-- HEADER -->
   <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
 
       <!-- Logo -->
       <a href="/" class="logo" aria-label="GetOnlineTool Home">
-        <img src="https://getonlinetool.com/images/GetOnlineTool-Logo.webp" alt="GetOnlineTool Logo" class="logo-img" />
+        <img src="/images/GetOnlineTool-Logo.webp" alt="GetOnlineTool Logo" class="logo-img" />
       </a>
 
       <!-- Desktop Nav -->
@@ -100,7 +101,7 @@
       <a href="/tool/palindrome-checker-online" class="mobile-sub">↳ Palindrome Checker</a>
       <a href="/tool/notepad-online" class="mobile-sub">↳ Notepad Online</a>
       <a href="/tool/keyword-phrase-maker" class="mobile-sub">↳ Keyword Phrase Maker</a>
-      <a href="#json-ld" class="mobile-sub">↳ JSON-LD Generator</a>
+      <a href="/tool/json-ld-maker-online" class="mobile-sub">↳ JSON-LD Generator</a>
       <a href="/tool/online-calculator" class="mobile-sub">↳ Calculator</a>
       <a href="/blog">Blog</a>
       <a href="/about-us">About Us</a>
@@ -114,10 +115,10 @@
       <div class="breadcrumb">
         <a href="/">Home</a><span>›</span>
         <a href="/#tools">Tools</a><span>›</span>
-        <span>Lower To Upper Case</span>
+        <span>Word Count Online</span>
       </div>
-      <h1 class="page-hero-title">Convert Lower to Upper Case</h1>
-      <p class="page-hero-sub">Paste any lowercase or mixed-case text and convert it to UPPERCASE instantly — one click, no sign-up required.</p>
+      <h1 class="page-hero-title">Word Count Online</h1>
+      <p class="page-hero-sub">Instantly count words in your text — live as you type. Also tracks characters, sentences, paragraphs, lines, and estimated reading time.</p>
     </div>
   </section>
 
@@ -125,64 +126,69 @@
   <section class="tool-section">
     <div class="container">
       <div class="tool-wrapper">
-        <div class="cm-layout">
+        <div class="cc-layout">
 
-          <!-- LEFT: Input + Output -->
-          <div class="cm-left">
-            <div class="cm-box">
-              <label class="cm-label">Input Text</label>
-              <div class="cc-textarea-wrap">
-                <textarea id="inputText" class="cc-textarea"
-                  style="min-height:240px"
-                  placeholder="Paste your lowercase or mixed case text here..."
-                  oninput="saveInput(this.value)"
-                  spellcheck="false"></textarea>
-                <div class="cc-textarea-footer">
-                  <span class="cc-live-badge" id="inputStats">0 words · 0 characters</span>
-                  <button class="cc-clear-btn" onclick="clearAll()">Clear</button>
-                </div>
+          <!-- LEFT: Big Textarea -->
+          <div class="cc-left">
+            <div class="cc-textarea-wrap">
+              <textarea rows="20" cols="120"
+                id="inputText"
+                class="cc-textarea"
+                placeholder="Type or paste your text here..."
+                oninput="analyzeText(this.value)"
+                spellcheck="true"
+              ></textarea>
+              <div class="cc-textarea-footer">
+                <span class="cc-live-badge">● Live counting</span>
+                <button class="cc-clear-btn" onclick="clearText()">Clear</button>
               </div>
-            </div>
-
-            <div class="cm-box">
-              <div class="cm-output-header">
-                <label class="cm-label">Output <span class="cm-active-case" style="margin-right: 10px">UPPERCASE</span></label>
-                <button class="btn-copy" onclick="copyOutput(this)">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  Copy
-                </button>
-              </div>
-              <textarea id="outputText" class="cc-textarea output-textarea"
-                style="min-height:200px"
-                readonly placeholder="UPPERCASE OUTPUT WILL APPEAR HERE..."
-                spellcheck="false"></textarea>
             </div>
           </div>
 
-          <!-- RIGHT: Sidebar -->
-          <div class="cm-right">
+          <!-- RIGHT: Stats Sidebar -->
+          <div class="cc-right">
 
-            <div class="simple-action-card">
-              <div class="sac-icon">🔠</div>
-              <p class="sac-desc">Converts every lowercase letter to its UPPERCASE equivalent. Numbers, spaces, and punctuation are left unchanged.</p>
-              <div class="sac-example">
-                <span class="sac-before">hello world</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                <span class="sac-after">HELLO WORLD</span>
+            <!-- Word count — primary big stat -->
+            <div class="cc-big-stat">
+              <span class="cc-big-num" id="wordCount">0</span>
+              <span class="cc-big-label">Words</span>
+            </div>
+
+            <!-- Characters — secondary big stat -->
+            <div class="cc-big-stat secondary">
+              <span class="cc-big-num" id="charCount">0</span>
+              <span class="cc-big-label">Characters <em>(with spaces)</em></span>
+            </div>
+
+            <!-- Other stats -->
+            <div class="cc-stat-card">
+              <div class="cc-stat-row">
+                <span class="cc-stat-row-label">Characters (no spaces)</span>
+                <span class="cc-stat-row-val" id="charNoSpaces">0</span>
+              </div>
+              <div class="cc-stat-row">
+                <span class="cc-stat-row-label">Sentences</span>
+                <span class="cc-stat-row-val" id="sentenceCount">0</span>
+              </div>
+              <div class="cc-stat-row">
+                <span class="cc-stat-row-label">Paragraphs</span>
+                <span class="cc-stat-row-val" id="paraCount">0</span>
+              </div>
+              <div class="cc-stat-row">
+                <span class="cc-stat-row-label">Lines</span>
+                <span class="cc-stat-row-val" id="lineCount">0</span>
+              </div>
+              <div class="cc-stat-row">
+                <span class="cc-stat-row-label">Reading time</span>
+                <span class="cc-stat-row-val" id="readingTime">0 sec</span>
               </div>
             </div>
 
-            <button class="btn-generate" onclick="convertNow()">
-              Convert to UPPERCASE
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-
-            <button class="btn-copy" onclick="copyOutput(this)">
+            <!-- Copy button -->
+            <button class="btn-generate" onclick="copyText(this)">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              Copy Output
+              Copy Text
             </button>
-
-            <button class="btn-clear" onclick="clearAll()">Clear All</button>
 
           </div>
         </div>
@@ -190,58 +196,68 @@
     </div>
   </section>
 
-  <!-- CONTENT -->
+  <!-- HOW TO USE -->
   <section class="content-section">
     <div class="container content-narrow">
 
-      <h2>How to Use the Lower to Upper Case Converter</h2>
-      <p>There's no trick to it. To change lower to upper case, paste your text and the output updates live as you type - you don't even have to press the button if you don't want to.</p>
+      <h2>How to Use the Word Count Tool</h2>
+      <p>Type or paste your text into the box on the left — all counts update live with no button click needed. The tool shows your word count as the primary stat, with characters, sentences, paragraphs, lines, and reading time shown alongside.</p>
+
       <ol class="how-steps">
-        <li><strong>Paste or type your text</strong> into the Input Text box. It can be fully lowercase, mixed case or anything.</li>
-        <li><strong>Click "Convert to UPPERCASE"</strong> or simply watch the output update on its own while you type.</li>
-        <li><strong>Copy the result</strong> with the Copy button and paste it wherever it's needed.</li>
+        <li><strong>Paste or type your text</strong> into the input area. Word count updates instantly as you write.</li>
+        <li><strong>Check your word count</strong> — shown prominently in the orange box at the top of the sidebar.</li>
+        <li><strong>Review additional stats</strong> — characters, sentences, paragraphs, lines, and reading time are all tracked automatically.</li>
+        <li><strong>Copy your text</strong> using the Copy Text button when you are done editing.</li>
       </ol>
 
-      <h2>What Gets Converted?</h2>
-      <p>Every lowercase letter (a–z) in your text becomes its UPPERCASE equivalent (A–Z). The rest of your text - numbers, punctuation, spaces, symbols, and line breaks - stays exactly as it was. So "hello, world! 123" comes out as "HELLO, WORLD! 123". Since the alphabet upper and lowercase forms map one-to-one, nothing gets lost or rearranged in the process; only the letter case changes.</p>
+      <h2>What Counts as a Word?</h2>
+      <p>A word is any sequence of characters separated by whitespace (spaces, tabs, or line breaks). Hyphenated words like "well-known" are counted as one word. Numbers are also counted as words. Multiple spaces between words are ignored — only the actual words matter.</p>
 
-      <h2>When Would You Need This?</h2>
-      <p>Uppercase text shows up in more places than people realise. Headings, titles, acronyms, warning labels, legal documents, formal announcements - all of these regularly call for capital letters. Design and branding lean on it too; plenty of logos and brand names are written entirely in caps. Then there are the practical cases: forms that insist on capital letters, or programming work where constants are written in uppercase by convention. Whenever one of these comes up, being able to convert lower to upper case in a single click beats retyping the whole thing.</p>
-      <p>One thing worth knowing - if what you actually need is Title Case rather than ALL CAPS, where only the first letter of each word is capitalised, our <a href="https://getonlinetool.com/tool/case-maker-online">Case Maker</a> works as a title capitalization converter and handles that along with several other case styles.</p>
+      <h2>Word Count Requirements for Common Content Types</h2>
+      <div class="limits-table">
+        <div class="lt-row lt-head"><span>Content Type</span><span>Typical Range</span></div>
+        <div class="lt-row"><span>Tweet / X post</span><span>~30 words</span></div>
+        <div class="lt-row"><span>Blog post (short)</span><span>500–800</span></div>
+        <div class="lt-row"><span>Blog post (standard)</span><span>1,000–1,500</span></div>
+        <div class="lt-row"><span>Long-form article</span><span>2,000–3,000+</span></div>
+        <div class="lt-row"><span>University essay</span><span>1,500–5,000</span></div>
+        <div class="lt-row"><span>Short story</span><span>1,000–7,500</span></div>
+        <div class="lt-row"><span>Novel</span><span>70,000–100,000+</span></div>
+      </div>
 
       <h2>Frequently Asked Questions</h2>
       <div class="faq-list">
 
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-            Does this affect numbers and punctuation?
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-a"><p>No. Letters are the only thing that changes. Numbers, punctuation, symbols, and spacing all pass through untouched, so "item 4b, please!" becomes "ITEM 4B, PLEASE!" with everything else exactly where you left it.</p></div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-            Is there a character limit?
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-a"><p>No limit. The conversion runs entirely in your browser without touching a server, so a single word and a full document both convert just as fast.</p></div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-            Does it work with non-English characters?
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-a"><p>Yes. Accented and non-English letters that have both alphabet upper and lowercase forms - é to É, ü to Ü, and so on - convert the same way English letters do. Characters with no case distinction simply stay as they are.</p></div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
             Does this tool save my text?
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-a"><p>Only on your own device. Your input is kept in your browser's local storage so it's still there if you close the tab and come back. Nothing is sent to any server.</p></div>
+          <div class="faq-a"><p>Yes. Your text is automatically saved in your browser's Local Storage. If you close and reopen this page in the same browser, your text will still be there. Nothing is ever sent to any server — everything stays on your device.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            How is reading time calculated?
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p>Reading time is based on an average reading speed of 200 words per minute — a widely accepted adult reading pace. For short texts the result is shown in seconds; for longer texts it is shown in minutes.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            Are numbers counted as words?
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p>Yes. Any sequence of characters separated by whitespace — including numbers, dates, or codes — is counted as a word. This matches how most word processors like Microsoft Word handle word counting.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            Is there a word limit?
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p>No. This tool runs entirely in your browser with no server involved, so there is no word or character limit. You can paste entire articles, essays, or book chapters and it will count them all instantly.</p></div>
         </div>
 
         <div class="faq-item">
@@ -249,7 +265,7 @@
             Is this tool free?
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-a"><p>Completely free, no account needed. Like every tool on GetOnlineTool, you can use it as often as you like with no limits or premium tiers.</p></div>
+          <div class="faq-a"><p>Completely free, no account required. All tools on GetOnlineTool.com are free for everyone with no hidden limits or premium tiers.</p></div>
         </div>
 
       </div>
@@ -261,19 +277,19 @@
     <div class="container">
       <h2 class="section-title">Related Tools</h2>
       <div class="related-grid">
-        <a href="/tool/upper-to-lower-case" class="tool-card">
-          <div class="tool-icon" style="background:#FFF0E6;">🔡</div>
-          <div class="tool-info"><h3>Upper To Lower Case</h3><p>Convert all UPPERCASE text to lowercase instantly.</p></div>
+        <a href="/tool/character-count-online" class="tool-card">
+          <div class="tool-icon" style="background:#E8F0FE;">🔤</div>
+          <div class="tool-info"><h3>Character Count</h3><p>Count total characters with and without spaces.</p></div>
           <span class="tool-tag">Text</span>
         </a>
         <a href="/tool/case-maker-online" class="tool-card">
           <div class="tool-icon" style="background:#E6F4EA;">Aa</div>
-          <div class="tool-info"><h3>Case Maker</h3><p>Convert text to Sentence case, Title Case, and more.</p></div>
+          <div class="tool-info"><h3>Case Maker</h3><p>Convert text to Title Case, Sentence case, and more.</p></div>
           <span class="tool-tag">Text</span>
         </a>
-        <a href="/tool/word-count-online" class="tool-card">
-          <div class="tool-icon" style="background:#FFF0E6;">📝</div>
-          <div class="tool-info"><h3>Word Count</h3><p>Count words, characters and sentences instantly.</p></div>
+        <a href="/tool/notepad-online" class="tool-card">
+          <div class="tool-icon" style="background:#FFF9E6;">🗒</div>
+          <div class="tool-info"><h3>Notepad Online</h3><p>A clean online notepad that saves your text locally.</p></div>
           <span class="tool-tag">Text</span>
         </a>
       </div>
@@ -286,7 +302,7 @@
       <div class="footer-brand">
         <a href="/" class="logo logo-light">
           <img src="/images/GetOnlineTool-Logo.webp" alt="GetOnlineTool Logo" class="logo-img footer-logo-img"
-               onerror="this.onerror=null;this.src='https://getonlinetool.com/images/GetOnlineTool-Logo.webp'" />
+               onerror="this.onerror=null;this.src='/images/GetOnlineTool-Logo.webp'" />
         </a>
         <p>GetOnlineTool provides free, fast, and simple online tools for writers, marketers, students, and developers. No account needed — ever.</p>
         <div class="social-links">
@@ -343,32 +359,44 @@
 
   <script>
     window.addEventListener('DOMContentLoaded', () => {
-      const saved = localStorage.getItem('ltu_text') || '';
+      const saved = localStorage.getItem('wc_text') || '';
       document.getElementById('inputText').value = saved;
-      if (saved) { updateStats(saved); convertNow(); }
+      if (saved) analyzeText(saved);
     });
 
-    function saveInput(val) {
-      localStorage.setItem('ltu_text', val);
-      updateStats(val);
-      convertNow();
+    function analyzeText(text) {
+      localStorage.setItem('wc_text', text);
+
+      // Words
+      const words = text.trim() === '' ? [] : text.trim().split(/\s+/);
+      document.getElementById('wordCount').textContent = words.length.toLocaleString();
+
+      // Characters
+      document.getElementById('charCount').textContent   = text.length.toLocaleString();
+      document.getElementById('charNoSpaces').textContent = text.replace(/ /g, '').length.toLocaleString();
+
+      // Sentences
+      const sentences = text.trim() === '' ? 0 : (text.match(/[^.!?]*[.!?]+/g) || []).length;
+      document.getElementById('sentenceCount').textContent = sentences.toLocaleString();
+
+      // Paragraphs
+      const paras = text.trim() === '' ? 0 : text.trim().split(/\n\s*\n/).filter(p => p.trim()).length;
+      document.getElementById('paraCount').textContent = paras.toLocaleString();
+
+      // Lines
+      document.getElementById('lineCount').textContent = (text === '' ? 0 : text.split('\n').length).toLocaleString();
+
+      // Reading time (200 wpm)
+      const secs = Math.ceil((words.length / 200) * 60);
+      document.getElementById('readingTime').textContent =
+        words.length === 0 ? '0 sec' : secs < 60 ? `${secs} sec` : `${Math.ceil(secs / 60)} min`;
     }
 
-    function updateStats(text) {
-      const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
-      document.getElementById('inputStats').textContent =
-        `${words.toLocaleString()} word${words !== 1 ? 's' : ''} · ${text.length.toLocaleString()} character${text.length !== 1 ? 's' : ''}`;
-    }
-
-    function convertNow() {
-      document.getElementById('outputText').value = document.getElementById('inputText').value.toUpperCase();
-    }
-
-    function copyOutput(btn) {
-      const out = document.getElementById('outputText').value;
-      if (!out) return;
-      navigator.clipboard.writeText(out).catch(() => {
-        document.getElementById('outputText').select();
+    function copyText(btn) {
+      const text = document.getElementById('inputText').value;
+      if (!text) return;
+      navigator.clipboard.writeText(text).catch(() => {
+        document.getElementById('inputText').select();
         document.execCommand('copy');
       });
       const orig = btn.innerHTML;
@@ -376,11 +404,10 @@
       setTimeout(() => btn.innerHTML = orig, 2000);
     }
 
-    function clearAll() {
-      document.getElementById('inputText').value  = '';
-      document.getElementById('outputText').value = '';
-      document.getElementById('inputStats').textContent = '0 words · 0 characters';
-      localStorage.removeItem('ltu_text');
+    function clearText() {
+      document.getElementById('inputText').value = '';
+      analyzeText('');
+      localStorage.removeItem('wc_text');
     }
 
     function toggleMenu(btn) {

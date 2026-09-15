@@ -3,28 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Upside Down Text Generator – Free Flip Text Tool Online</title>
-  <meta name="description" content="Flip your text upside down instantly using Unicode characters. Free online upside down text generator — paste anywhere, no sign-up needed." />
-  <link rel="canonical" href="https://getonlinetool.com/tool/upside-down-text-generator" />
-  <meta property="og:title" content="Upside Down Text Generator – Free Flip Text Tool" />
-  <meta property="og:description" content="Flip text upside down instantly using Unicode. Free, browser-based, no account needed." />
+  <title>Lower To Upper Case – Free Online Text Converter</title>
+  <meta name="description" content="Convert lowercase or mixed text to UPPERCASE instantly. Free online lower to upper case converter — no sign-up, no installation needed." />
+  <link rel="canonical" href="https://getonlinetool.com/tool/lower-to-upper-case" />
+  <meta property="og:title" content="Lower To Upper Case – Free Online Text Converter" />
+  <meta property="og:description" content="Convert any text to UPPERCASE instantly. Free, browser-based, no account needed." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://getonlinetool.com/tool/upside-down-text-generator" />
+  <meta property="og:url" content="https://getonlinetool.com/tool/lower-to-upper-case" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../tool.css" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/tool.css" />
 <link rel="icon" type="image/webp" href="/images/getonlinetool-favicon.webp">
-
-
+  
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "Upside Down Text Generator",
-    "url": "https://getonlinetool.com/tool/upside-down-text-generator",
-    "description": "Free online tool to flip text upside down using Unicode characters instantly.",
+    "name": "Lower To Upper Case",
+    "url": "https://getonlinetool.com/tool/lower-to-upper-case",
+    "description": "Free online tool to convert lowercase text to UPPERCASE instantly.",
     "applicationCategory": "UtilityApplication",
     "operatingSystem": "Any",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
@@ -34,13 +33,12 @@
 <body>
 
   <!-- HEADER -->
-  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
 
       <!-- Logo -->
       <a href="/" class="logo" aria-label="GetOnlineTool Home">
-        <img src="https://getonlinetool.com/images/GetOnlineTool-Logo.webp" alt="GetOnlineTool Logo" class="logo-img" />
+        <img src="/images/GetOnlineTool-Logo.webp" alt="GetOnlineTool Logo" class="logo-img" />
       </a>
 
       <!-- Desktop Nav -->
@@ -102,7 +100,7 @@
       <a href="/tool/palindrome-checker-online" class="mobile-sub">↳ Palindrome Checker</a>
       <a href="/tool/notepad-online" class="mobile-sub">↳ Notepad Online</a>
       <a href="/tool/keyword-phrase-maker" class="mobile-sub">↳ Keyword Phrase Maker</a>
-      <a href="/tool/json-ld-maker-online" class="mobile-sub">↳ JSON-LD Generator</a>
+      <a href="#json-ld" class="mobile-sub">↳ JSON-LD Generator</a>
       <a href="/tool/online-calculator" class="mobile-sub">↳ Calculator</a>
       <a href="/blog">Blog</a>
       <a href="/about-us">About Us</a>
@@ -116,10 +114,10 @@
       <div class="breadcrumb">
         <a href="/">Home</a><span>›</span>
         <a href="/#tools">Tools</a><span>›</span>
-        <span>Upside Down Text Generator</span>
+        <span>Lower To Upper Case</span>
       </div>
-      <h1 class="page-hero-title">Upside Down Text Generator</h1>
-      <p class="page-hero-sub">˙ʎlǝʇɐıpǝɯɯı ʇxǝʇ uʍop ǝpısdn ɹnoʎ dılɟ — Flip your text upside down instantly using Unicode. Paste it anywhere.</p>
+      <h1 class="page-hero-title">Lower To Upper Case</h1>
+      <p class="page-hero-sub">Paste any lowercase or mixed-case text and convert it to UPPERCASE instantly — one click, no sign-up required.</p>
     </div>
   </section>
 
@@ -129,18 +127,18 @@
       <div class="tool-wrapper">
         <div class="cm-layout">
 
-          <!-- LEFT -->
+          <!-- LEFT: Input + Output -->
           <div class="cm-left">
             <div class="cm-box">
               <label class="cm-label">Input Text</label>
               <div class="cc-textarea-wrap">
                 <textarea id="inputText" class="cc-textarea"
                   style="min-height:240px"
-                  placeholder="Type or paste your text here..."
-                  oninput="convert(this.value)"
+                  placeholder="Paste your lowercase or mixed case text here..."
+                  oninput="saveInput(this.value)"
                   spellcheck="false"></textarea>
                 <div class="cc-textarea-footer">
-                  <span class="cc-live-badge">● Live output</span>
+                  <span class="cc-live-badge" id="inputStats">0 words · 0 characters</span>
                   <button class="cc-clear-btn" onclick="clearAll()">Clear</button>
                 </div>
               </div>
@@ -148,15 +146,15 @@
 
             <div class="cm-box">
               <div class="cm-output-header">
-                <label class="cm-label">🙃 Upside Down Output</label>
+                <label class="cm-label">Output <span class="cm-active-case">— UPPERCASE</span></label>
                 <button class="btn-copy" onclick="copyOutput(this)">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
                   Copy
                 </button>
               </div>
               <textarea id="outputText" class="cc-textarea output-textarea"
-                style="min-height:200px;font-size:1.05rem;"
-                readonly placeholder="ɹǝɹǝɥ ɹɐǝddɐ llıʍ ʇndʇno..."
+                style="min-height:200px"
+                readonly placeholder="UPPERCASE OUTPUT WILL APPEAR HERE..."
                 spellcheck="false"></textarea>
             </div>
           </div>
@@ -165,37 +163,18 @@
           <div class="cm-right">
 
             <div class="simple-action-card">
-              <div class="sac-icon">🙃</div>
-              <p class="sac-desc">Flips every letter upside down and reverses the text direction using Unicode characters.</p>
+              <div class="sac-icon">🔠</div>
+              <p class="sac-desc">Converts every lowercase letter to its UPPERCASE equivalent. Numbers, spaces, and punctuation are left unchanged.</p>
               <div class="sac-example">
-                <span class="sac-before">hello</span>
+                <span class="sac-before">hello world</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                <span class="sac-after">oןןǝɥ</span>
+                <span class="sac-after">HELLO WORLD</span>
               </div>
             </div>
 
-            <!-- Flip mode -->
-            <div class="kpm-options-card">
-              <h3 class="options-title">Flip Mode</h3>
-              <label class="radio-label" style="padding:10px 14px;">
-                <input type="radio" name="flipMode" value="both" checked onchange="convert(document.getElementById('inputText').value)" />
-                <div>
-                  <span style="font-weight:600;font-size:.86rem;">Flip + Reverse</span>
-                  <div style="font-size:.74rem;color:var(--text-muted);">hello → oןןǝɥ</div>
-                </div>
-              </label>
-              <label class="radio-label" style="padding:10px 14px;">
-                <input type="radio" name="flipMode" value="fliponly" onchange="convert(document.getElementById('inputText').value)" />
-                <div>
-                  <span style="font-weight:600;font-size:.86rem;">Flip Only</span>
-                  <div style="font-size:.74rem;color:var(--text-muted);">hello → ɥǝןןo</div>
-                </div>
-              </label>
-            </div>
-
-            <button class="btn-generate" onclick="convert(document.getElementById('inputText').value)">
-              Flip Text
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M2 12h20"/></svg>
+            <button class="btn-generate" onclick="convertNow()">
+              Convert to UPPERCASE
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </button>
 
             <button class="btn-copy" onclick="copyOutput(this)">
@@ -215,46 +194,53 @@
   <section class="content-section">
     <div class="container content-narrow">
 
-      <h2>What Is Upside Down Text?</h2>
-      <p>Upside down text uses special Unicode characters that visually resemble flipped versions of regular letters. For example, the letter "a" becomes "ɐ", "b" becomes "q", "h" becomes "ɥ", and so on. When the text is also reversed in order, reading it from right to left while tilting your head gives the original text — creating a fun visual effect.</p>
-      <p>Because these are real Unicode characters, the upside down text can be copied and pasted anywhere that supports regular text — social media posts, bios, usernames, messages, and more.</p>
-
-      <h2>How to Use the Upside Down Text Generator</h2>
+      <h2>How to Use the Lower to Upper Case Converter</h2>
+      <p>Converting lowercase text to uppercase is instant with this tool — no button press needed as the output updates live as you type.</p>
       <ol class="how-steps">
-        <li><strong>Type or paste your text</strong> into the input box. The flipped output appears live.</li>
-        <li><strong>Choose a flip mode</strong> — "Flip + Reverse" flips each letter and reverses the whole text order (classic upside down effect). "Flip Only" flips each letter but keeps the order the same.</li>
-        <li><strong>Copy the output</strong> and paste it wherever you want.</li>
+        <li><strong>Paste or type your text</strong> into the Input Text box. It can be fully lowercase, mixed case, or anything.</li>
+        <li><strong>Click "Convert to UPPERCASE"</strong> or watch the output update automatically as you type.</li>
+        <li><strong>Copy the result</strong> using the Copy button and paste it wherever you need.</li>
       </ol>
 
-      <h2>Flip + Reverse vs Flip Only</h2>
-      <p><strong>Flip + Reverse</strong> is the classic upside down text effect. It flips every letter upside down AND reverses the order of the entire text. If you physically flip your screen or tilt your head 180 degrees, the text reads normally. This is the most commonly used mode for social media tricks.</p>
-      <p><strong>Flip Only</strong> flips each letter individually without reversing the order. The result reads left-to-right like normal text but each character looks flipped — a different stylistic effect.</p>
+      <h2>What Gets Converted?</h2>
+      <p>Every lowercase letter (a–z) in your text is converted to its UPPERCASE equivalent (A–Z). Numbers, punctuation, spaces, symbols, and line breaks are left completely unchanged. So "hello, world! 123" becomes "HELLO, WORLD! 123".</p>
+
+      <h2>When Would You Need This?</h2>
+      <p>Uppercase text is commonly used for headings, titles, acronyms, warning labels, legal documents, and formal announcements. It is also used in design and branding — many logos and brand names are written in all caps. You may also need it when filling out forms that require capital letters, or when working with certain programming languages and systems that use uppercase constants.</p>
 
       <h2>Frequently Asked Questions</h2>
       <div class="faq-list">
 
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-            Can I paste upside down text on Instagram or Twitter?
+            Does this affect numbers and punctuation?
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-a"><p>Yes. The characters used are standard Unicode, so they work on Instagram, Twitter/X, Facebook, WhatsApp, Discord, and most other text-based platforms. Just copy the output and paste it directly.</p></div>
+          <div class="faq-a"><p>No. Only alphabetic characters (a–z) are converted to uppercase. Numbers, punctuation marks, spaces, and special characters remain exactly as they are in your original text.</p></div>
         </div>
 
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-            Why don't some letters flip perfectly?
+            Is there a character limit?
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-a"><p>Not every letter has a perfect Unicode upside-down equivalent. The tool uses the closest available Unicode character for each letter, but some may look approximate rather than exact. Numbers and special characters may also not flip perfectly due to Unicode limitations.</p></div>
+          <div class="faq-a"><p>No. This tool runs entirely in your browser with no server involved, so there is no character or word limit. You can paste entire documents and convert them instantly.</p></div>
         </div>
 
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-            Does it work with numbers and punctuation?
+            Does it work with non-English characters?
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-a"><p>Some numbers and punctuation marks have Unicode upside-down equivalents (for example, "1" → "Ɩ", "?" → "¿"). Characters without a Unicode equivalent are passed through unchanged.</p></div>
+          <div class="faq-a"><p>Yes. The tool uses JavaScript's built-in toUpperCase() method which supports Unicode. Accented letters like é → É and ñ → Ñ are handled correctly.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            Does this tool save my text?
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p>Yes. Your input text is automatically saved in your browser's Local Storage. If you close and reopen this page, your text will still be there. Nothing is sent to any server.</p></div>
         </div>
 
         <div class="faq-item">
@@ -274,19 +260,19 @@
     <div class="container">
       <h2 class="section-title">Related Tools</h2>
       <div class="related-grid">
-        <a href="/tool/small-caps-generator" class="tool-card">
-          <div class="tool-icon" style="background:#E6F4EA;">ₛᴄ</div>
-          <div class="tool-info"><h3>Small Caps Generator</h3><p>Convert your text to ꜱᴍᴀʟʟ ᴄᴀᴘꜱ Unicode style.</p></div>
+        <a href="/tool/upper-to-lower-case" class="tool-card">
+          <div class="tool-icon" style="background:#FFF0E6;">🔡</div>
+          <div class="tool-info"><h3>Upper To Lower Case</h3><p>Convert all UPPERCASE text to lowercase instantly.</p></div>
           <span class="tool-tag">Text</span>
         </a>
-        <a href="/tool/text-reverse-generator" class="tool-card">
-          <div class="tool-icon" style="background:#FFF9E6;">🔁</div>
-          <div class="tool-info"><h3>Text Reverse Generator</h3><p>Reverse any text or sentence backward instantly.</p></div>
+        <a href="/tool/case-maker-online" class="tool-card">
+          <div class="tool-icon" style="background:#E6F4EA;">Aa</div>
+          <div class="tool-info"><h3>Case Maker</h3><p>Convert text to Sentence case, Title Case, and more.</p></div>
           <span class="tool-tag">Text</span>
         </a>
-        <a href="/tool/palindrome-checker-online" class="tool-card">
-          <div class="tool-icon" style="background:#E8F0FE;">🔄</div>
-          <div class="tool-info"><h3>Palindrome Checker</h3><p>Check if your word or phrase reads the same backward.</p></div>
+        <a href="/tool/word-count-online" class="tool-card">
+          <div class="tool-icon" style="background:#FFF0E6;">📝</div>
+          <div class="tool-info"><h3>Word Count</h3><p>Count words, characters and sentences instantly.</p></div>
           <span class="tool-tag">Text</span>
         </a>
       </div>
@@ -299,7 +285,7 @@
       <div class="footer-brand">
         <a href="/" class="logo logo-light">
           <img src="/images/GetOnlineTool-Logo.webp" alt="GetOnlineTool Logo" class="logo-img footer-logo-img"
-               onerror="this.onerror=null;this.src='https://getonlinetool.com/images/GetOnlineTool-Logo.webp'" />
+               onerror="this.onerror=null;this.src='/images/GetOnlineTool-Logo.webp'" />
         </a>
         <p>GetOnlineTool provides free, fast, and simple online tools for writers, marketers, students, and developers. No account needed — ever.</p>
         <div class="social-links">
@@ -355,28 +341,26 @@
   </footer>
 
   <script>
-    const UD_MAP = {
-      a:'ɐ', b:'q', c:'ɔ', d:'p', e:'ǝ', f:'ɟ', g:'ƃ', h:'ɥ',
-      i:'ı', j:'ɾ', k:'ʞ', l:'l', m:'ɯ', n:'u', o:'o', p:'d',
-      q:'b', r:'ɹ', s:'s', t:'ʇ', u:'n', v:'ʌ', w:'ʍ', x:'x',
-      y:'ʎ', z:'z',
-      A:'∀', B:'ᗺ', C:'Ɔ', D:'ᗡ', E:'Ǝ', F:'Ⅎ', G:'פ', H:'H',
-      I:'I', J:'ɾ', K:'ʞ', L:'˥', M:'W', N:'N', O:'O', P:'Ԁ',
-      Q:'Q', R:'ᴚ', S:'S', T:'┴', U:'∩', V:'Λ', W:'M', X:'X',
-      Y:'⅄', Z:'Z',
-      '0':'0', '1':'Ɩ', '2':'ᄅ', '3':'Ɛ', '4':'ᔭ', '5':'ϛ',
-      '6':'9', '7':'ㄥ', '8':'8', '9':'6',
-      '.':'˙', ',':'\'', '\'':',', '!':'¡', '?':'¿',
-      '(':')', ')':'(', '[':']', ']':'[', '{':'}', '}':'{'
-    };
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('ltu_text') || '';
+      document.getElementById('inputText').value = saved;
+      if (saved) { updateStats(saved); convertNow(); }
+    });
 
-    function convert(text) {
-      const mode = document.querySelector('input[name="flipMode"]:checked').value;
-      const flipped = text.split('').map(c => UD_MAP[c] || c);
-      const result = mode === 'both'
-        ? flipped.reverse().join('')
-        : flipped.join('');
-      document.getElementById('outputText').value = result;
+    function saveInput(val) {
+      localStorage.setItem('ltu_text', val);
+      updateStats(val);
+      convertNow();
+    }
+
+    function updateStats(text) {
+      const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+      document.getElementById('inputStats').textContent =
+        `${words.toLocaleString()} word${words !== 1 ? 's' : ''} · ${text.length.toLocaleString()} character${text.length !== 1 ? 's' : ''}`;
+    }
+
+    function convertNow() {
+      document.getElementById('outputText').value = document.getElementById('inputText').value.toUpperCase();
     }
 
     function copyOutput(btn) {
@@ -394,10 +378,12 @@
     function clearAll() {
       document.getElementById('inputText').value  = '';
       document.getElementById('outputText').value = '';
+      document.getElementById('inputStats').textContent = '0 words · 0 characters';
+      localStorage.removeItem('ltu_text');
     }
 
     function toggleMenu(btn) {
-      const nav  = document.getElementById('mobileNav');
+      const nav = document.getElementById('mobileNav');
       const open = nav.classList.toggle('open');
       btn.setAttribute('aria-expanded', open);
       btn.classList.toggle('active', open);

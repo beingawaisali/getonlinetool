@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coming Soon - GetOnlineTool</title>
+<link rel="icon" type="image/webp" href="/images/getonlinetool-favicon.webp">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Inter,Segoe UI,Arial,sans-serif;
+    background:#121212;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    overflow:hidden;
+}
+
+/* Background Glow */
+body::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:#ca5b1f;
+    opacity:.08;
+    border-radius:50%;
+    filter:blur(140px);
+    top:-150px;
+    right:-150px;
+}
+
+body::after{
+    content:"";
+    position:absolute;
+    width:450px;
+    height:450px;
+    background:#ca5b1f;
+    opacity:.05;
+    border-radius:50%;
+    filter:blur(120px);
+    bottom:-180px;
+    left:-180px;
+}
+
+.container{
+    width:90%;
+    max-width:700px;
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+
+.logo{
+    width:320px;
+    max-width:90%;
+    margin-bottom:45px;
+}
+
+h1{
+    font-size:64px;
+    font-weight:700;
+    letter-spacing:-2px;
+    margin-bottom:18px;
+}
+
+.orange{
+    color:#ca5b1f;
+}
+
+p{
+    color:#b8b8b8;
+    font-size:19px;
+    line-height:1.7;
+    max-width:580px;
+    margin:auto;
+}
+
+.line{
+    width:90px;
+    height:4px;
+    background:#ca5b1f;
+    margin:40px auto;
+    border-radius:20px;
+}
+
+.footer{
+    margin-top:45px;
+    color:#666;
+    font-size:14px;
+}
+
+@media(max-width:768px){
+
+.logo{
+    width:240px;
+}
+
+h1{
+    font-size:42px;
+}
+
+p{
+    font-size:17px;
+}
+
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <img src="/images/GetOnlineTool-Logo.webp"
+         alt="GetOnlineTool"
+         class="logo">
+
+    <h1>Coming <span class="orange">Soon</span></h1>
+
+    <p>
+        We're working on this page and it'll be available very soon.
+        Thanks for your patience while we build something useful for you.
+    </p>
+
+    <div class="line"></div>
+
+    <div class="footer">
+        © 2026 GetOnlineTool.com
+    </div>
+
+</div>
+
+</body>
+</html>

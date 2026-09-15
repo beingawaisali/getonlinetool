@@ -2,27 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-<link rel="icon" type="image/webp" href="/images/getonlinetool-favicon.webp" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Small Caps Generator – Free Online Small Caps Text Converter</title>
-  <meta name="description" content="Convert your text to ꜱᴍᴀʟʟ ᴄᴀᴘꜱ Unicode style instantly. Free online small caps generator — no sign-up, no installation needed." />
-  <link rel="canonical" href="https://getonlinetool.com/tool/small-caps-generator" />
-  <meta property="og:title" content="Small Caps Generator – Free Online Small Caps Text Converter" />
-  <meta property="og:description" content="Convert text to small caps Unicode style instantly. Free, browser-based, no account needed." />
+  <title>Palindrome Checker Online – Free Palindrome Test Tool</title>
+  <meta name="description" content="Check if a word, phrase or sentence is a palindrome instantly. Free online palindrome checker — ignores spaces and punctuation for accurate results." />
+  <link rel="canonical" href="https://getonlinetool.com/tool/palindrome-checker-online" />
+  <meta property="og:title" content="Palindrome Checker Online – Free Palindrome Test Tool" />
+  <meta property="og:description" content="Check if your text is a palindrome instantly. Free, browser-based, no account needed." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://getonlinetool.com/tool/small-caps-generator" />
+  <meta property="og:url" content="https://getonlinetool.com/tool/palindrome-checker-online" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../tool.css" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/tool.css" />
+<link rel="icon" type="image/webp" href="/images/getonlinetool-favicon.webp">
+
+  
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "Small Caps Generator",
-    "url": "https://getonlinetool.com/tool/small-caps-generator",
-    "description": "Free online tool to convert text to small caps Unicode style instantly.",
+    "name": "Palindrome Checker Online",
+    "url": "https://getonlinetool.com/tool/palindrome-checker-online",
+    "description": "Free online tool to check if a word or phrase is a palindrome.",
     "applicationCategory": "UtilityApplication",
     "operatingSystem": "Any",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
@@ -32,13 +34,12 @@
 <body>
 
   <!-- HEADER -->
-  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
 
       <!-- Logo -->
       <a href="/" class="logo" aria-label="GetOnlineTool Home">
-        <img src="https://getonlinetool.com/images/GetOnlineTool-Logo.webp" alt="GetOnlineTool Logo" class="logo-img" />
+        <img src="/images/GetOnlineTool-Logo.webp" alt="GetOnlineTool Logo" class="logo-img" />
       </a>
 
       <!-- Desktop Nav -->
@@ -100,13 +101,14 @@
       <a href="/tool/palindrome-checker-online" class="mobile-sub">↳ Palindrome Checker</a>
       <a href="/tool/notepad-online" class="mobile-sub">↳ Notepad Online</a>
       <a href="/tool/keyword-phrase-maker" class="mobile-sub">↳ Keyword Phrase Maker</a>
-      <a href="/tool/json-ld-maker-online" class="mobile-sub">↳ JSON-LD Generator</a>
+      <a href="#json-ld" class="mobile-sub">↳ JSON-LD Generator</a>
       <a href="/tool/online-calculator" class="mobile-sub">↳ Calculator</a>
       <a href="/blog">Blog</a>
       <a href="/about-us">About Us</a>
       <a href="/contact-us">Contact Us</a>
     </nav>
   </header>
+  
 
   <!-- PAGE HERO -->
   <section class="page-hero">
@@ -114,10 +116,10 @@
       <div class="breadcrumb">
         <a href="/">Home</a><span>›</span>
         <a href="/#tools">Tools</a><span>›</span>
-        <span>Small Caps Generator</span>
+        <span>Palindrome Checker Online</span>
       </div>
-      <h1 class="page-hero-title">Small Caps Generator</h1>
-      <p class="page-hero-sub">Convert your text to ꜱᴍᴀʟʟ ᴄᴀᴘꜱ Unicode style instantly. Paste anywhere — social media, bios, messages, and more.</p>
+      <h1 class="page-hero-title">Palindrome Checker Online</h1>
+      <p class="page-hero-sub">Check if any word, phrase, or sentence is a palindrome instantly. Spaces and punctuation are automatically ignored for accurate results.</p>
     </div>
   </section>
 
@@ -129,75 +131,77 @@
 
           <!-- LEFT -->
           <div class="cm-left">
+
+            <!-- Input -->
             <div class="cm-box">
-              <label class="cm-label">Input Text</label>
+              <label class="cm-label">Enter Text</label>
               <div class="cc-textarea-wrap">
                 <textarea id="inputText" class="cc-textarea"
-                  style="min-height:240px"
-                  placeholder="Type or paste your text here..."
-                  oninput="convert(this.value)"
+                  style="min-height:200px"
+                  placeholder="Type or paste a word, phrase, or sentence..."
+                  oninput="checkPalindrome(this.value)"
                   spellcheck="false"></textarea>
                 <div class="cc-textarea-footer">
-                  <span class="cc-live-badge">● Live output</span>
+                  <span class="cc-live-badge">● Live check</span>
                   <button class="cc-clear-btn" onclick="clearAll()">Clear</button>
                 </div>
               </div>
             </div>
 
-            <div class="cm-box">
-              <div class="cm-output-header">
-                <label class="cm-label">ꜱᴍᴀʟʟ ᴄᴀᴘꜱ Output</label>
-                <button class="btn-copy" onclick="copyOutput(this)">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  Copy
-                </button>
+            <!-- Result box -->
+            <div class="pc-result-box" id="resultBox">
+              <div class="pc-result-idle">
+                <span class="pc-result-icon">🔄</span>
+                <p>Type something above to check if it is a palindrome.</p>
               </div>
-              <textarea id="outputText" class="cc-textarea output-textarea"
-                style="min-height:200px;font-size:1.05rem;letter-spacing:.02em;"
-                readonly placeholder="ꜱᴍᴀʟʟ ᴄᴀᴘꜱ ᴏᴜᴛᴘᴜᴛ ᴡɪʟʟ ᴀᴘᴘᴇᴀʀ ʜᴇʀᴇ..."
-                spellcheck="false"></textarea>
             </div>
+
+            <!-- Reversed text -->
+            <div class="cm-box" id="reversedSection" style="display:none;">
+              <label class="cm-label">Reversed Text</label>
+              <div class="cc-textarea-wrap">
+                <textarea id="reversedText" class="cc-textarea output-textarea"
+                  style="min-height:80px"
+                  readonly spellcheck="false"></textarea>
+              </div>
+            </div>
+
           </div>
 
           <!-- RIGHT: Sidebar -->
           <div class="cm-right">
 
-            <div class="simple-action-card">
-              <div class="sac-icon">ₛᴄ</div>
-              <p class="sac-desc">Converts every letter to its Unicode small caps equivalent. Numbers, spaces, and punctuation stay unchanged.</p>
-              <div class="sac-example">
-                <span class="sac-before">Hello World</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                <span class="sac-after">ʜᴇʟʟᴏ ᴡᴏʀʟᴅ</span>
-              </div>
+            <div class="kpm-options-card">
+              <h3 class="options-title">Check Options</h3>
+              <label class="check-label" style="padding:10px 14px;">
+                <input type="checkbox" id="ignoreCase" checked onchange="recheckCurrent()" />
+                <span>Ignore case</span>
+              </label>
+              <label class="check-label" style="padding:10px 14px;">
+                <input type="checkbox" id="ignoreSpaces" checked onchange="recheckCurrent()" />
+                <span>Ignore spaces</span>
+              </label>
+              <label class="check-label" style="padding:10px 14px;">
+                <input type="checkbox" id="ignorePunct" checked onchange="recheckCurrent()" />
+                <span>Ignore punctuation</span>
+              </label>
             </div>
 
-            <button class="btn-generate" onclick="convert(document.getElementById('inputText').value)">
-              Generate Small Caps
+            <button class="btn-generate" onclick="checkPalindrome(document.getElementById('inputText').value)">
+              Check Palindrome
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </button>
 
-            <button class="btn-copy" onclick="copyOutput(this)">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              Copy Output
-            </button>
+            <button class="btn-clear" onclick="clearAll()">Clear</button>
 
-            <button class="btn-clear" onclick="clearAll()">Clear All</button>
-
-            <!-- Alphabet preview -->
-            <div class="sc-preview-card">
-              <h4>Small Caps Alphabet</h4>
-              <div class="sc-alpha-row">
-                <span>a → ᴀ</span><span>b → ʙ</span><span>c → ᴄ</span>
-                <span>d → ᴅ</span><span>e → ᴇ</span><span>f → ꜰ</span>
-                <span>g → ɢ</span><span>h → ʜ</span><span>i → ɪ</span>
-                <span>j → ᴊ</span><span>k → ᴋ</span><span>l → ʟ</span>
-                <span>m → ᴍ</span><span>n → ɴ</span><span>o → ᴏ</span>
-                <span>p → ᴘ</span><span>q → ǫ</span><span>r → ʀ</span>
-                <span>s → ꜱ</span><span>t → ᴛ</span><span>u → ᴜ</span>
-                <span>v → ᴠ</span><span>w → ᴡ</span><span>x → x</span>
-                <span>y → ʏ</span><span>z → ᴢ</span>
-              </div>
+            <!-- Examples -->
+            <div class="pc-examples-card">
+              <h4>Try an example</h4>
+              <button class="pc-example-btn" onclick="tryExample('racecar')">racecar</button>
+              <button class="pc-example-btn" onclick="tryExample('A man a plan a canal Panama')">A man a plan a canal Panama</button>
+              <button class="pc-example-btn" onclick="tryExample('Was it a car or a cat I saw')">Was it a car or a cat I saw</button>
+              <button class="pc-example-btn" onclick="tryExample('Never odd or even')">Never odd or even</button>
+              <button class="pc-example-btn" onclick="tryExample('hello world')">hello world</button>
             </div>
 
           </div>
@@ -210,44 +214,55 @@
   <section class="content-section">
     <div class="container content-narrow">
 
-      <h2>What Are Small Caps?</h2>
-      <p>Small caps are a typographic style where lowercase letters are replaced with uppercase letters that are smaller than the standard capital letters — similar in height to regular lowercase letters. In traditional typography, small caps are a font feature. This tool generates small caps using Unicode characters, which means the output can be pasted and displayed anywhere that supports Unicode text — including social media bios, Twitter, Instagram, Discord, WhatsApp, and more.</p>
+      <h2>What Is a Palindrome?</h2>
+      <p>A palindrome is a word, phrase, number, or sequence of characters that reads the same forward and backward. The word "racecar" is a classic example — spell it forwards or backwards and it is identical. Famous palindrome phrases include "A man, a plan, a canal: Panama" and "Was it a car or a cat I saw?" — both read the same in either direction when spaces and punctuation are ignored.</p>
 
-      <h2>How to Use the Small Caps Generator</h2>
+      <h2>How to Use the Palindrome Checker</h2>
       <ol class="how-steps">
-        <li><strong>Type or paste your text</strong> into the input box. The small caps output appears live as you type.</li>
-        <li><strong>Copy the output</strong> using the Copy button.</li>
-        <li><strong>Paste it anywhere</strong> — social media profiles, bios, messages, documents, or anywhere that supports text.</li>
+        <li><strong>Type or paste your text</strong> into the input box. The check runs live as you type.</li>
+        <li><strong>Adjust check options</strong> in the sidebar — you can choose whether to ignore case, spaces, and punctuation.</li>
+        <li><strong>Read the result</strong> — the tool will tell you clearly whether your text is a palindrome or not, and show you the reversed version for comparison.</li>
+        <li><strong>Try the examples</strong> in the sidebar to see how famous palindromes look.</li>
       </ol>
 
-      <h2>Where Can You Use Small Caps Text?</h2>
-      <p>Because this tool uses Unicode characters — not a special font — the small caps text works anywhere that accepts regular text. Common uses include Instagram bios, Twitter/X posts and usernames, Discord usernames and messages, WhatsApp messages, YouTube descriptions, website headings, and creative writing.</p>
+      <h2>Famous Palindrome Examples</h2>
+      <div class="limits-table">
+        <div class="lt-row lt-head"><span>Palindrome</span><span>Type</span></div>
+        <div class="lt-row"><span>racecar</span><span>Word</span></div>
+        <div class="lt-row"><span>level</span><span>Word</span></div>
+        <div class="lt-row"><span>madam</span><span>Word</span></div>
+        <div class="lt-row"><span>civic</span><span>Word</span></div>
+        <div class="lt-row"><span>A man a plan a canal Panama</span><span>Phrase</span></div>
+        <div class="lt-row"><span>Never odd or even</span><span>Phrase</span></div>
+        <div class="lt-row"><span>Was it a car or a cat I saw</span><span>Phrase</span></div>
+        <div class="lt-row"><span>12321</span><span>Number</span></div>
+      </div>
 
       <h2>Frequently Asked Questions</h2>
       <div class="faq-list">
 
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-            Why do some letters look the same?
+            Are spaces ignored when checking?
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-a"><p>Not every letter has a dedicated Unicode small caps equivalent. For example, "x" does not have a small caps version in Unicode, so it remains as "x". This is a limitation of the Unicode standard, not the tool itself.</p></div>
+          <div class="faq-a"><p>By default, yes. The "Ignore spaces" option is turned on, which means "never odd or even" is correctly detected as a palindrome. You can turn this off using the Check Options in the sidebar if you want a strict character-by-character check including spaces.</p></div>
         </div>
 
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-            Will it work on all platforms?
+            Does it check numbers too?
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-a"><p>The small caps characters used here are standard Unicode, so they work on most modern platforms and operating systems. However, some older systems or apps with limited font support may not render them correctly.</p></div>
+          <div class="faq-a"><p>Yes. You can check numeric palindromes like 12321 or 1001 just by typing the number into the input box. The tool treats numbers as regular characters.</p></div>
         </div>
 
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-            Does it work with uppercase input?
+            Is "A man a plan a canal Panama" a palindrome?
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-a"><p>Yes. The tool converts both uppercase and lowercase letters to small caps. Both "HELLO" and "hello" will produce "ʜᴇʟʟᴏ" as the output.</p></div>
+          <div class="faq-a"><p>Yes — when spaces and punctuation are ignored and the check is case-insensitive. The letters "amanaplanacanalpanama" read identically forwards and backwards. Try the example button in the sidebar to verify it.</p></div>
         </div>
 
         <div class="faq-item">
@@ -267,19 +282,19 @@
     <div class="container">
       <h2 class="section-title">Related Tools</h2>
       <div class="related-grid">
-        <a href="/tool/upside-down-text-generator" class="tool-card">
-          <div class="tool-icon" style="background:#FEE8E8;">🙃</div>
-          <div class="tool-info"><h3>Upside Down Text Generator</h3><p>Flip your text upside down using Unicode characters.</p></div>
+        <a href="/tool/text-reverse-generator" class="tool-card">
+          <div class="tool-icon" style="background:#FFF9E6;">🔁</div>
+          <div class="tool-info"><h3>Text Reverse Generator</h3><p>Reverse any text or sentence backward instantly.</p></div>
+          <span class="tool-tag">Text</span>
+        </a>
+        <a href="/tool/word-count-online" class="tool-card">
+          <div class="tool-icon" style="background:#FFF0E6;">📝</div>
+          <div class="tool-info"><h3>Word Count</h3><p>Count words, characters and sentences instantly.</p></div>
           <span class="tool-tag">Text</span>
         </a>
         <a href="/tool/case-maker-online" class="tool-card">
           <div class="tool-icon" style="background:#E6F4EA;">Aa</div>
           <div class="tool-info"><h3>Case Maker</h3><p>Convert text to Sentence case, Title Case, and more.</p></div>
-          <span class="tool-tag">Text</span>
-        </a>
-        <a href="/tool/text-reverse-generator" class="tool-card">
-          <div class="tool-icon" style="background:#FFF9E6;">🔁</div>
-          <div class="tool-info"><h3>Text Reverse Generator</h3><p>Reverse any text or sentence backward instantly.</p></div>
           <span class="tool-tag">Text</span>
         </a>
       </div>
@@ -292,7 +307,7 @@
       <div class="footer-brand">
         <a href="/" class="logo logo-light">
           <img src="/images/GetOnlineTool-Logo.webp" alt="GetOnlineTool Logo" class="logo-img footer-logo-img"
-               onerror="this.onerror=null;this.src='https://getonlinetool.com/images/GetOnlineTool-Logo.webp'" />
+               onerror="this.onerror=null;this.src='/images/GetOnlineTool-Logo.webp'" />
         </a>
         <p>GetOnlineTool provides free, fast, and simple online tools for writers, marketers, students, and developers. No account needed — ever.</p>
         <div class="social-links">
@@ -348,36 +363,70 @@
   </footer>
 
   <script>
-    const SC_MAP = {
-      a:'ᴀ', b:'ʙ', c:'ᴄ', d:'ᴅ', e:'ᴇ', f:'ꜰ', g:'ɢ', h:'ʜ',
-      i:'ɪ', j:'ᴊ', k:'ᴋ', l:'ʟ', m:'ᴍ', n:'ɴ', o:'ᴏ', p:'ᴘ',
-      q:'ǫ', r:'ʀ', s:'ꜱ', t:'ᴛ', u:'ᴜ', v:'ᴠ', w:'ᴡ', x:'x',
-      y:'ʏ', z:'ᴢ'
-    };
-
-    function convert(text) {
-      const result = text.split('').map(c => {
-        const lower = c.toLowerCase();
-        return SC_MAP[lower] || c;
-      }).join('');
-      document.getElementById('outputText').value = result;
+    function processText(text) {
+      let t = text;
+      if (document.getElementById('ignoreCase').checked)   t = t.toLowerCase();
+      if (document.getElementById('ignoreSpaces').checked) t = t.replace(/\s/g, '');
+      if (document.getElementById('ignorePunct').checked)  t = t.replace(/[^a-zA-Z0-9]/g, '');
+      return t;
     }
 
-    function copyOutput(btn) {
-      const out = document.getElementById('outputText').value;
-      if (!out) return;
-      navigator.clipboard.writeText(out).catch(() => {
-        document.getElementById('outputText').select();
-        document.execCommand('copy');
-      });
-      const orig = btn.innerHTML;
-      btn.innerHTML = '✓ Copied!';
-      setTimeout(() => btn.innerHTML = orig, 2000);
+    function checkPalindrome(raw) {
+      const box = document.getElementById('resultBox');
+      const revSection = document.getElementById('reversedSection');
+
+      if (!raw.trim()) {
+        box.innerHTML = `<div class="pc-result-idle">
+          <span class="pc-result-icon">🔄</span>
+          <p>Type something above to check if it is a palindrome.</p>
+        </div>`;
+        revSection.style.display = 'none';
+        return;
+      }
+
+      const processed = processText(raw);
+      const reversed  = processed.split('').reverse().join('');
+      const isPalin   = processed.length > 0 && processed === reversed;
+
+      // Show reversed original (not processed)
+      document.getElementById('reversedText').value = raw.split('').reverse().join('');
+      revSection.style.display = '';
+
+      if (isPalin) {
+        box.innerHTML = `<div class="pc-result yes">
+          <span class="pc-result-icon">✅</span>
+          <div>
+            <strong>Yes, it's a palindrome!</strong>
+            <p>"${raw.trim()}" reads the same forwards and backwards.</p>
+          </div>
+        </div>`;
+      } else {
+        box.innerHTML = `<div class="pc-result no">
+          <span class="pc-result-icon">❌</span>
+          <div>
+            <strong>Not a palindrome.</strong>
+            <p>"${raw.trim()}" does not read the same backwards.</p>
+          </div>
+        </div>`;
+      }
+    }
+
+    function recheckCurrent() {
+      checkPalindrome(document.getElementById('inputText').value);
+    }
+
+    function tryExample(text) {
+      document.getElementById('inputText').value = text;
+      checkPalindrome(text);
     }
 
     function clearAll() {
-      document.getElementById('inputText').value  = '';
-      document.getElementById('outputText').value = '';
+      document.getElementById('inputText').value = '';
+      document.getElementById('reversedSection').style.display = 'none';
+      document.getElementById('resultBox').innerHTML = `<div class="pc-result-idle">
+        <span class="pc-result-icon">🔄</span>
+        <p>Type something above to check if it is a palindrome.</p>
+      </div>`;
     }
 
     function toggleMenu(btn) {
