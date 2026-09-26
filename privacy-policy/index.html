@@ -1,143 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Coming Soon - GetOnlineTool</title>
-<link rel="icon" type="image/webp" href="../images/getonlinetool-favicon.webp">
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:Inter,Segoe UI,Arial,sans-serif;
-    background:#121212;
-    color:#fff;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-    overflow:hidden;
-}
-
-/* Background Glow */
-body::before{
-    content:"";
-    position:absolute;
-    width:500px;
-    height:500px;
-    background:#ca5b1f;
-    opacity:.08;
-    border-radius:50%;
-    filter:blur(140px);
-    top:-150px;
-    right:-150px;
-}
-
-body::after{
-    content:"";
-    position:absolute;
-    width:450px;
-    height:450px;
-    background:#ca5b1f;
-    opacity:.05;
-    border-radius:50%;
-    filter:blur(120px);
-    bottom:-180px;
-    left:-180px;
-}
-
-.container{
-    width:90%;
-    max-width:700px;
-    text-align:center;
-    position:relative;
-    z-index:2;
-}
-
-.logo{
-    width:320px;
-    max-width:90%;
-    margin-bottom:45px;
-}
-
-h1{
-    font-size:64px;
-    font-weight:700;
-    letter-spacing:-2px;
-    margin-bottom:18px;
-}
-
-.orange{
-    color:#ca5b1f;
-}
-
-p{
-    color:#b8b8b8;
-    font-size:19px;
-    line-height:1.7;
-    max-width:580px;
-    margin:auto;
-}
-
-.line{
-    width:90px;
-    height:4px;
-    background:#ca5b1f;
-    margin:40px auto;
-    border-radius:20px;
-}
-
-.footer{
-    margin-top:45px;
-    color:#666;
-    font-size:14px;
-}
-
-@media(max-width:768px){
-
-.logo{
-    width:240px;
-}
-
-h1{
-    font-size:42px;
-}
-
-p{
-    font-size:17px;
-}
-
-}
-</style>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - GetOnlineTool</title>
+  <meta name="description" content="How GetOnlineTool handles your data: what stays on your device, what our server sees, and what we never collect." />
+  <link rel="canonical" href="https://getonlinetool.com/privacy-policy" />
+  <meta property="og:title" content="Privacy Policy - GetOnlineTool" />
+  <meta property="og:description" content="How GetOnlineTool handles your data." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://getonlinetool.com/privacy-policy" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../tool.css" />
+  <link rel="icon" type="image/webp" href="../images/getonlinetool-favicon.webp">
 </head>
 <body>
 
-<div class="container">
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
 
-    <img src="../images/GetOnlineTool-Logo.webp"
-         alt="GetOnlineTool"
-         class="logo">
+      <!-- Logo -->
+      <a href="../" class="logo" aria-label="GetOnlineTool Home">
+        <img src="../images/GetOnlineTool-Logo.webp" alt="GetOnlineTool Logo" class="logo-img" />
+      </a>
 
-    <h1>Coming <span class="orange">Soon</span></h1>
+      <!-- Desktop Nav -->
+      <nav class="main-nav" aria-label="Main navigation">
 
-    <p>
-        We're working on this page and it'll be available very soon.
-        Thanks for your patience while we build something useful for you.
-    </p>
+        <!-- All Tools with Dropdown -->
+        <div class="nav-dropdown">
+          <a>
+            All Tools
+            <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="dropdown-menu">
+            <div class="dropdown-col">
+              <span class="dropdown-cat">📝 Text Tools</span>
+              <a href="../tool/word-count-online/">Word Count</a>
+              <a href="../tool/character-count-online/">Character Count</a>
+              <a href="../tool/case-maker-online/">Case Maker</a>
+              <a href="../tool/upper-to-lower-case/">Upper To Lower Case</a>
+              <a href="../tool/lower-to-upper-case/">Lower To Upper Case</a>
+              <a href="../tool/text-reverse-generator/">Text Reverse Generator</a>
+              <a href="../tool/small-caps-generator/">Small Caps Generator</a>
+              <a href="../tool/upside-down-text-generator/">Upside Down Text</a>
+              <a href="../tool/palindrome-checker-online/">Palindrome Checker</a>
+              <a href="../tool/notepad-online/">Notepad Online</a>
+            </div>
+            <div class="dropdown-col">
+              <span class="dropdown-cat">🔑 SEO Tools</span>
+              <a href="../tool/keyword-phrase-maker/">Keyword Phrase Maker</a>
+              <a href="../tool/json-ld-maker-online/">JSON-LD Generator</a>
+              <span class="dropdown-cat" style="margin-top:16px;">🧮 Utility</span>
+              <a href="../tool/online-calculator/">Calculator</a>
+            </div>
+          </div>
+        </div>
 
-    <div class="line"></div>
+        <a href="../blog/">Blog</a>
+        <a href="../about-us/">About Us</a>
+        <a href="../contact-us/">Contact Us</a>
+      </nav>
 
-    <div class="footer">
-        © 2026 GetOnlineTool.com
+      <!-- Hamburger (mobile) -->
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMenu(this)">
+        <span></span><span></span><span></span>
+      </button>
+
     </div>
 
-</div>
+    <!-- Mobile Nav Drawer -->
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+      <p>All Tools</p>
+      <a href="../tool/word-count-online/" class="mobile-sub">↳ Word Count</a>
+      <a href="../tool/character-count-online/" class="mobile-sub">↳ Character Count</a>
+      <a href="../tool/case-maker-online/" class="mobile-sub">↳ Case Maker</a>
+      <a href="../tool/upper-to-lower-case/" class="mobile-sub">↳ Upper To Lower Case</a>
+      <a href="../tool/lower-to-upper-case/" class="mobile-sub">↳ Lower To Upper Case</a>
+      <a href="../tool/text-reverse-generator/" class="mobile-sub">↳ Text Reverse Generator</a>
+      <a href="../tool/small-caps-generator/" class="mobile-sub">↳ Small Caps Generator</a>
+      <a href="../tool/upside-down-text-generator/" class="mobile-sub">↳ Upside Down Text</a>
+      <a href="../tool/palindrome-checker-online/" class="mobile-sub">↳ Palindrome Checker</a>
+      <a href="../tool/notepad-online/" class="mobile-sub">↳ Notepad Online</a>
+      <a href="../tool/keyword-phrase-maker/" class="mobile-sub">↳ Keyword Phrase Maker</a>
+      <a href="../tool/json-ld-maker-online/" class="mobile-sub">↳ JSON-LD Generator</a>
+      <a href="../tool/online-calculator/" class="mobile-sub">↳ Calculator</a>
+      <a href="../blog/">Blog</a>
+      <a href="../about-us/">About Us</a>
+      <a href="../contact-us/">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../">Home</a><span>›</span>
+        <span>Privacy Policy</span>
+      </div>
+      <h1 class="page-hero-title">Privacy Policy</h1>
+      <p class="page-hero-sub">Last updated: September 2026.</p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="content-section">
+    <div class="container content-narrow">
+
+      <p>This is a simple site without logins, accounts, or payment forms, so there isn't much personal data for us to collect in the first place. Here's what actually happens when you use GetOnlineTool.</p>
+
+      <h2>How the tools handle your data</h2>
+      <p>All the tools on this site (word counter, case converter, calculator, and the rest) run entirely in your browser using JavaScript. Whatever text or numbers you type into a tool stay on your device. None of it is sent to our servers, stored in a database, or shared with anyone. Close the tab or refresh the page, and that data is simply gone.</p>
+      <p>One exception is the Notepad tool, which saves your text in your browser's local storage so it's still there the next time you open the page on the same device and browser. That data never leaves your device either, and you can clear it any time by clearing your browser's site data.</p>
+
+      <h2>Server logs</h2>
+      <p>Like most websites, our server logs basic technical information when you visit: things like your browser type, an approximate location based on IP address, and which pages were requested. This is standard web hosting information used only to keep the site running and catch technical problems. It isn't linked to your identity.</p>
+
+      <h2>Fonts</h2>
+      <p>We use Google Fonts to display the text on this site, which means your browser makes a request to Google's servers to load them. Google may log that request as part of its own service. We don't control what Google does with that data; its own privacy policy covers it.</p>
+
+      <h2>What we don't do</h2>
+      <p>We don't use tracking cookies, we don't sell data (there isn't any to sell), and we don't run third-party advertising scripts that build a profile of you.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>If we ever add anything that changes this, like accounts, ads, or analytics tools, this page will be updated to reflect it, and the date at the top will change.</p>
+
+      <h2>Questions</h2>
+      <p>If you have questions about privacy or want to know more about how a specific tool works, email <strong>support@getonlinetool.com</strong> and we'll answer honestly.</p>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="../" class="logo logo-light">
+          <img src="../images/GetOnlineTool-Logo.webp" alt="GetOnlineTool Logo" class="logo-img footer-logo-img"
+               onerror="this.onerror=null;this.src='../images/GetOnlineTool-Logo.webp'" />
+        </a>
+        <p>GetOnlineTool provides free, fast, and simple online tools for writers, marketers, students, and developers. No account needed - ever.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="LinkedIn">💼</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="../">Home</a></li>
+          <li><a href="../#tools">All Tools</a></li>
+          <li><a href="../about-us/">About Us</a></li>
+          <li><a href="../blog/">Blog</a></li>
+          <li><a href="../contact-us/">Contact Us</a></li>
+          <li><a href="../privacy-policy/">Privacy Policy</a></li>
+          <li><a href="../terms-and-conditions/">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Popular Tools</h4>
+        <ul>
+          <li><a href="../tool/word-count-online/">Word Count</a></li>
+          <li><a href="../tool/character-count-online/">Character Count</a></li>
+          <li><a href="../tool/keyword-phrase-maker/">Keyword Phrase Maker</a></li>
+          <li><a href="../tool/case-maker-online/">Case Maker</a></li>
+          <li><a href="../tool/text-reverse-generator/">Text Reverse Generator</a></li>
+          <li><a href="../tool/palindrome-checker-online/">Palindrome Checker</a></li>
+          <li><a href="../tool/online-calculator/">Calculator</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Stay Updated</h4>
+        <p class="newsletter-desc">Get notified when we add new tools. No spam, ever.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email address" aria-label="Email address" />
+          <button type="button">Subscribe</button>
+        </div>
+        <p class="newsletter-note">We respect your privacy. Unsubscribe anytime.</p>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <div class="container footer-bar-inner">
+        <p>© 2026 GetOnlineTool. All rights reserved.</p>
+        <div class="footer-bar-links">
+          <a href="../privacy-policy/">Privacy Policy</a>
+          <a href="../terms-and-conditions/">Terms & Conditions</a>
+          <a href="../sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu(btn) {
+      const nav = document.getElementById('mobileNav');
+      const open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+      btn.classList.toggle('active', open);
+    }
+  </script>
 
 </body>
 </html>
