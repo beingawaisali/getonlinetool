@@ -477,14 +477,14 @@
   <section class="content-section">
     <div class="container content-narrow">
       <h2>What Is JSON-LD?</h2>
-      <p>JSON-LD (JavaScript Object Notation for Linked Data) is a method of encoding structured data that search engines like Google use to better understand your web pages. It enables rich results in search - such as star ratings, FAQ dropdowns, article details, and more.</p>
+      <p>It's a way of formatting structured data so Google and other search engines can actually understand what's on your page, rather than just guessing from the text. That's what unlocks the rich results you see in search, star ratings, FAQ dropdowns, article previews, that kind of thing.</p>
 
       <h2>How to Use the JSON-LD Generator</h2>
       <ol class="how-steps">
-        <li><strong>Select a schema type</strong> from the buttons above - Article, FAQ, Product, Local Business, Person, or Website.</li>
-        <li><strong>Fill in the fields</strong> on the left. The JSON-LD code updates automatically as you type.</li>
-        <li><strong>Copy the generated code</strong> using the Copy Code button.</li>
-        <li><strong>Paste it into your website</strong> inside a <code style="background:var(--primary-lt);color:var(--primary);padding:1px 6px;border-radius:4px;font-size:.85em;">&lt;script type="application/ld+json"&gt;</code> tag in the <code style="background:var(--primary-lt);color:var(--primary);padding:1px 6px;border-radius:4px;font-size:.85em;">&lt;head&gt;</code>.</li>
+        <li><strong>Pick a schema type</strong> from the buttons up top, Article, FAQ, Product, Local Business, Person, or Website.</li>
+        <li><strong>Fill in the fields</strong> on the left, and the code on the right builds itself as you go.</li>
+        <li><strong>Copy the code</strong> once it looks right.</li>
+        <li><strong>Drop it into your site</strong> inside a <code style="background:var(--primary-lt);color:var(--primary);padding:1px 6px;border-radius:4px;font-size:.85em;">&lt;script type="application/ld+json"&gt;</code> tag, somewhere in the <code style="background:var(--primary-lt);color:var(--primary);padding:1px 6px;border-radius:4px;font-size:.85em;">&lt;head&gt;</code>.</li>
       </ol>
 
       <h2>Which Schema Type Should You Use?</h2>
@@ -504,25 +504,25 @@
           <button class="faq-q" onclick="toggleFaq(this)">Where exactly do I paste the JSON-LD code?
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-a"><p>Paste it inside your page's HTML wrapped in a script tag: &lt;script type="application/ld+json"&gt;...&lt;/script&gt;. Place it in the &lt;head&gt; section. WordPress users can use plugins like Yoast SEO or RankMath to add it easily.</p></div>
+          <div class="faq-a"><p>Wrap it in a script tag, &lt;script type="application/ld+json"&gt;...&lt;/script&gt;, and drop that in the &lt;head&gt; of your page. If you're on WordPress, Yoast or RankMath make this pretty painless too.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">Will JSON-LD improve my search rankings?
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-a"><p>JSON-LD doesn't directly boost rankings but enables rich results (star ratings, FAQ dropdowns etc.) which improve click-through rates and can indirectly benefit your SEO over time.</p></div>
+          <div class="faq-a"><p>Not directly, no. What it does is unlock rich results, star ratings, FAQ dropdowns, that sort of thing, which tend to get more clicks. That click-through boost is where the SEO benefit actually comes from.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">Can I use multiple schemas on one page?
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-a"><p>Yes. You can add multiple JSON-LD script tags on the same page. Generate each schema separately using this tool and add both to your page.</p></div>
+          <div class="faq-a"><p>Sure can, nothing stopping you from adding several script tags on the same page. Just generate each schema separately here and paste both in.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">How do I test my JSON-LD?
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-a"><p>Use Google's Rich Results Test at search.google.com/test/rich-results to validate your structured data and check if your page qualifies for rich results.</p></div>
+          <div class="faq-a"><p>Google's Rich Results Test (search.google.com/test/rich-results) is the one to use. Paste your page or code in there and it'll tell you if it qualifies.</p></div>
         </div>
       </div>
     </div>

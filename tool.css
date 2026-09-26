@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════
-   TOOL.CSS — Shared styles for all tool pages
+   TOOL.CSS - Shared styles for all tool pages
    Uses same design tokens as style.css
 ═══════════════════════════════════════════════ */
 
@@ -65,7 +65,7 @@
 }
 
 /* ─────────────────────────────────────────────
-   KEYWORD PHRASE MAKER — Sidebar Layout
+   KEYWORD PHRASE MAKER - Sidebar Layout
 ───────────────────────────────────────────── */
 
 /* Main 2-col layout */
@@ -545,7 +545,7 @@
 
 
 /* ─────────────────────────────────────────────
-   RESPONSIVE — Tool pages
+   RESPONSIVE - Tool pages
 ───────────────────────────────────────────── */
 @media (max-width: 900px) {
   .kpm-layout { grid-template-columns: 1fr; }
@@ -583,7 +583,7 @@
   align-items: start;
 }
 
-/* Left — big textarea */
+/* Left - big textarea */
 .cc-left { display: flex; flex-direction: column; }
 
 .cc-textarea-wrap {
