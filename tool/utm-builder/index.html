@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UTM Builder – Free Campaign URL Generator</title>
+  <meta name="description" content="Build UTM-tagged campaign URLs for Google Analytics. Add source, medium, campaign, term and content parameters, free and instant." />
+  <link rel="canonical" href="https://getonlinetool.com/tool/utm-builder" />
+  <meta property="og:title" content="UTM Builder – Free Campaign URL Generator" />
+  <meta property="og:description" content="Build UTM-tagged campaign URLs for analytics tracking instantly." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://getonlinetool.com/tool/utm-builder" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../tool.css" />
+  <link rel="icon" type="image/webp" href="../../images/getonlinetool-favicon.webp">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "UTM Builder",
+    "url": "https://getonlinetool.com/tool/utm-builder",
+    "description": "Free online tool to build UTM-tagged campaign URLs for analytics tracking.",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <style>
+    .utm-req { color: var(--primary); font-weight: 700; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../../" class="logo" aria-label="GetOnlineTool Home">
+        <img src="../../images/GetOnlineTool-Logo.webp" alt="GetOnlineTool Logo" class="logo-img" />
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <div class="nav-dropdown">
+          <a>
+            All Tools
+            <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="dropdown-menu">
+            <div class="dropdown-col">
+              <span class="dropdown-cat">📝 Text Tools</span>
+              <a href="../../tool/word-count-online/">Word Count</a>
+              <a href="../../tool/character-count-online/">Character Count</a>
+              <a href="../../tool/case-maker-online/">Case Maker</a>
+              <a href="../../tool/upper-to-lower-case/">Upper To Lower Case</a>
+              <a href="../../tool/lower-to-upper-case/">Lower To Upper Case</a>
+              <a href="../../tool/text-reverse-generator/">Text Reverse Generator</a>
+              <a href="../../tool/small-caps-generator/">Small Caps Generator</a>
+              <a href="../../tool/upside-down-text-generator/">Upside Down Text</a>
+              <a href="../../tool/palindrome-checker-online/">Palindrome Checker</a>
+              <a href="../../tool/notepad-online/">Notepad Online</a>
+            </div>
+            <div class="dropdown-col">
+              <span class="dropdown-cat">🔑 SEO Tools</span>
+              <a href="../../tool/keyword-phrase-maker/">Keyword Phrase Maker</a>
+              <a href="../../tool/json-ld-maker-online/">JSON-LD Generator</a>
+              <a href="../../tool/seo-title-length/">SEO Title Length</a>
+              <a href="../../tool/seo-description-length/">SEO Description Length</a>
+              <a href="../../tool/url-maker/">URL Maker</a>
+              <a href="../../tool/utm-builder/">UTM Builder</a>
+              <span class="dropdown-cat" style="margin-top:16px;">🧮 Utility</span>
+              <a href="../../tool/online-calculator/">Calculator</a>
+              <a href="../../tool/bulk-link-opener/">Bulk Link Opener</a>
+            </div>
+          </div>
+        </div>
+        <a href="../../blog/">Blog</a>
+        <a href="../../about-us/">About Us</a>
+        <a href="../../contact-us/">Contact Us</a>
+      </nav>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMenu(this)">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+      <p>All Tools</p>
+      <a href="../../tool/word-count-online/" class="mobile-sub">↳ Word Count</a>
+      <a href="../../tool/character-count-online/" class="mobile-sub">↳ Character Count</a>
+      <a href="../../tool/case-maker-online/" class="mobile-sub">↳ Case Maker</a>
+      <a href="../../tool/upper-to-lower-case/" class="mobile-sub">↳ Upper To Lower Case</a>
+      <a href="../../tool/lower-to-upper-case/" class="mobile-sub">↳ Lower To Upper Case</a>
+      <a href="../../tool/text-reverse-generator/" class="mobile-sub">↳ Text Reverse Generator</a>
+      <a href="../../tool/small-caps-generator/" class="mobile-sub">↳ Small Caps Generator</a>
+      <a href="../../tool/upside-down-text-generator/" class="mobile-sub">↳ Upside Down Text</a>
+      <a href="../../tool/palindrome-checker-online/" class="mobile-sub">↳ Palindrome Checker</a>
+      <a href="../../tool/notepad-online/" class="mobile-sub">↳ Notepad Online</a>
+      <a href="../../tool/keyword-phrase-maker/" class="mobile-sub">↳ Keyword Phrase Maker</a>
+      <a href="../../tool/json-ld-maker-online/" class="mobile-sub">↳ JSON-LD Generator</a>
+      <a href="../../tool/seo-title-length/" class="mobile-sub">↳ SEO Title Length</a>
+      <a href="../../tool/seo-description-length/" class="mobile-sub">↳ SEO Description Length</a>
+      <a href="../../tool/url-maker/" class="mobile-sub">↳ URL Maker</a>
+      <a href="../../tool/utm-builder/" class="mobile-sub">↳ UTM Builder</a>
+      <a href="../../tool/online-calculator/" class="mobile-sub">↳ Calculator</a>
+      <a href="../../tool/bulk-link-opener/" class="mobile-sub">↳ Bulk Link Opener</a>
+      <a href="../../blog/">Blog</a>
+      <a href="../../about-us/">About Us</a>
+      <a href="../../contact-us/">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../../">Home</a><span>›</span>
+        <a href="../../#tools">Tools</a><span>›</span>
+        <span>UTM Builder</span>
+      </div>
+      <h1 class="page-hero-title">UTM Builder</h1>
+      <p class="page-hero-sub">Build a campaign-tagged URL for Google Analytics in seconds.</p>
+    </div>
+  </section>
+
+  <!-- TOOL -->
+  <section class="tool-section">
+    <div class="container">
+      <div class="tool-wrapper">
+        <div class="kpm-layout">
+
+          <div class="kpm-left">
+            <div class="kpm-box">
+              <label class="kpm-label">Website URL <span class="utm-req">*</span></label>
+              <input type="text" id="utmUrl" class="kpm-textarea" style="height:44px;" placeholder="https://example.com/page" oninput="buildUtm()" />
+            </div>
+            <div class="kpm-box">
+              <label class="kpm-label">Campaign Source <span class="utm-req">*</span> <span class="optional">e.g. facebook, newsletter</span></label>
+              <input type="text" id="utmSource" class="kpm-textarea" style="height:44px;" placeholder="google" oninput="buildUtm()" />
+            </div>
+            <div class="kpm-box">
+              <label class="kpm-label">Campaign Medium <span class="utm-req">*</span> <span class="optional">e.g. cpc, email, social</span></label>
+              <input type="text" id="utmMedium" class="kpm-textarea" style="height:44px;" placeholder="cpc" oninput="buildUtm()" />
+            </div>
+            <div class="kpm-box">
+              <label class="kpm-label">Campaign Name <span class="utm-req">*</span> <span class="optional">e.g. summer_sale</span></label>
+              <input type="text" id="utmCampaign" class="kpm-textarea" style="height:44px;" placeholder="summer_sale" oninput="buildUtm()" />
+            </div>
+            <div class="kpm-box">
+              <label class="kpm-label">Campaign Term <span class="optional">(optional, for paid keywords)</span></label>
+              <input type="text" id="utmTerm" class="kpm-textarea" style="height:44px;" placeholder="running+shoes" oninput="buildUtm()" />
+            </div>
+            <div class="kpm-box">
+              <label class="kpm-label">Campaign Content <span class="optional">(optional, for A/B testing links)</span></label>
+              <input type="text" id="utmContent" class="kpm-textarea" style="height:44px;" placeholder="logolink" oninput="buildUtm()" />
+            </div>
+
+            <div class="kpm-results">
+              <div class="results-header">
+                <h3 class="results-title">Generated URL</h3>
+              </div>
+              <textarea id="utmOutput" class="results-textarea" style="height:100px;" readonly spellcheck="false" placeholder="Your tagged campaign URL will appear here..."></textarea>
+            </div>
+          </div>
+
+          <div class="kpm-right">
+            <div class="kpm-options-card">
+              <h3 class="options-title">How it works</h3>
+              <p style="padding:12px 14px; font-size:.85rem; color:var(--text-muted); line-height:1.6;">Fields marked <span class="utm-req">*</span> are the ones Google Analytics needs to attribute traffic correctly. Term and Content are only needed for paid search or A/B testing.</p>
+            </div>
+
+            <button class="btn-copy" id="copyBtn" onclick="copyUtm()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              Copy URL
+            </button>
+            <button class="btn-clear" onclick="clearUtm()">Clear All</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="../../" class="logo logo-light">
+          <img src="../../images/GetOnlineTool-Logo.webp" alt="GetOnlineTool Logo" class="logo-img footer-logo-img"
+               onerror="this.onerror=null;this.src='../../images/GetOnlineTool-Logo.webp'" />
+        </a>
+        <p>GetOnlineTool provides free, fast, and simple online tools for writers, marketers, students, and developers. No account needed - ever.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="LinkedIn">💼</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="../../">Home</a></li>
+          <li><a href="../../#tools">All Tools</a></li>
+          <li><a href="../../about-us/">About Us</a></li>
+          <li><a href="../../blog/">Blog</a></li>
+          <li><a href="../../contact-us/">Contact Us</a></li>
+          <li><a href="../../privacy-policy/">Privacy Policy</a></li>
+          <li><a href="../../terms-and-conditions/">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Popular Tools</h4>
+        <ul>
+          <li><a href="../../tool/word-count-online/">Word Count</a></li>
+          <li><a href="../../tool/character-count-online/">Character Count</a></li>
+          <li><a href="../../tool/keyword-phrase-maker/">Keyword Phrase Maker</a></li>
+          <li><a href="../../tool/case-maker-online/">Case Maker</a></li>
+          <li><a href="../../tool/text-reverse-generator/">Text Reverse Generator</a></li>
+          <li><a href="../../tool/palindrome-checker-online/">Palindrome Checker</a></li>
+          <li><a href="../../tool/online-calculator/">Calculator</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Stay Updated</h4>
+        <p class="newsletter-desc">Get notified when we add new tools. No spam, ever.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email address" aria-label="Email address" />
+          <button type="button">Subscribe</button>
+        </div>
+        <p class="newsletter-note">We respect your privacy. Unsubscribe anytime.</p>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <div class="container footer-bar-inner">
+        <p>© 2026 GetOnlineTool. All rights reserved.</p>
+        <div class="footer-bar-links">
+          <a href="../../privacy-policy/">Privacy Policy</a>
+          <a href="../../terms-and-conditions/">Terms & Conditions</a>
+          <a href="../../sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function buildUtm() {
+      const base = document.getElementById('utmUrl').value.trim();
+      const params = [
+        ['utm_source', document.getElementById('utmSource').value.trim()],
+        ['utm_medium', document.getElementById('utmMedium').value.trim()],
+        ['utm_campaign', document.getElementById('utmCampaign').value.trim()],
+        ['utm_term', document.getElementById('utmTerm').value.trim()],
+        ['utm_content', document.getElementById('utmContent').value.trim()],
+      ].filter(([, v]) => v.length > 0);
+
+      const output = document.getElementById('utmOutput');
+
+      if (!base) {
+        output.value = '';
+        return;
+      }
+      if (params.length === 0) {
+        output.value = base;
+        return;
+      }
+
+      const query = params
+        .map(([k, v]) => `${k}=${encodeURIComponent(v)}`)
+        .join('&');
+
+      const separator = base.includes('?') ? '&' : '?';
+      output.value = base + separator + query;
+    }
+
+    function copyUtm() {
+      const box = document.getElementById('utmOutput');
+      if (!box.value) return;
+      box.select();
+      navigator.clipboard.writeText(box.value).catch(() => document.execCommand('copy'));
+      const btn = document.getElementById('copyBtn');
+      const orig = btn.innerHTML;
+      btn.textContent = '✓ Copied!';
+      btn.classList.add('copied');
+      setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('copied'); }, 2000);
+    }
+
+    function clearUtm() {
+      ['utmUrl','utmSource','utmMedium','utmCampaign','utmTerm','utmContent'].forEach(id => document.getElementById(id).value = '');
+      document.getElementById('utmOutput').value = '';
+    }
+
+    function toggleMenu(btn) {
+      const nav = document.getElementById('mobileNav');
+      const open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+      btn.classList.toggle('active', open);
+    }
+  </script>
+
+</body>
+</html>
