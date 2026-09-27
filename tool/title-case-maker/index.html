@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>URL Maker – Free Online Slug Generator</title>
-  <meta name="description" content="Turn any title or sentence into a clean, SEO-friendly URL slug. Choose hyphen or underscore separators, free and instant." />
-  <link rel="canonical" href="https://getonlinetool.com/tool/url-maker" />
-  <meta property="og:title" content="URL Maker – Free Online Slug Generator" />
-  <meta property="og:description" content="Turn any title into a clean, SEO-friendly URL slug instantly." />
+  <title>Title Case Maker – Free Online Title Case Converter</title>
+  <meta name="description" content="Convert any text to proper Title Case instantly. Follows standard capitalization rules for headlines, articles and book titles." />
+  <link rel="canonical" href="https://getonlinetool.com/tool/title-case-maker" />
+  <meta property="og:title" content="Title Case Maker – Free Online Title Case Converter" />
+  <meta property="og:description" content="Convert any text to proper Title Case instantly, free and no sign-up." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://getonlinetool.com/tool/url-maker" />
+  <meta property="og:url" content="https://getonlinetool.com/tool/title-case-maker" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
@@ -20,9 +20,9 @@
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "URL Maker",
-    "url": "https://getonlinetool.com/tool/url-maker",
-    "description": "Free online tool to turn any title or sentence into a clean URL slug.",
+    "name": "Title Case Maker",
+    "url": "https://getonlinetool.com/tool/title-case-maker",
+    "description": "Free online tool to convert text to Title Case instantly.",
     "applicationCategory": "UtilityApplication",
     "operatingSystem": "Any",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
@@ -122,10 +122,10 @@
       <div class="breadcrumb">
         <a href="../../">Home</a><span>›</span>
         <a href="../../#tools">Tools</a><span>›</span>
-        <span>URL Maker</span>
+        <span>Title Case Maker</span>
       </div>
-      <h1 class="page-hero-title">URL Maker</h1>
-      <p class="page-hero-sub">Turn any title or sentence into a clean, SEO-friendly URL slug, instantly.</p>
+      <h1 class="page-hero-title">Title Case Maker</h1>
+      <p class="page-hero-sub">Convert any text to proper Title Case for headlines, articles, and book titles - live as you type.</p>
     </div>
   </section>
 
@@ -133,50 +133,29 @@
   <section class="tool-section">
     <div class="container">
       <div class="tool-wrapper">
-        <div class="kpm-layout">
+        <div class="cc-layout">
 
-          <div class="kpm-left">
-            <div class="kpm-box">
-              <label class="kpm-label">Title or Text</label>
-              <textarea id="slugInput" class="kpm-textarea" style="height:120px;" placeholder="e.g. 10 Best Coffee Shops in New York (2026 Guide)" spellcheck="false" oninput="generateSlug()"></textarea>
-            </div>
-
-            <div class="kpm-results">
-              <div class="results-header">
-                <h3 class="results-title">URL Slug</h3>
+          <div class="cc-left">
+            <div class="cc-textarea-wrap">
+              <textarea rows="10" id="inputText" class="cc-textarea" placeholder="Type or paste your text here..." oninput="convert(this.value)" spellcheck="true"></textarea>
+              <div class="cc-textarea-footer">
+                <span class="cc-live-badge">● Live conversion</span>
+                <button class="cc-clear-btn" onclick="clearAll()">Clear</button>
               </div>
-              <textarea id="slugOutput" class="results-textarea" style="height:80px;" readonly spellcheck="false" placeholder="Your URL slug will appear here..."></textarea>
             </div>
           </div>
 
-          <div class="kpm-right">
-            <div class="kpm-options-card">
-              <h3 class="options-title">Separator</h3>
-              <label class="radio-label">
-                <input type="radio" name="sep" value="-" checked onchange="generateSlug()" /> Hyphen (-)
-              </label>
-              <label class="radio-label">
-                <input type="radio" name="sep" value="_" onchange="generateSlug()" /> Underscore (_)
-              </label>
+          <div class="cc-right">
+            <div class="kpm-results">
+              <div class="results-header">
+                <h3 class="results-title">Title Case Output</h3>
+              </div>
+              <textarea id="outputText" class="results-textarea" style="height:200px;" readonly spellcheck="false" placeholder="Your Title Case Text Will Appear Here..."></textarea>
             </div>
-
-            <div class="kpm-options-card">
-              <h3 class="options-title">Options</h3>
-              <label class="check-label">
-                <input type="checkbox" id="lowercaseOpt" checked onchange="generateSlug()" />
-                <span>Lowercase</span>
-              </label>
-              <label class="check-label">
-                <input type="checkbox" id="stripAccents" checked onchange="generateSlug()" />
-                <span>Remove accents</span>
-              </label>
-            </div>
-
-            <button class="btn-copy" id="copyBtn" onclick="copySlug()">
+            <button class="btn-copy" id="copyBtn" onclick="copyOutput()" style="margin-top:12px;">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              Copy Slug
+              Copy Text
             </button>
-            <button class="btn-clear" onclick="clearSlug()">Clear</button>
           </div>
 
         </div>
@@ -246,49 +225,39 @@
   </footer>
 
   <script>
-    function generateSlug() {
-      const raw = document.getElementById('slugInput').value;
-      const sep = document.querySelector('input[name="sep"]:checked').value;
-      const lowercase = document.getElementById('lowercaseOpt').checked;
-      const stripAccents = document.getElementById('stripAccents').checked;
+    const SKIP = new Set(['a','an','the','and','but','or','for','nor','on','at','to','by','in','of','up','as','is','it']);
 
-      let text = raw;
-      if (stripAccents) {
-        text = text.normalize('NFKD').replace(/[̀-ͯ]/g, '');
-      }
-      if (lowercase) {
-        text = text.toLowerCase();
-      }
-
-      text = text
-        .replace(/[^a-zA-Z0-9\s-_]/g, '')
-        .trim()
-        .replace(/[\s_-]+/g, sep);
-
-      if (sep === '-') {
-        text = text.replace(/^-+|-+$/g, '');
-      } else {
-        text = text.replace(/^_+|_+$/g, '');
-      }
-
-      document.getElementById('slugOutput').value = text;
+    function toTitleCase(text) {
+      return text.replace(/\S+/g, (word, offset) => {
+        const lower = word.toLowerCase();
+        const isFirst = offset === 0;
+        const precedingChar = text.slice(0, offset).trimEnd().slice(-1);
+        const isAfterPunctuation = precedingChar === ':' || precedingChar === '.' || precedingChar === '?' || precedingChar === '!' || precedingChar === '\n';
+        if (!isFirst && !isAfterPunctuation && SKIP.has(lower.replace(/[^a-z]/g, ''))) {
+          return lower;
+        }
+        return lower.replace(/^([a-z])/, c => c.toUpperCase());
+      });
     }
 
-    function copySlug() {
-      const box = document.getElementById('slugOutput');
+    function convert(text) {
+      document.getElementById('outputText').value = toTitleCase(text);
+    }
+
+    function clearAll() {
+      document.getElementById('inputText').value = '';
+      document.getElementById('outputText').value = '';
+    }
+
+    function copyOutput() {
+      const box = document.getElementById('outputText');
       if (!box.value) return;
       box.select();
       navigator.clipboard.writeText(box.value).catch(() => document.execCommand('copy'));
       const btn = document.getElementById('copyBtn');
       const orig = btn.innerHTML;
       btn.textContent = '✓ Copied!';
-      btn.classList.add('copied');
-      setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('copied'); }, 2000);
-    }
-
-    function clearSlug() {
-      document.getElementById('slugInput').value = '';
-      document.getElementById('slugOutput').value = '';
+      setTimeout(() => btn.innerHTML = orig, 2000);
     }
 
     function toggleMenu(btn) {

@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>URL Maker – Free Online Slug Generator</title>
-  <meta name="description" content="Turn any title or sentence into a clean, SEO-friendly URL slug. Choose hyphen or underscore separators, free and instant." />
-  <link rel="canonical" href="https://getonlinetool.com/tool/url-maker" />
-  <meta property="og:title" content="URL Maker – Free Online Slug Generator" />
-  <meta property="og:description" content="Turn any title into a clean, SEO-friendly URL slug instantly." />
+  <title>Reduce Word Count Tool – Trim Text to a Target Word Count</title>
+  <meta name="description" content="Set a target word count and instantly see how much to cut, trim your text to an exact word limit, and spot common filler words to remove." />
+  <link rel="canonical" href="https://getonlinetool.com/tool/reduce-word-count" />
+  <meta property="og:title" content="Reduce Word Count Tool – Trim Text to a Target Word Count" />
+  <meta property="og:description" content="Trim your text to an exact word limit and spot filler words to cut, instantly." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://getonlinetool.com/tool/url-maker" />
+  <meta property="og:url" content="https://getonlinetool.com/tool/reduce-word-count" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
@@ -20,14 +20,25 @@
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "URL Maker",
-    "url": "https://getonlinetool.com/tool/url-maker",
-    "description": "Free online tool to turn any title or sentence into a clean URL slug.",
+    "name": "Reduce Word Count Tool",
+    "url": "https://getonlinetool.com/tool/reduce-word-count",
+    "description": "Free online tool to trim text to a target word count and highlight common filler words.",
     "applicationCategory": "UtilityApplication",
     "operatingSystem": "Any",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
   }
   </script>
+  <style>
+    .rwc-target-row { display: flex; align-items: center; gap: 10px; padding: 10px 14px; }
+    .rwc-target-row input[type="number"] {
+      width: 90px; padding: 8px 10px; border: 1.5px solid var(--border); border-radius: 8px;
+      font-family: inherit; font-size: .9rem;
+    }
+    .rwc-diff { font-weight: 700; padding: 3px 10px; border-radius: 100px; font-size: .78rem; }
+    .rwc-diff.over { background: #FEE8E8; color: #C62828; }
+    .rwc-diff.under { background: #E6F4EA; color: #2E7D32; }
+    .filler-tag { display: inline-block; background: var(--primary-lt); color: var(--primary); padding: 2px 8px; border-radius: 100px; font-size: .78rem; margin: 3px 4px 0 0; }
+  </style>
 </head>
 <body>
 
@@ -122,10 +133,10 @@
       <div class="breadcrumb">
         <a href="../../">Home</a><span>›</span>
         <a href="../../#tools">Tools</a><span>›</span>
-        <span>URL Maker</span>
+        <span>Reduce Word Count</span>
       </div>
-      <h1 class="page-hero-title">URL Maker</h1>
-      <p class="page-hero-sub">Turn any title or sentence into a clean, SEO-friendly URL slug, instantly.</p>
+      <h1 class="page-hero-title">Reduce Word Count Tool</h1>
+      <p class="page-hero-sub">Set a target word count, see exactly how much to cut, and trim your text to fit - instantly.</p>
     </div>
   </section>
 
@@ -133,50 +144,47 @@
   <section class="tool-section">
     <div class="container">
       <div class="tool-wrapper">
-        <div class="kpm-layout">
+        <div class="cc-layout">
 
-          <div class="kpm-left">
-            <div class="kpm-box">
-              <label class="kpm-label">Title or Text</label>
-              <textarea id="slugInput" class="kpm-textarea" style="height:120px;" placeholder="e.g. 10 Best Coffee Shops in New York (2026 Guide)" spellcheck="false" oninput="generateSlug()"></textarea>
-            </div>
-
-            <div class="kpm-results">
-              <div class="results-header">
-                <h3 class="results-title">URL Slug</h3>
+          <div class="cc-left">
+            <div class="cc-textarea-wrap">
+              <textarea rows="16" id="inputText" class="cc-textarea" placeholder="Paste your text here..." oninput="analyzeText()" spellcheck="true"></textarea>
+              <div class="cc-textarea-footer">
+                <span class="cc-live-badge">● Live counting</span>
+                <button class="cc-clear-btn" onclick="clearAll()">Clear</button>
               </div>
-              <textarea id="slugOutput" class="results-textarea" style="height:80px;" readonly spellcheck="false" placeholder="Your URL slug will appear here..."></textarea>
             </div>
           </div>
 
-          <div class="kpm-right">
+          <div class="cc-right">
             <div class="kpm-options-card">
-              <h3 class="options-title">Separator</h3>
-              <label class="radio-label">
-                <input type="radio" name="sep" value="-" checked onchange="generateSlug()" /> Hyphen (-)
-              </label>
-              <label class="radio-label">
-                <input type="radio" name="sep" value="_" onchange="generateSlug()" /> Underscore (_)
-              </label>
+              <h3 class="options-title">Target Word Count</h3>
+              <div class="rwc-target-row">
+                <input type="number" id="targetCount" min="1" value="500" oninput="analyzeText()" />
+                <span id="diffBadge" class="rwc-diff under">0 to cut</span>
+              </div>
             </div>
 
-            <div class="kpm-options-card">
-              <h3 class="options-title">Options</h3>
-              <label class="check-label">
-                <input type="checkbox" id="lowercaseOpt" checked onchange="generateSlug()" />
-                <span>Lowercase</span>
-              </label>
-              <label class="check-label">
-                <input type="checkbox" id="stripAccents" checked onchange="generateSlug()" />
-                <span>Remove accents</span>
-              </label>
+            <div class="cc-stat-card">
+              <div class="cc-stat-row">
+                <span class="cc-stat-row-label">Current words</span>
+                <span class="cc-stat-row-val" id="wordCount">0</span>
+              </div>
+              <div class="cc-stat-row">
+                <span class="cc-stat-row-label">Filler words found</span>
+                <span class="cc-stat-row-val" id="fillerCount">0</span>
+              </div>
             </div>
 
-            <button class="btn-copy" id="copyBtn" onclick="copySlug()">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              Copy Slug
+            <button class="btn-generate" onclick="trimToTarget()">
+              Trim to Target
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </button>
-            <button class="btn-clear" onclick="clearSlug()">Clear</button>
+
+            <div class="kpm-options-card" style="margin-top:12px;">
+              <h3 class="options-title">Filler Words Found</h3>
+              <div id="fillerList" style="padding:10px 14px; font-size:.85rem; color:var(--text-muted);">None yet - type some text.</div>
+            </div>
           </div>
 
         </div>
@@ -246,49 +254,58 @@
   </footer>
 
   <script>
-    function generateSlug() {
-      const raw = document.getElementById('slugInput').value;
-      const sep = document.querySelector('input[name="sep"]:checked').value;
-      const lowercase = document.getElementById('lowercaseOpt').checked;
-      const stripAccents = document.getElementById('stripAccents').checked;
+    const FILLER_WORDS = ['very','really','actually','basically','just','that','literally','simply','quite','somewhat','perhaps','maybe','in order to','due to the fact that','at this point in time','for the most part'];
 
-      let text = raw;
-      if (stripAccents) {
-        text = text.normalize('NFKD').replace(/[̀-ͯ]/g, '');
-      }
-      if (lowercase) {
-        text = text.toLowerCase();
-      }
+    function getWords(text) {
+      return text.trim() === '' ? [] : text.trim().split(/\s+/);
+    }
 
-      text = text
-        .replace(/[^a-zA-Z0-9\s-_]/g, '')
-        .trim()
-        .replace(/[\s_-]+/g, sep);
+    function analyzeText() {
+      const text = document.getElementById('inputText').value;
+      const words = getWords(text);
+      const wordCount = words.length;
+      const target = parseInt(document.getElementById('targetCount').value, 10) || 0;
 
-      if (sep === '-') {
-        text = text.replace(/^-+|-+$/g, '');
+      document.getElementById('wordCount').textContent = wordCount.toLocaleString();
+
+      const diffBadge = document.getElementById('diffBadge');
+      const diff = wordCount - target;
+      if (diff > 0) {
+        diffBadge.textContent = `${diff} to cut`;
+        diffBadge.className = 'rwc-diff over';
       } else {
-        text = text.replace(/^_+|_+$/g, '');
+        diffBadge.textContent = diff === 0 ? 'On target' : `${Math.abs(diff)} under`;
+        diffBadge.className = 'rwc-diff under';
       }
 
-      document.getElementById('slugOutput').value = text;
+      const lowerText = text.toLowerCase();
+      const found = FILLER_WORDS.filter(fw => {
+        const re = new RegExp('\\b' + fw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'g');
+        return re.test(lowerText);
+      });
+
+      document.getElementById('fillerCount').textContent = found.length;
+      const fillerList = document.getElementById('fillerList');
+      fillerList.innerHTML = found.length === 0
+        ? 'None found - nice and tight.'
+        : found.map(w => `<span class="filler-tag">${w}</span>`).join('');
     }
 
-    function copySlug() {
-      const box = document.getElementById('slugOutput');
-      if (!box.value) return;
-      box.select();
-      navigator.clipboard.writeText(box.value).catch(() => document.execCommand('copy'));
-      const btn = document.getElementById('copyBtn');
-      const orig = btn.innerHTML;
-      btn.textContent = '✓ Copied!';
-      btn.classList.add('copied');
-      setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('copied'); }, 2000);
+    function trimToTarget() {
+      const text = document.getElementById('inputText').value;
+      const words = getWords(text);
+      const target = parseInt(document.getElementById('targetCount').value, 10) || 0;
+
+      if (target <= 0 || words.length <= target) return;
+
+      const trimmed = words.slice(0, target).join(' ');
+      document.getElementById('inputText').value = trimmed;
+      analyzeText();
     }
 
-    function clearSlug() {
-      document.getElementById('slugInput').value = '';
-      document.getElementById('slugOutput').value = '';
+    function clearAll() {
+      document.getElementById('inputText').value = '';
+      analyzeText();
     }
 
     function toggleMenu(btn) {
@@ -297,6 +314,8 @@
       btn.setAttribute('aria-expanded', open);
       btn.classList.toggle('active', open);
     }
+
+    analyzeText();
   </script>
 
 </body>

@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>URL Maker – Free Online Slug Generator</title>
-  <meta name="description" content="Turn any title or sentence into a clean, SEO-friendly URL slug. Choose hyphen or underscore separators, free and instant." />
-  <link rel="canonical" href="https://getonlinetool.com/tool/url-maker" />
-  <meta property="og:title" content="URL Maker – Free Online Slug Generator" />
-  <meta property="og:description" content="Turn any title into a clean, SEO-friendly URL slug instantly." />
+  <title>Essay Word Counter – Free Online Page & Word Count Tool</title>
+  <meta name="description" content="Count words and characters in your essay and see an estimated page count for single or double spacing, live as you type." />
+  <link rel="canonical" href="https://getonlinetool.com/tool/essay-word-counter" />
+  <meta property="og:title" content="Essay Word Counter – Free Online Page & Word Count Tool" />
+  <meta property="og:description" content="Count words and estimate page count for your essay instantly, free and no sign-up." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://getonlinetool.com/tool/url-maker" />
+  <meta property="og:url" content="https://getonlinetool.com/tool/essay-word-counter" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
@@ -20,9 +20,9 @@
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "URL Maker",
-    "url": "https://getonlinetool.com/tool/url-maker",
-    "description": "Free online tool to turn any title or sentence into a clean URL slug.",
+    "name": "Essay Word Counter",
+    "url": "https://getonlinetool.com/tool/essay-word-counter",
+    "description": "Free online tool to count words and estimate page count for essays.",
     "applicationCategory": "UtilityApplication",
     "operatingSystem": "Any",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
@@ -122,10 +122,10 @@
       <div class="breadcrumb">
         <a href="../../">Home</a><span>›</span>
         <a href="../../#tools">Tools</a><span>›</span>
-        <span>URL Maker</span>
+        <span>Essay Word Counter</span>
       </div>
-      <h1 class="page-hero-title">URL Maker</h1>
-      <p class="page-hero-sub">Turn any title or sentence into a clean, SEO-friendly URL slug, instantly.</p>
+      <h1 class="page-hero-title">Essay Word Counter</h1>
+      <p class="page-hero-sub">Count words and characters and see an estimated page count for your essay - live as you type.</p>
     </div>
   </section>
 
@@ -133,50 +133,53 @@
   <section class="tool-section">
     <div class="container">
       <div class="tool-wrapper">
-        <div class="kpm-layout">
+        <div class="cc-layout">
 
-          <div class="kpm-left">
-            <div class="kpm-box">
-              <label class="kpm-label">Title or Text</label>
-              <textarea id="slugInput" class="kpm-textarea" style="height:120px;" placeholder="e.g. 10 Best Coffee Shops in New York (2026 Guide)" spellcheck="false" oninput="generateSlug()"></textarea>
-            </div>
-
-            <div class="kpm-results">
-              <div class="results-header">
-                <h3 class="results-title">URL Slug</h3>
+          <div class="cc-left">
+            <div class="cc-textarea-wrap">
+              <textarea rows="20" id="inputText" class="cc-textarea" placeholder="Paste your essay here..." oninput="analyzeText(this.value)" spellcheck="true"></textarea>
+              <div class="cc-textarea-footer">
+                <span class="cc-live-badge">● Live counting</span>
+                <button class="cc-clear-btn" onclick="clearText()">Clear</button>
               </div>
-              <textarea id="slugOutput" class="results-textarea" style="height:80px;" readonly spellcheck="false" placeholder="Your URL slug will appear here..."></textarea>
             </div>
           </div>
 
-          <div class="kpm-right">
-            <div class="kpm-options-card">
-              <h3 class="options-title">Separator</h3>
-              <label class="radio-label">
-                <input type="radio" name="sep" value="-" checked onchange="generateSlug()" /> Hyphen (-)
-              </label>
-              <label class="radio-label">
-                <input type="radio" name="sep" value="_" onchange="generateSlug()" /> Underscore (_)
-              </label>
+          <div class="cc-right">
+            <div class="cc-big-stat">
+              <span class="cc-big-num" id="wordCount">0</span>
+              <span class="cc-big-label">Words</span>
             </div>
-
-            <div class="kpm-options-card">
-              <h3 class="options-title">Options</h3>
-              <label class="check-label">
-                <input type="checkbox" id="lowercaseOpt" checked onchange="generateSlug()" />
-                <span>Lowercase</span>
-              </label>
-              <label class="check-label">
-                <input type="checkbox" id="stripAccents" checked onchange="generateSlug()" />
-                <span>Remove accents</span>
-              </label>
+            <div class="cc-big-stat secondary">
+              <span class="cc-big-num" id="pageCount">0.0</span>
+              <span class="cc-big-label">Estimated Pages <em>(double-spaced)</em></span>
             </div>
-
-            <button class="btn-copy" id="copyBtn" onclick="copySlug()">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              Copy Slug
-            </button>
-            <button class="btn-clear" onclick="clearSlug()">Clear</button>
+            <div class="cc-stat-card">
+              <div class="cc-stat-row">
+                <span class="cc-stat-row-label">Characters</span>
+                <span class="cc-stat-row-val" id="charCount">0</span>
+              </div>
+              <div class="cc-stat-row">
+                <span class="cc-stat-row-label">Sentences</span>
+                <span class="cc-stat-row-val" id="sentenceCount">0</span>
+              </div>
+              <div class="cc-stat-row">
+                <span class="cc-stat-row-label">Paragraphs</span>
+                <span class="cc-stat-row-val" id="paraCount">0</span>
+              </div>
+              <div class="cc-stat-row">
+                <span class="cc-stat-row-label">Pages (single-spaced)</span>
+                <span class="cc-stat-row-val" id="pageSingle">0.0</span>
+              </div>
+              <div class="cc-stat-row">
+                <span class="cc-stat-row-label">Reading time</span>
+                <span class="cc-stat-row-val" id="readingTime">0 sec</span>
+              </div>
+              <div class="cc-stat-row">
+                <span class="cc-stat-row-label">Speaking time</span>
+                <span class="cc-stat-row-val" id="speakingTime">0 sec</span>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -246,49 +249,37 @@
   </footer>
 
   <script>
-    function generateSlug() {
-      const raw = document.getElementById('slugInput').value;
-      const sep = document.querySelector('input[name="sep"]:checked').value;
-      const lowercase = document.getElementById('lowercaseOpt').checked;
-      const stripAccents = document.getElementById('stripAccents').checked;
+    function analyzeText(text) {
+      const words = text.trim() === '' ? [] : text.trim().split(/\s+/);
+      const wordCount = words.length;
 
-      let text = raw;
-      if (stripAccents) {
-        text = text.normalize('NFKD').replace(/[̀-ͯ]/g, '');
-      }
-      if (lowercase) {
-        text = text.toLowerCase();
-      }
+      document.getElementById('wordCount').textContent = wordCount.toLocaleString();
+      document.getElementById('charCount').textContent = text.length.toLocaleString();
 
-      text = text
-        .replace(/[^a-zA-Z0-9\s-_]/g, '')
-        .trim()
-        .replace(/[\s_-]+/g, sep);
+      const sentences = text.trim() === '' ? 0 : (text.match(/[^.!?]*[.!?]+/g) || []).length;
+      document.getElementById('sentenceCount').textContent = sentences.toLocaleString();
 
-      if (sep === '-') {
-        text = text.replace(/^-+|-+$/g, '');
-      } else {
-        text = text.replace(/^_+|_+$/g, '');
-      }
+      const paras = text.trim() === '' ? 0 : text.trim().split(/\n\s*\n/).filter(p => p.trim()).length;
+      document.getElementById('paraCount').textContent = paras.toLocaleString();
 
-      document.getElementById('slugOutput').value = text;
+      // Standard estimates: ~250 words/page double-spaced, ~500 words/page single-spaced
+      const pagesDouble = wordCount / 250;
+      const pagesSingle = wordCount / 500;
+      document.getElementById('pageCount').textContent = pagesDouble.toFixed(1);
+      document.getElementById('pageSingle').textContent = pagesSingle.toFixed(1);
+
+      const readSecs = Math.ceil((wordCount / 200) * 60);
+      document.getElementById('readingTime').textContent =
+        wordCount === 0 ? '0 sec' : readSecs < 60 ? `${readSecs} sec` : `${Math.ceil(readSecs / 60)} min`;
+
+      const speakSecs = Math.ceil((wordCount / 130) * 60);
+      document.getElementById('speakingTime').textContent =
+        wordCount === 0 ? '0 sec' : speakSecs < 60 ? `${speakSecs} sec` : `${Math.ceil(speakSecs / 60)} min`;
     }
 
-    function copySlug() {
-      const box = document.getElementById('slugOutput');
-      if (!box.value) return;
-      box.select();
-      navigator.clipboard.writeText(box.value).catch(() => document.execCommand('copy'));
-      const btn = document.getElementById('copyBtn');
-      const orig = btn.innerHTML;
-      btn.textContent = '✓ Copied!';
-      btn.classList.add('copied');
-      setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('copied'); }, 2000);
-    }
-
-    function clearSlug() {
-      document.getElementById('slugInput').value = '';
-      document.getElementById('slugOutput').value = '';
+    function clearText() {
+      document.getElementById('inputText').value = '';
+      analyzeText('');
     }
 
     function toggleMenu(btn) {
