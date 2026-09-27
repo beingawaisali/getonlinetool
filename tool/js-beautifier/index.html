@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SEO Title Length Checker – Free Google Title Tag Tester</title>
-  <meta name="description" content="Check if your page title is the right length for Google search. Live character and pixel-width count with a real search result preview." />
-  <link rel="canonical" href="https://getonlinetool.com/tool/seo-title-length" />
-  <meta property="og:title" content="SEO Title Length Checker – Free Google Title Tag Tester" />
-  <meta property="og:description" content="Check your title tag length against Google's pixel and character limits, with a live preview." />
+  <title>JS Beautifier – Free Online JavaScript Formatter</title>
+  <meta name="description" content="Paste minified or messy JavaScript and get it reformatted with proper indentation and line breaks, instantly in your browser." />
+  <link rel="canonical" href="https://getonlinetool.com/tool/js-beautifier" />
+  <meta property="og:title" content="JS Beautifier – Free Online JavaScript Formatter" />
+  <meta property="og:description" content="Reformat minified or messy JavaScript with proper indentation, instantly." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://getonlinetool.com/tool/seo-title-length" />
+  <meta property="og:url" content="https://getonlinetool.com/tool/js-beautifier" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
@@ -20,30 +20,16 @@
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "SEO Title Length Checker",
-    "url": "https://getonlinetool.com/tool/seo-title-length",
-    "description": "Free tool to check SEO title tag length against Google's character and pixel limits.",
+    "name": "JS Beautifier",
+    "url": "https://getonlinetool.com/tool/js-beautifier",
+    "description": "Free online tool to reformat minified or messy JavaScript with proper indentation.",
     "applicationCategory": "UtilityApplication",
     "operatingSystem": "Any",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
   }
   </script>
   <style>
-    .serp-preview {
-      background: #fff;
-      border: 1.5px solid var(--border);
-      border-radius: 10px;
-      padding: 16px 18px;
-      font-family: arial, sans-serif;
-    }
-    .serp-title { color: #1a0dab; font-size: 20px; line-height: 1.3; overflow-wrap: break-word; }
-    .serp-title.truncated { position: relative; }
-    .serp-url { color: #006621; font-size: 14px; margin-top: 4px; }
-    .serp-note { font-size: .78rem; color: var(--text-muted); margin-top: 10px; }
-    .len-status { font-weight: 700; padding: 3px 10px; border-radius: 100px; font-size: .78rem; display: inline-block; }
-    .len-status.good { background: #E6F4EA; color: #2E7D32; }
-    .len-status.warn { background: #FFF3E0; color: #B0500F; }
-    .len-status.bad { background: #FEE8E8; color: #C62828; }
+    .code-textarea { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: .82rem; white-space: pre; }
   </style>
 </head>
 <body>
@@ -147,10 +133,10 @@
       <div class="breadcrumb">
         <a href="../../">Home</a><span>›</span>
         <a href="../../#tools">Tools</a><span>›</span>
-        <span>SEO Title Length</span>
+        <span>JS Beautifier</span>
       </div>
-      <h1 class="page-hero-title">SEO Title Length Checker</h1>
-      <p class="page-hero-sub">Type your page title and see the character count, pixel width, and a live Google search preview.</p>
+      <h1 class="page-hero-title">JS Beautifier</h1>
+      <p class="page-hero-sub">Paste minified or messy JavaScript and get it reformatted with proper indentation - instantly, in your browser.</p>
     </div>
   </section>
 
@@ -162,43 +148,25 @@
 
           <div class="cc-left">
             <div class="cc-textarea-wrap">
-              <textarea rows="4" id="titleInput" class="cc-textarea" placeholder="Type or paste your page title here..." oninput="analyzeTitle(this.value)" spellcheck="false" style="min-height:100px;"></textarea>
+              <textarea rows="18" id="inputCode" class="cc-textarea code-textarea" placeholder="Paste your JavaScript here..." oninput="run()" spellcheck="false"></textarea>
               <div class="cc-textarea-footer">
-                <span class="cc-live-badge">● Live preview</span>
-                <button class="cc-clear-btn" onclick="clearTitle()">Clear</button>
+                <span class="cc-live-badge">● Live formatting</span>
+                <button class="cc-clear-btn" onclick="clearAll()">Clear</button>
               </div>
-            </div>
-
-            <div class="serp-preview" style="margin-top:20px;">
-              <div class="serp-title" id="serpTitle">Your page title will appear here</div>
-              <div class="serp-url">https://www.yoursite.com › page</div>
-              <div class="serp-note">This is an approximation of how Google may display your title. Actual rendering can vary by device and query.</div>
             </div>
           </div>
 
           <div class="cc-right">
-            <div class="cc-big-stat">
-              <span class="cc-big-num" id="charCount">0</span>
-              <span class="cc-big-label">Characters</span>
-            </div>
-            <div class="cc-big-stat secondary">
-              <span class="cc-big-num" id="pixelWidth">0px</span>
-              <span class="cc-big-label">Pixel Width <em>(approx.)</em></span>
-            </div>
-            <div class="cc-stat-card">
-              <div class="cc-stat-row">
-                <span class="cc-stat-row-label">Status</span>
-                <span class="cc-stat-row-val"><span class="len-status good" id="statusBadge">Good</span></span>
+            <div class="kpm-results">
+              <div class="results-header">
+                <h3 class="results-title">Formatted Code</h3>
               </div>
-              <div class="cc-stat-row">
-                <span class="cc-stat-row-label">Recommended</span>
-                <span class="cc-stat-row-val">50–60 characters</span>
-              </div>
-              <div class="cc-stat-row">
-                <span class="cc-stat-row-label">Pixel limit</span>
-                <span class="cc-stat-row-val">~580px</span>
-              </div>
+              <textarea id="outputCode" class="results-textarea code-textarea" style="height:340px;" readonly spellcheck="false" placeholder="Formatted code will appear here..."></textarea>
             </div>
+            <button class="btn-copy" id="copyBtn" onclick="copyOutput()" style="margin-top:12px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              Copy Code
+            </button>
           </div>
 
         </div>
@@ -268,40 +236,180 @@
   </footer>
 
   <script>
-    const canvas = document.createElement('canvas');
-    const ctx = canvas.getContext('2d');
-    ctx.font = '400 20px arial, sans-serif';
+    function beautifyJS(input) {
+      const INDENT = '  ';
+      let i = 0;
+      const len = input.length;
+      let out = '';
+      let indent = 0;
+      let parenDepth = 0;
 
-    function measurePixelWidth(text) {
-      return Math.round(ctx.measureText(text).width);
-    }
-
-    function analyzeTitle(text) {
-      const charCount = text.length;
-      const pxWidth = measurePixelWidth(text);
-
-      document.getElementById('charCount').textContent = charCount;
-      document.getElementById('pixelWidth').textContent = pxWidth + 'px';
-
-      const serpTitle = document.getElementById('serpTitle');
-      serpTitle.textContent = text.trim() ? text : 'Your page title will appear here';
-
-      const badge = document.getElementById('statusBadge');
-      if (pxWidth <= 580 && charCount <= 60) {
-        badge.textContent = 'Good';
-        badge.className = 'len-status good';
-      } else if (pxWidth <= 600 && charCount <= 70) {
-        badge.textContent = 'Getting Long';
-        badge.className = 'len-status warn';
-      } else {
-        badge.textContent = 'Too Long';
-        badge.className = 'len-status bad';
+      function stripTrailingSpaces() {
+        out = out.replace(/[ \t]+$/, '');
       }
+
+      while (i < len) {
+        const c = input[i];
+
+        // line comment
+        if (c === '/' && input[i+1] === '/') {
+          let j = i;
+          while (j < len && input[j] !== '\n') j++;
+          out += input.slice(i, j);
+          // a line comment always ends the line - force a break so trailing
+          // code can never get swallowed into the comment on copy/paste
+          let k = j;
+          while (k < len && (input[k] === '\n' || input[k] === '\r' || input[k] === ' ' || input[k] === '\t')) k++;
+          stripTrailingSpaces();
+          out += '\n' + INDENT.repeat(indent);
+          i = k;
+          continue;
+        }
+        // block comment
+        if (c === '/' && input[i+1] === '*') {
+          let j = i + 2;
+          while (j < len && !(input[j] === '*' && input[j+1] === '/')) j++;
+          j = Math.min(j + 2, len);
+          out += input.slice(i, j);
+          i = j;
+          continue;
+        }
+        // strings / template literals
+        if (c === '"' || c === "'" || c === '`') {
+          const quote = c;
+          let j = i + 1;
+          while (j < len) {
+            if (input[j] === '\\') { j += 2; continue; }
+            if (input[j] === quote) { j++; break; }
+            j++;
+          }
+          out += input.slice(i, j);
+          i = j;
+          continue;
+        }
+        // regex literal (heuristic)
+        if (c === '/') {
+          const trimmed = out.replace(/\s+$/, '');
+          const lastCh = trimmed.slice(-1);
+          const lastWord = (trimmed.match(/[A-Za-z_$][A-Za-z0-9_$]*$/) || [''])[0];
+          const KEYWORDS = ['return','typeof','case','in','of','new','delete','void','instanceof','throw','do','else','yield'];
+          const regexCtx = trimmed === '' || /[=(:,;!&|?{}\[+\-*%^~<>]/.test(lastCh) || KEYWORDS.includes(lastWord);
+          if (regexCtx) {
+            let j = i + 1;
+            let inClass = false;
+            let ok = true;
+            while (j < len) {
+              if (input[j] === '\\') { j += 2; continue; }
+              if (input[j] === '[') inClass = true;
+              else if (input[j] === ']') inClass = false;
+              else if (input[j] === '/' && !inClass) { j++; break; }
+              else if (input[j] === '\n') { ok = false; break; }
+              j++;
+            }
+            if (ok) {
+              while (j < len && /[a-z]/i.test(input[j])) j++;
+              out += input.slice(i, j);
+              i = j;
+              continue;
+            }
+          }
+        }
+
+        if (c === '{') {
+          const prevCh = out.slice(-1);
+          if (/[A-Za-z0-9_$)\]]/.test(prevCh)) out += ' ';
+          out += '{';
+          indent++;
+          stripTrailingSpaces();
+          out += '\n' + INDENT.repeat(indent);
+          i++;
+          continue;
+        }
+
+        if (c === '}') {
+          stripTrailingSpaces();
+          indent = Math.max(indent - 1, 0);
+          if (!out.endsWith('\n')) out += '\n';
+          out += INDENT.repeat(indent) + '}';
+          i++;
+          let j = i;
+          while (j < len && (input[j] === ' ' || input[j] === '\t')) j++;
+          const rest = input.slice(j);
+          if (/^(else|catch|finally)\b/.test(rest)) {
+            out += ' ';
+            i = j;
+          } else if (rest[0] === ',' || rest[0] === ';' || rest[0] === ')' || rest[0] === ']' || rest[0] === '.') {
+            i = j;
+          } else if (rest.length === 0) {
+            i = j;
+          } else {
+            out += '\n' + INDENT.repeat(indent);
+            i = j;
+          }
+          continue;
+        }
+
+        if (c === '(') { parenDepth++; out += '('; i++; continue; }
+        if (c === ')') { parenDepth = Math.max(parenDepth - 1, 0); out += ')'; i++; continue; }
+
+        if (c === ';') {
+          out += ';';
+          i++;
+          if (parenDepth > 0) {
+            out += ' ';
+          } else {
+            stripTrailingSpaces();
+            out += '\n' + INDENT.repeat(indent);
+          }
+          continue;
+        }
+
+        if (c === '\n' || c === '\r') {
+          let j = i;
+          while (j < len && /\s/.test(input[j])) j++;
+          const prevCh = out.slice(-1);
+          const nextCh = input[j];
+          if (/[A-Za-z0-9_$]/.test(prevCh) && nextCh && /[A-Za-z0-9_$]/.test(nextCh)) {
+            out += ' ';
+          }
+          i = j;
+          continue;
+        }
+
+        if (c === ' ' || c === '\t') {
+          let j = i;
+          while (j < len && (input[j] === ' ' || input[j] === '\t')) j++;
+          out += ' ';
+          i = j;
+          continue;
+        }
+
+        out += c;
+        i++;
+      }
+
+      return out.trim();
     }
 
-    function clearTitle() {
-      document.getElementById('titleInput').value = '';
-      analyzeTitle('');
+    function run() {
+      const input = document.getElementById('inputCode').value;
+      document.getElementById('outputCode').value = input.trim() ? beautifyJS(input) : '';
+    }
+
+    function clearAll() {
+      document.getElementById('inputCode').value = '';
+      document.getElementById('outputCode').value = '';
+    }
+
+    function copyOutput() {
+      const box = document.getElementById('outputCode');
+      if (!box.value) return;
+      box.select();
+      navigator.clipboard.writeText(box.value).catch(() => document.execCommand('copy'));
+      const btn = document.getElementById('copyBtn');
+      const orig = btn.innerHTML;
+      btn.textContent = '✓ Copied!';
+      setTimeout(() => btn.innerHTML = orig, 2000);
     }
 
     function toggleMenu(btn) {
@@ -310,8 +418,6 @@
       btn.setAttribute('aria-expanded', open);
       btn.classList.toggle('active', open);
     }
-
-    analyzeTitle('');
   </script>
 
 </body>
