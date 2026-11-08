@@ -711,4 +711,8 @@ img { display: block; max-width: 100%; }
 .tool-tag.image { background: #E8F0FE; color: #1A56C4; }
 .tool-tag.gen { background: #FCE4EC; color: #AD1457; }
 .tool-tag.life { background: #E0F7FA; color: #00838F; }
+/* keep card titles clear of the absolutely positioned tag (width + offset - card padding + gap) */
+.tool-info h3 { padding-right: 52px; }
+.tool-card:has(.tool-tag.calc) .tool-info h3, .tool-card:has(.tool-tag.gen) .tool-info h3 { padding-right: 100px; }
+.tool-card:has(.tool-tag.utility) .tool-info h3, .tool-card:has(.tool-tag.image) .tool-info h3 { padding-right: 68px; }
 /* ===== END NAV + TAGS ===== */
