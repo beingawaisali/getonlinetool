@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orthogonal Projection Calculator - Vector Projection Tool</title>
+  <meta name="description" content="Compute the orthogonal projection of a vector onto a vector or subspace. See the projection, orthogonal component, coefficients and dot-product checks." />
+  <link rel="canonical" href="https://getonlinetool.com/tool/orthogonal-projection-calculator" />
+  <meta property="og:title" content="Orthogonal Projection Calculator - Vector Projection Tool" />
+  <meta property="og:description" content="Compute the orthogonal projection of a vector onto a vector or subspace. See the projection, orthogonal component, coefficients and dot-product checks." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://getonlinetool.com/tool/orthogonal-projection-calculator" />
+  <meta property="og:site_name" content="GetOnlineTool" />
+  <meta property="og:image" content="https://getonlinetool.com/images/GetOnlineTool-Logo.webp" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Orthogonal Projection Calculator - Vector Projection Tool" />
+  <meta name="twitter:description" content="Compute the orthogonal projection of a vector onto a vector or subspace. See the projection, orthogonal component, coefficients and dot-product checks." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../tool.css" />
+  <link rel="icon" type="image/webp" href="../../images/getonlinetool-favicon.webp">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Orthogonal Projection Calculator",
+    "url": "https://getonlinetool.com/tool/orthogonal-projection-calculator",
+    "description": "Compute the orthogonal projection of a vector onto a vector or subspace. See the projection, orthogonal component, coefficients and dot-product checks.",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://getonlinetool.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://getonlinetool.com/#tools"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Orthogonal Projection Calculator",
+        "item": "https://getonlinetool.com/tool/orthogonal-projection-calculator"
+      }
+    ]
+  }
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3212365382815035"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../../" class="logo" aria-label="GetOnlineTool Home">
+        <img src="../../images/GetOnlineTool-Logo.webp" alt="GetOnlineTool Logo" class="logo-img" />
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <div class="nav-dropdown">
+          <a>
+            All Tools
+            <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="dropdown-menu">
+            <div class="dropdown-col">
+              <span class="dropdown-cat">📝 Text Tools</span>
+              <a href="../../tool/word-count-online/">Word Count</a>
+              <a href="../../tool/character-count-online/">Character Count</a>
+              <a href="../../tool/case-maker-online/">Case Maker</a>
+              <a href="../../tool/upper-to-lower-case/">Upper To Lower Case</a>
+              <a href="../../tool/lower-to-upper-case/">Lower To Upper Case</a>
+              <a href="../../tool/text-reverse-generator/">Text Reverse Generator</a>
+              <a href="../../tool/small-caps-generator/">Small Caps Generator</a>
+              <a href="../../tool/upside-down-text-generator/">Upside Down Text</a>
+              <a href="../../tool/palindrome-checker-online/">Palindrome Checker</a>
+              <a href="../../tool/notepad-online/">Notepad Online</a>
+              <a href="../../tool/essay-word-counter/">Essay Word Counter</a>
+              <a href="../../tool/reduce-word-count/">Reduce Word Count</a>
+              <a href="../../tool/title-case-maker/">Title Case Maker</a>
+              <a href="../../tool/camel-case-maker/">Camel Case Maker</a>
+              <a href="../../tool/space-remover/">Space Remover</a>
+              <a href="../../tool/character-replacer/">Character Replacer</a>
+              <a href="../../tool/remove-empty-lines/">Remove Empty Lines</a>
+              <a href="../../tool/append-text/">Append Text</a>
+              <a href="../../tool/comma-inserter/">Comma Inserter</a>
+              <a href="../../tool/text-to-binary-converter/">Text to Binary</a>
+            </div>
+            <div class="dropdown-col">
+              <span class="dropdown-cat">🔑 SEO Tools</span>
+              <a href="../../tool/keyword-phrase-maker/">Keyword Phrase Maker</a>
+              <a href="../../tool/json-ld-maker-online/">JSON-LD Generator</a>
+              <a href="../../tool/seo-title-length/">SEO Title Length</a>
+              <a href="../../tool/seo-description-length/">SEO Description Length</a>
+              <a href="../../tool/url-maker/">URL Maker</a>
+              <a href="../../tool/utm-builder/">UTM Builder</a>
+              <a href="../../tool/social-media-preview-generator/">Social Media Preview</a>
+              <a href="../../tool/structured-data-testing/">Structured Data Testing</a>
+              <a href="../../tool/rich-results-test/">Rich Results Test</a>
+              <span class="dropdown-cat" style="margin-top:16px;">🧮 Utility</span>
+              <a href="../../tool/online-calculator/">Calculator</a>
+              <a href="../../tool/bulk-link-opener/">Bulk Link Opener</a>
+              <a href="../../tool/js-beautifier/">JS Beautifier</a>
+              <a href="../../tool/js-css-minifier/">JS/CSS Minifier</a>
+            </div>
+            <div class="dropdown-col">
+              <span class="dropdown-cat">🖼️ Image Tools</span>
+              <a href="../../tool/image-pixelator/">Image Pixelator</a>
+              <a href="../../tool/rainbow-filter-adder/">Rainbow Filter Adder</a>
+              <a href="../../tool/image-dimensions-finder/">Image Dimensions Finder</a>
+              <a href="../../tool/image-quality-changer/">Image Quality Changer</a>
+              <a href="../../tool/image-splitter/">Image Splitter</a>
+              <a href="../../tool/image-color-picker/">Image Color Picker</a>
+              <span class="dropdown-cat" style="margin-top:16px;">➗ Calculators</span>
+              <a href="../../tool/scientific-calculator/">Scientific Calculator</a>
+              <a href="../../tool/percentage-calculator/">Percentage Calculator</a>
+              <a href="../../tool/number-sum-calculator/">Number Sum Calculator</a>
+              <a href="../../tool/area-calculator/">Area Calculator</a>
+              <a href="../../tool/orthogonal-projection-calculator/">Orthogonal Projection</a>
+            </div>
+            <div class="dropdown-col">
+              <span class="dropdown-cat">🎲 Generators</span>
+              <a href="../../tool/strong-password-generator/">Strong Password Generator</a>
+              <a href="../../tool/keyword-password-generator/">Keyword Password Generator</a>
+              <a href="../../tool/multi-dice-roller/">Multi Dice Roller</a>
+              <a href="../../tool/prophecy-generator/">Prophecy Generator</a>
+              <span class="dropdown-cat" style="margin-top:16px;">🌤️ Lifestyle</span>
+              <a href="../../tool/weather-checker/">Weather Checker</a>
+              <a href="../../tool/daily-horoscope/">Daily Horoscope</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="../../blog/">Blog</a>
+        <a href="../../about-us/">About Us</a>
+        <a href="../../contact-us/">Contact Us</a>
+      </nav>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMenu(this)">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+      <p>📝 Text Tools</p>
+      <a href="../../tool/word-count-online/" class="mobile-sub">↳ Word Count</a>
+      <a href="../../tool/character-count-online/" class="mobile-sub">↳ Character Count</a>
+      <a href="../../tool/case-maker-online/" class="mobile-sub">↳ Case Maker</a>
+      <a href="../../tool/upper-to-lower-case/" class="mobile-sub">↳ Upper To Lower Case</a>
+      <a href="../../tool/lower-to-upper-case/" class="mobile-sub">↳ Lower To Upper Case</a>
+      <a href="../../tool/text-reverse-generator/" class="mobile-sub">↳ Text Reverse Generator</a>
+      <a href="../../tool/small-caps-generator/" class="mobile-sub">↳ Small Caps Generator</a>
+      <a href="../../tool/upside-down-text-generator/" class="mobile-sub">↳ Upside Down Text</a>
+      <a href="../../tool/palindrome-checker-online/" class="mobile-sub">↳ Palindrome Checker</a>
+      <a href="../../tool/notepad-online/" class="mobile-sub">↳ Notepad Online</a>
+      <a href="../../tool/essay-word-counter/" class="mobile-sub">↳ Essay Word Counter</a>
+      <a href="../../tool/reduce-word-count/" class="mobile-sub">↳ Reduce Word Count</a>
+      <a href="../../tool/title-case-maker/" class="mobile-sub">↳ Title Case Maker</a>
+      <a href="../../tool/camel-case-maker/" class="mobile-sub">↳ Camel Case Maker</a>
+      <a href="../../tool/space-remover/" class="mobile-sub">↳ Space Remover</a>
+      <a href="../../tool/character-replacer/" class="mobile-sub">↳ Character Replacer</a>
+      <a href="../../tool/remove-empty-lines/" class="mobile-sub">↳ Remove Empty Lines</a>
+      <a href="../../tool/append-text/" class="mobile-sub">↳ Append Text</a>
+      <a href="../../tool/comma-inserter/" class="mobile-sub">↳ Comma Inserter</a>
+      <a href="../../tool/text-to-binary-converter/" class="mobile-sub">↳ Text to Binary</a>
+      <p>🔑 SEO Tools</p>
+      <a href="../../tool/keyword-phrase-maker/" class="mobile-sub">↳ Keyword Phrase Maker</a>
+      <a href="../../tool/json-ld-maker-online/" class="mobile-sub">↳ JSON-LD Generator</a>
+      <a href="../../tool/seo-title-length/" class="mobile-sub">↳ SEO Title Length</a>
+      <a href="../../tool/seo-description-length/" class="mobile-sub">↳ SEO Description Length</a>
+      <a href="../../tool/url-maker/" class="mobile-sub">↳ URL Maker</a>
+      <a href="../../tool/utm-builder/" class="mobile-sub">↳ UTM Builder</a>
+      <a href="../../tool/social-media-preview-generator/" class="mobile-sub">↳ Social Media Preview</a>
+      <a href="../../tool/structured-data-testing/" class="mobile-sub">↳ Structured Data Testing</a>
+      <a href="../../tool/rich-results-test/" class="mobile-sub">↳ Rich Results Test</a>
+      <p>🧮 Utility</p>
+      <a href="../../tool/online-calculator/" class="mobile-sub">↳ Calculator</a>
+      <a href="../../tool/bulk-link-opener/" class="mobile-sub">↳ Bulk Link Opener</a>
+      <a href="../../tool/js-beautifier/" class="mobile-sub">↳ JS Beautifier</a>
+      <a href="../../tool/js-css-minifier/" class="mobile-sub">↳ JS/CSS Minifier</a>
+      <p>➗ Calculators</p>
+      <a href="../../tool/scientific-calculator/" class="mobile-sub">↳ Scientific Calculator</a>
+      <a href="../../tool/percentage-calculator/" class="mobile-sub">↳ Percentage Calculator</a>
+      <a href="../../tool/number-sum-calculator/" class="mobile-sub">↳ Number Sum Calculator</a>
+      <a href="../../tool/area-calculator/" class="mobile-sub">↳ Area Calculator</a>
+      <a href="../../tool/orthogonal-projection-calculator/" class="mobile-sub">↳ Orthogonal Projection</a>
+      <p>🖼️ Image Tools</p>
+      <a href="../../tool/image-pixelator/" class="mobile-sub">↳ Image Pixelator</a>
+      <a href="../../tool/rainbow-filter-adder/" class="mobile-sub">↳ Rainbow Filter Adder</a>
+      <a href="../../tool/image-dimensions-finder/" class="mobile-sub">↳ Image Dimensions Finder</a>
+      <a href="../../tool/image-quality-changer/" class="mobile-sub">↳ Image Quality Changer</a>
+      <a href="../../tool/image-splitter/" class="mobile-sub">↳ Image Splitter</a>
+      <a href="../../tool/image-color-picker/" class="mobile-sub">↳ Image Color Picker</a>
+      <p>🎲 Generators</p>
+      <a href="../../tool/strong-password-generator/" class="mobile-sub">↳ Strong Password Generator</a>
+      <a href="../../tool/keyword-password-generator/" class="mobile-sub">↳ Keyword Password Generator</a>
+      <a href="../../tool/multi-dice-roller/" class="mobile-sub">↳ Multi Dice Roller</a>
+      <a href="../../tool/prophecy-generator/" class="mobile-sub">↳ Prophecy Generator</a>
+      <p>🌤️ Lifestyle</p>
+      <a href="../../tool/weather-checker/" class="mobile-sub">↳ Weather Checker</a>
+      <a href="../../tool/daily-horoscope/" class="mobile-sub">↳ Daily Horoscope</a>
+      <a href="../../blog/">Blog</a>
+      <a href="../../about-us/">About Us</a>
+      <a href="../../contact-us/">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../../">Home</a><span>›</span>
+        <a href="../../#tools">Tools</a><span>›</span>
+        <span>Orthogonal Projection</span>
+      </div>
+      <h1 class="page-hero-title">Orthogonal Projection Calculator</h1>
+      <p class="page-hero-sub">Project a vector onto a line or a subspace and see the orthogonal component.</p>
+    </div>
+  </section>
+
+  <!-- TOOL -->
+  <section class="tool-section">
+    <div class="container">
+      <div class="tool-wrapper">
+        <div class="nt-grid side">
+          <div class="nt-stack">
+            <div class="nt-card">
+              <h2 class="nt-title">Inputs</h2>
+              <div class="nt-field">
+                <label class="nt-label" for="vec">Vector to project (v)</label>
+                <input id="vec" class="nt-input nt-mono" placeholder="e.g. 2, 3, 4">
+              </div>
+              <div class="nt-field">
+                <label class="nt-label" for="basis">Project onto - one basis vector per line</label>
+                <textarea id="basis" class="nt-textarea nt-mono" style="min-height:110px" placeholder="e.g. 1, 1, 0&#10;(add a second line to project onto a plane)" spellcheck="false"></textarea>
+              </div>
+              <p class="nt-hint">Separate numbers with commas or spaces. One basis vector projects onto a line, several project onto the subspace they span.</p>
+              <div class="nt-actions">
+                <button class="nt-btn ghost sm" id="ex1" type="button">Example: line</button>
+                <button class="nt-btn ghost sm" id="ex2" type="button">Example: plane</button>
+                <button class="nt-btn ghost sm" id="clear" type="button">Clear</button>
+              </div>
+            </div>
+            <div id="err" class="nt-msg err nt-hidden"></div>
+          </div>
+          <div class="nt-stack" id="outCol">
+            <div class="nt-card">
+              <h2 class="nt-title">Orthogonal projection</h2>
+              <div class="nt-out" id="proj">-</div>
+              <h2 class="nt-title">Orthogonal component (v minus projection)</h2>
+              <div class="nt-out" id="orth">-</div>
+            </div>
+            <div class="nt-stats" id="stats"></div>
+            <div class="nt-card">
+              <h2 class="nt-title">Working</h2>
+              <div class="nt-list" id="steps"><div class="nt-hint">Enter a vector and at least one basis vector.</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="../../" class="logo logo-light">
+          <img src="../../images/GetOnlineTool-Logo.webp" alt="GetOnlineTool Logo" class="logo-img footer-logo-img"
+               onerror="this.onerror=null;this.src='../../images/GetOnlineTool-Logo.webp'" />
+        </a>
+        <p>GetOnlineTool provides free, fast, and simple online tools for writers, marketers, students, and developers. No account needed - ever.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="LinkedIn">💼</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="../../">Home</a></li>
+          <li><a href="../../#tools">All Tools</a></li>
+          <li><a href="../../about-us/">About Us</a></li>
+          <li><a href="../../blog/">Blog</a></li>
+          <li><a href="../../contact-us/">Contact Us</a></li>
+          <li><a href="../../privacy-policy/">Privacy Policy</a></li>
+          <li><a href="../../terms-and-conditions/">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Popular Tools</h4>
+        <ul>
+          <li><a href="../../tool/word-count-online/">Word Count</a></li>
+          <li><a href="../../tool/character-count-online/">Character Count</a></li>
+          <li><a href="../../tool/keyword-phrase-maker/">Keyword Phrase Maker</a></li>
+          <li><a href="../../tool/case-maker-online/">Case Maker</a></li>
+          <li><a href="../../tool/text-reverse-generator/">Text Reverse Generator</a></li>
+          <li><a href="../../tool/palindrome-checker-online/">Palindrome Checker</a></li>
+          <li><a href="../../tool/online-calculator/">Calculator</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Stay Updated</h4>
+        <p class="newsletter-desc">Get notified when we add new tools. No spam, ever.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email address" aria-label="Email address" />
+          <button type="button">Subscribe</button>
+        </div>
+        <p class="newsletter-note">We respect your privacy. Unsubscribe anytime.</p>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <div class="container footer-bar-inner">
+        <p>© 2026 GetOnlineTool. All rights reserved.</p>
+        <div class="footer-bar-links">
+          <a href="../../privacy-policy/">Privacy Policy</a>
+          <a href="../../terms-and-conditions/">Terms & Conditions</a>
+          <a href="../../sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu(btn) {
+      const nav = document.getElementById('mobileNav');
+      const open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+      btn.classList.toggle('active', open);
+    }
+    function copyText(text, btn) {
+      if (!text) return;
+      const done = () => {
+        if (!btn) return;
+        const orig = btn.dataset.orig || btn.innerHTML;
+        btn.dataset.orig = orig;
+        btn.textContent = '\u2713 Copied';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('copied'); }, 1600);
+      };
+      const fallback = () => {
+        const ta = document.createElement('textarea');
+        ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.select();
+        try { document.execCommand('copy'); } catch (e) { /* ignore */ }
+        ta.remove(); done();
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, fallback);
+      else fallback();
+    }
+    const $ = (id) => document.getElementById(id);
+    const parseVec = (s) => (s.match(/[-+]?(?:\d+\.?\d*|\.\d+)(?:[eE][-+]?\d+)?/g) || []).map(Number);
+    const dot = (a, b) => a.reduce((s, x, i) => s + x * b[i], 0);
+    const fmtN = (n) => { if (Math.abs(n) < 1e-10) return '0'; return String(parseFloat(n.toFixed(6))); };
+    const fmtV = (v) => '(' + v.map(fmtN).join(', ') + ')';
+
+    function solve(G, r) {
+      const n = r.length, M = G.map((row, i) => [...row, r[i]]);
+      for (let c = 0; c < n; c++) {
+        let p = c;
+        for (let i = c + 1; i < n; i++) if (Math.abs(M[i][c]) > Math.abs(M[p][c])) p = i;
+        if (Math.abs(M[p][c]) < 1e-10) return null;
+        [M[c], M[p]] = [M[p], M[c]];
+        for (let i = 0; i < n; i++) {
+          if (i === c) continue;
+          const k = M[i][c] / M[c][c];
+          for (let j = c; j <= n; j++) M[i][j] -= k * M[c][j];
+        }
+      }
+      return M.map((row, i) => row[n] / row[i]);
+    }
+
+    function run() {
+      const err = $('err');
+      err.classList.add('nt-hidden');
+      const v = parseVec($('vec').value);
+      const basis = $('basis').value.split(/\r?\n/).map(parseVec).filter((b) => b.length);
+      const reset = () => { $('proj').textContent = '-'; $('orth').textContent = '-'; $('stats').innerHTML = ''; $('steps').innerHTML = '<div class="nt-hint">Enter a vector and at least one basis vector.</div>'; };
+      if (!v.length || !basis.length) return reset();
+      const bad = basis.findIndex((b) => b.length !== v.length);
+      if (bad >= 0) { err.textContent = 'Every vector must have the same number of components (v has ' + v.length + ', basis vector ' + (bad + 1) + ' has ' + basis[bad].length + ').'; err.classList.remove('nt-hidden'); return reset(); }
+      if (basis.length > v.length) { err.textContent = 'You gave more basis vectors than dimensions, so they must be linearly dependent.'; err.classList.remove('nt-hidden'); return reset(); }
+      const G = basis.map((a) => basis.map((b) => dot(a, b)));
+      const rhs = basis.map((b) => dot(b, v));
+      const c = solve(G, rhs);
+      if (!c) { err.textContent = 'The basis vectors are linearly dependent (or a vector is zero), so the projection is not uniquely defined. Remove a dependent vector.'; err.classList.remove('nt-hidden'); return reset(); }
+      const proj = v.map((_, i) => basis.reduce((s, b, k) => s + c[k] * b[i], 0));
+      const orth = v.map((x, i) => x - proj[i]);
+      $('proj').textContent = fmtV(proj);
+      $('orth').textContent = fmtV(orth);
+      const norm = (x) => Math.sqrt(dot(x, x));
+      const maxDot = Math.max(...basis.map((b) => Math.abs(dot(b, orth))));
+      $('stats').innerHTML =
+        '<div class="nt-stat"><b>' + fmtN(norm(proj)) + '</b><span>|projection|</span></div>' +
+        '<div class="nt-stat"><b>' + fmtN(norm(orth)) + '</b><span>|orthogonal part|</span></div>' +
+        '<div class="nt-stat"><b>' + (maxDot < 1e-8 ? 'Yes' : 'No') + '</b><span>Orthogonal check</span></div>';
+      const steps = [];
+      if (basis.length === 1) {
+        const b = basis[0], vb = dot(v, b), bb = dot(b, b), t = vb / bb;
+        steps.push('v · b = ' + fmtN(vb));
+        steps.push('b · b = ' + fmtN(bb));
+        steps.push('scalar t = (v · b) / (b · b) = ' + fmtN(t));
+        steps.push('projection = t × b = ' + fmtV(proj));
+        steps.push('scalar projection = (v · b) / |b| = ' + fmtN(vb / Math.sqrt(bb)));
+        const cos = vb / (norm(v) * norm(b));
+        if (Number.isFinite(cos)) steps.push('angle between v and b = ' + fmtN(Math.acos(Math.max(-1, Math.min(1, cos))) * 180 / Math.PI) + '°');
+      } else {
+        steps.push('Solve (BᵀB) c = Bᵀv for the coefficients c');
+        steps.push('c = ' + fmtV(c));
+        steps.push('projection = ' + c.map((x, i) => fmtN(x) + '·b' + (i + 1)).join(' + '));
+      }
+      steps.push('check: projection + orthogonal part = ' + fmtV(proj.map((x, i) => x + orth[i])));
+      $('steps').innerHTML = steps.map((s) => '<div class="nt-list-item"><span class="txt">' + s + '</span></div>').join('');
+    }
+    $('vec').addEventListener('input', run);
+    $('basis').addEventListener('input', run);
+    $('ex1').addEventListener('click', () => { $('vec').value = '2, 3, 4'; $('basis').value = '1, 1, 0'; run(); });
+    $('ex2').addEventListener('click', () => { $('vec').value = '1, 2, 3'; $('basis').value = '1, 0, 0\n0, 1, 0'; run(); });
+    $('clear').addEventListener('click', () => { $('vec').value = ''; $('basis').value = ''; run(); });
+    run();
+  </script>
+
+</body>
+</html>
